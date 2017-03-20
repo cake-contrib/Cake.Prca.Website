@@ -72,7 +72,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
 <hr class="infobar-hidden">
@@ -159,7 +160,11 @@
 <section class="content">
 	
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            Initializes a new instance of the <code class="cs"><a href="/Cake.Prca.Website/api/Cake.Prca.Issues/CodeAnalysisIssue">CodeAnalysisIssue</a></code> class.
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">	
 				<dl class="dl-horizontal">	
@@ -197,27 +202,30 @@
 					<tbody><tr>
 						<td>filePath</td>
 						<td>string</td>
-						<td></td>
+						<td>The path to the file affacted by the issue.
+            The path needs to be relative to the repository root.</td>
 					</tr>
 					<tr>
 						<td>line</td>
 						<td>int?</td>
-						<td></td>
+						<td>The line in the file where the issues has occurred.
+            Nothing if the issue affects the whole file or an asssembly.</td>
 					</tr>
 					<tr>
 						<td>message</td>
 						<td>string</td>
-						<td></td>
+						<td>The message of the code analysis issue.</td>
 					</tr>
 					<tr>
 						<td>priority</td>
 						<td>int</td>
-						<td></td>
+						<td>The priority of the message used to filter out issues if there are more issues than
+            should be posted.</td>
 					</tr>
 					<tr>
 						<td>rule</td>
 						<td>string</td>
-						<td></td>
+						<td>The rule of the code analysis issue.</td>
 					</tr>
 			</tbody></table>
 		</div>

@@ -222,7 +222,9 @@ class Type type-node
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.Issues/StringPathExtensions/3A4EFC80">IsFullPath<wbr>(string)<wbr></a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Checks if a string containing a path is a full path.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -230,7 +232,12 @@ class Type type-node
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.Issues/StringPathExtensions/7914C8C1">IsSubpathOf<wbr>(string, <wbr>string)<wbr></a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Checks if a path is a sub path of another path.
+            The comparison is case-insensitive, handles <code class="cs">/</code> and <code class="cs">\</code> slashes as folder separators and
+            only matches if the base dir folder name is matched exactly
+            (<code class="cs">c:\foobar\file.txt</code> is not a sub path of <code class="cs">c:\foo</code>).
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -238,7 +245,9 @@ class Type type-node
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.Issues/StringPathExtensions/27F89187">IsValidPath<wbr>(string)<wbr></a></td>
 								<td>bool</td>
 								<td>
-									<div></div>
+									<div>
+            Checks if a string containing a path is a valid path string.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -246,7 +255,10 @@ class Type type-node
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.Issues/StringPathExtensions/3A08A5EA">NormalizePath<wbr>(string)<wbr></a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Normalize path string.
+            All <code class="cs">/</code> are changed to <code class="cs">\</code>.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
