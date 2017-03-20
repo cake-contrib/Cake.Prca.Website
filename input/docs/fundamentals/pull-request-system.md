@@ -1,29 +1,13 @@
 ---
 Order: 30
 ---
+Pull Request Addins implement specific Pull Request Systems and allow the
+Cake Pull Request Code Analysis Addin to write found issues as comments to pull requests.
 
-Pull Request Addins implement specific Pull Request Systems and allow the Cake Pull Request Code Analysis Addin to write found issues as comments to pull requests.
+See [Pull Request Systems] for a list of currently supported pull request systems.
 
-## Implementation
+See [How to implement pull request systems] for instruction on how to implement support for
+additional pull request systems.
 
-Pull Request Systems need to implement the [IPullRequestSystem] interface.
-For simplyfing implementation there exists an abstract [PullRequestSystem] base class from which concrete implementation can be inherited.
-
-Pull request system aliases should use the `CakeAliasConstants.MainCakeAliasCategory` and  `CakeAliasConstants.PullRequestSystemCakeAliasCategory`
-constants for defining their category:
-
-```csharp
-[CakeAliasCategory(CakeAliasConstants.MainCakeAliasCategory)]
-public static class MyPullRequestSystemAliases
-{
-    [CakeMethodAlias]
-    [CakeAliasCategory(CakeAliasConstants.PullRequestSystemCakeAliasCategory)]
-    public static ICodeAnalysisProvider MyPullRequestSystem(
-        this ICakeContext context)
-    {
-    }
-}
-```
-
-[IPullRequestSystem]: ../../api/Cake.Prca.PullRequests/IPullRequestSystem
-[PullRequestSystem]: ../../api/Cake.Prca.PullRequests/PullRequestSystem
+[Pull Request Systems]: ../../addins/pull-request-system/
+[How to implement pull request systems]: ../extending/how-to-implement-pull-request-systems
