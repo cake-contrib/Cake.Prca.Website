@@ -112,7 +112,10 @@ Task("Build")
             UpdatePackages = true,
             Settings = new Dictionary<string, object>
             {
-                { "AssemblyFiles",  addinSpecs.Where(x => x.Assemblies != null).SelectMany(x => x.Assemblies).Select(x => "../release/addins" + x) }
+                { "AssemblyFiles",  addinSpecs.Where(x => x.Assemblies != null).SelectMany(x => x.Assemblies).Select(x => "../release/addins" + x) },
+                { "Host",  "cake-contrib.github.io" },
+                { "LinkRoot",  "Cake.Prca.Website" },
+                { "BaseEditUrl", "https://github.com/cake-contrib/Cake.Prca.Website/tree/develop/docs/input/" },
             }
         });
     });
@@ -128,9 +131,14 @@ Task("Preview")
             Theme = "Samson",
             UpdatePackages = true,
             Preview = true,
+            Watch = true,
+            PreviewVirtualDirectory = "Cake.Prca.Website",
             Settings = new Dictionary<string, object>
             {
-                { "AssemblyFiles",  addinSpecs.Where(x => x.Assemblies != null).SelectMany(x => x.Assemblies).Select(x => "../release/addins" + x) }
+                { "AssemblyFiles",  addinSpecs.Where(x => x.Assemblies != null).SelectMany(x => x.Assemblies).Select(x => "../release/addins" + x) },
+                { "Host",  "cake-contrib.github.io" },
+                { "LinkRoot",  "Cake.Prca.Website" },
+                { "BaseEditUrl", "https://github.com/cake-contrib/Cake.Prca.Website/tree/develop/docs/input/" },
             }
         });
     });
