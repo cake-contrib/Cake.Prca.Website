@@ -1,6 +1,5 @@
 Name: Team Foundation Server (TFS) & Visual Studio Team Services (VSTS) Support
 NuGet: Cake.Prca.PullRequests.Tfs
-Prerelease: true
 Repository: https://github.com/cake-contrib/Cake.Prca.PullRequests.Tfs
 Assemblies:
 - "/**/Cake.Prca.PullRequests.Tfs.dll"
