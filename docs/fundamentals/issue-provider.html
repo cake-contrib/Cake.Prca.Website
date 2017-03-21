@@ -100,6 +100,14 @@
 
                     </ul>
                 </li>
+                <li class="treeview">
+                    <a href="/Cake.Prca.Website/docs/extending">Extending</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                                        <li><a href="/Cake.Prca.Website/docs/extending/how-to-implement-issue-providers">How to implement issue providers</a></li>
+                <li><a href="/Cake.Prca.Website/docs/extending/how-to-implement-pull-request-systems">How to implement pull request systems</a></li>
+
+                    </ul>
+                </li>
 
                     </ul>
                 </section>                
@@ -115,40 +123,10 @@
 		<h1>Issue Provider</h1>
 	</section>
 	<section class="content">
-		<html><head></head><body><p>Issue provider Addins are responsible for providing the output of an analyzer or linter to the Cake Pull Request Code Analysis Addin.</p>
-<h2 id="implementation">Implementation</h2>
-<p>Issue providers need to implement the <a href="../../api/Cake.Prca.Issues/ICodeAnalysisProvider">ICodeAnalysisProvider</a> interface.
-For simplyfing implementation there exists an abstract <a href="../../api/Cake.Prca.Issues/CodeAnalysisProvider">CodeAnalysisProvider</a> base class from which concrete implementation can be inherited.</p>
-<p>Issue provider aliases should use the <code>CakeAliasConstants.MainCakeAliasCategory</code> and  <code>CakeAliasConstants.CodeAnalysisProviderCakeAliasCategory</code>
-constants for defining their category:</p>
-<pre><code class="language-csharp">[CakeAliasCategory(CakeAliasConstants.MainCakeAliasCategory)]
-public static class MyIssueProviderAliases
-{
-    [CakeMethodAlias]
-    [CakeAliasCategory(CakeAliasConstants.CodeAnalysisProviderCakeAliasCategory)]
-    public static <a href="/Cake.Prca.Website/api/Cake.Prca.Issues/ICodeAnalysisProvider">ICodeAnalysisProvider</a> MyIssueProvider(
-        this ICakeContext context)
-    {
-    }
-}
-</code></pre>
-<h2 id="helper">Helper</h2>
-<p>The following helper are provider by <code>Cake.Prca</code> for simplyfing implementation of issue providers:</p>
-<table class="table">
-<thead>
-<tr>
-<th>Helper</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="../../api/Cake.Prca.Issues/StringPathExtensions">StringPathExtensions</a></td>
-<td>Extensions for string for handling paths.</td>
-</tr>
-</tbody>
-</table>
-</body></html>
+		<p>Issue provider Addins are responsible for providing the output of an analyzer or linter to the Cake Pull Request Code Analysis Addin.</p>
+<p>See <a href="../../addins/issue-provider/">Issue Provider</a> for a list of currently supported analyzers and linters.</p>
+<p>See <a href="../extending/how-to-implement-issue-providers">How to implement issue providers</a> for instruction on how to implement support for additional issue providers.</p>
+
 	</section>
                 
             </div>           
