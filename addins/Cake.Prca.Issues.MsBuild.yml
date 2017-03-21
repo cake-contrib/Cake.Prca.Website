@@ -1,6 +1,5 @@
 Name: MsBuild Log Support
 NuGet: Cake.Prca.Issues.MsBuild
-Prerelease: true
 Repository: https://github.com/cake-contrib/Cake.Prca.Issues.MsBuild
 Assemblies:
 - "/**/Cake.Prca.Issues.MsBuild.dll"

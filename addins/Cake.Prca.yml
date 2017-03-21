@@ -1,6 +1,5 @@
 Name: Cake Pull Request Code Analysis
 NuGet: Cake.Prca
-Prerelease: true
 Repository: https://github.com/cake-contrib/Cake.Prca
 Assemblies:
 - "/**/Cake.Prca.dll"
