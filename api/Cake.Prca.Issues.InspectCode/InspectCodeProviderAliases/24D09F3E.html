@@ -72,9 +72,7 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
-<p><a href="#Syntax">Syntax</a></p>
-<p><a href="#Examples">Examples</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
@@ -158,11 +156,7 @@
 <section class="content">
 	
 	
-		<h1 id="Summary">Summary</h1>
-	<div class="lead">
-            Gets an instance of a provider for code analysis issues reported by JetBrains Inspect Code using a log file from disk.
-            </div>
-
+	
 		<div class="panel panel-default">
   			<div class="panel-body">	
 				<dl class="dl-horizontal">	
@@ -182,17 +176,6 @@
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public static ICodeAnalysisProvider InspectCodeFromFilePath(this ICakeContext context, FilePath logFilePath, DirectoryPath repositoryRoot)</code></pre>
 
-	<h1 id="Examples">Examples</h1>
-	<div>
-            <p>Report code analysis issues reported by JetBrains Inspect Code to a TFS pull request:</p>
-            <pre><code class="cs">ReportCodeAnalysisIssuesToPullRequest(
-        InspectCodeFromFilePath(
-            new FilePath("C:\build\InspectCode.log"),
-            new DirectoryPath("c:\repo")),
-        TfsPullRequests(
-            new Uri("http://myserver:8080/tfs/defaultcollection/myproject/_git/myrepository"),
-            "refs/heads/feature/myfeature"));</code></pre>
-            </div>
 
 
 	<h1 id="Attributes">Attributes</h1>
@@ -232,17 +215,17 @@
 					<tbody><tr>
 						<td>context</td>
 						<td>ICakeContext</td>
-						<td>The context.</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>logFilePath</td>
 						<td>FilePath</td>
-						<td>Path to the the InspectCode log file.</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>repositoryRoot</td>
 						<td>DirectoryPath</td>
-						<td>Root path of the repository.</td>
+						<td></td>
 					</tr>
 			</tbody></table>
 		</div>
@@ -260,7 +243,7 @@
 				</thead>
 				<tbody><tr>
 					<td><a href="/Cake.Prca.Website/api/Cake.Prca.Issues/ICodeAnalysisProvider">I<wbr>Code<wbr>Analysis<wbr>Provider</a></td>
-					<td>Instance of a provider for code analysis issues reported by JetBrains Insepct Code.</td>
+					<td></td>
 				</tr>
 			</tbody></table>
 		</div>
