@@ -25,8 +25,8 @@ You can check the required dependencies through the dependencies on the NuGet pa
 This means that it's not possible to use a version of an issue provider build against `Cake.Prca` 1.0.0
 together with a version of a pull request system build against `Cake.Prca` 2.0.0.
 
-We use stric [semantic versioning].
-Therefore it's possible to use issue provider and pull request system built agains `Cake.Prca` 1.0.0
+We use strict [semantic versioning].
+Therefore it's possible to use issue provider and pull request system built against `Cake.Prca` 1.0.0
 together with `Cake.Prca` 1.1.0.
 :::
 
@@ -52,3 +52,6 @@ Task("prca").Does(() =>
 :::{.alert .alert-info}
 Please note that you need at least Cake 0.16.2 to use Pull Request Code Analysis.
 :::
+```
+
+[semantic versioning]: http://semver.org/
