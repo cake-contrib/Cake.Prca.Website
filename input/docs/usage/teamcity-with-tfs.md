@@ -29,11 +29,12 @@ Task("prca").Does(() =>
         MsBuildCodeAnalysisFromFilePath(
             @"C:\build\msbuild.log",
             MsBuildXmlFileLoggerFormat,
-            new DirectoryPath("c:\repo")),
+            repoRootFolder),
         TfsPullRequests(
             repoRemoteUrl,
             sourceBranchName,
-            PrcaAuthenticationNtlm()));
+            PrcaAuthenticationNtlm()),
+        repoRootFolder);
 });
 ```
 

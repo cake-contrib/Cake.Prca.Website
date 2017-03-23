@@ -22,14 +22,16 @@ Finally you can define a task where you call the core addin with the desired iss
 ```csharp
 Task("prca").Does(() =>
 {
+    var repoRootFolder = new DirectoryPath("c:\repo");
     ReportCodeAnalysisIssuesToPullRequest(
         MsBuildCodeAnalysisFromFilePath(
             @"C:\build\msbuild.log",
             MsBuildXmlFileLoggerFormat,
-            new DirectoryPath("c:\repo")),
+            repoRootFolder),
         TfsPullRequests(
             new Uri("http://myserver:8080/tfs/defaultcollection/myproject/_git/myrepository"),
             "refs/heads/feature/myfeature",
-            PrcaAuthenticationNtlm()));
+            PrcaAuthenticationNtlm()),
+        repoRootFolder);
 });
 ```
