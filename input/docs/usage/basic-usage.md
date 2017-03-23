@@ -29,6 +29,7 @@ Task("prca").Does(() =>
             new DirectoryPath("c:\repo")),
         TfsPullRequests(
             new Uri("http://myserver:8080/tfs/defaultcollection/myproject/_git/myrepository"),
-            "refs/heads/feature/myfeature"));
+            "refs/heads/feature/myfeature",
+            PrcaAuthenticationNtlm()));
 });
 ```
