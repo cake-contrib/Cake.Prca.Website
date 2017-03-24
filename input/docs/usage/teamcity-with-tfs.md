@@ -7,10 +7,6 @@ TeamCity and with Team Foundation Server as pull request system.
 
 TFS support is implemented in the `Cake.Prca.PullRequests.Tfs` addin.
 
-:::{.alert .alert-info}
-Please note that the addin currently only supports Team Foundation Server on-prem using NTLM authentication.
-:::
-
 In your main Cake build script run on TeamCity you need to determine the remote repository URL and
 source branch of the pull request and create the [TfsPullRequests] object with this information.
 
@@ -33,8 +29,12 @@ Task("prca").Does(() =>
         MsBuildCodeAnalysisFromFilePath(
             @"C:\build\msbuild.log",
             MsBuildXmlFileLoggerFormat,
-            new DirectoryPath("c:\repo")),
-        TfsPullRequests(repoRemoteUrl, sourceBranchName));
+            repoRootFolder),
+        TfsPullRequests(
+            repoRemoteUrl,
+            sourceBranchName,
+            PrcaAuthenticationNtlm()),
+        repoRootFolder);
 });
 ```
 
