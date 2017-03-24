@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head>
+﻿<!DOCTYPE html><html><head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=Edge">
         <meta name="description">
@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/Cake.Prca.Website/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/Cake.Prca.Website/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake PRCA - API - TfsPullRequestSystemAliases.TfsPullRequests(ICakeContext, Uri, int) Method</title>
+        <title>Cake PRCA - API - TfsPullRequestSystemAliases.PrcaAuthenticationPersonalAccessToken(ICakeContext, string) Method</title>
         <link href="/Cake.Prca.Website/assets/css/mermaid.css" rel="stylesheet">
         <link href="/Cake.Prca.Website/assets/css/highlight.css" rel="stylesheet">
         <link href="/Cake.Prca.Website/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -74,7 +74,6 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
-<p><a href="#Examples">Examples</a></p>
 <p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
@@ -136,8 +135,13 @@
 		<li><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystemAliases">Tfs<wbr>Pull<wbr>Request<wbr>System<wbr>Aliases</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Method Members</li>
-				<li><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystemAliases/2C297596">TfsPullRequests<wbr>(ICakeContext, <wbr>Uri, <wbr>string)<wbr></a></li>
-				<li class="selected"><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystemAliases/EEF6DC38">TfsPullRequests<wbr>(ICakeContext, <wbr>Uri, <wbr>int)<wbr></a></li>
+				<li><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystemAliases/E9DD7BA2">Prca<wbr>Authentication<wbr>Azure<wbr>Active<wbr>Directory<wbr>(ICakeContext, <wbr>string, <wbr>string)<wbr></a></li>
+				<li><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystemAliases/12EAF902">Prca<wbr>Authentication<wbr>Basic<wbr>(ICakeContext, <wbr>string, <wbr>string)<wbr></a></li>
+				<li><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystemAliases/46EEB612">Prca<wbr>Authentication<wbr>Ntlm<wbr>(ICakeContext)<wbr></a></li>
+				<li><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystemAliases/A65DCCF0">Prca<wbr>Authentication<wbr>O<wbr>Auth<wbr>(ICakeContext, <wbr>string)<wbr></a></li>
+				<li class="selected"><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystemAliases/9AE041FC">Prca<wbr>Authentication<wbr>Personal<wbr>Access<wbr>Token<wbr>(ICakeContext, <wbr>string)<wbr></a></li>
+				<li><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystemAliases/ECC9B51D">TfsPullRequests<wbr>(ICakeContext, <wbr>Uri, <wbr>string, <wbr>IPrcaCredentials)<wbr></a></li>
+				<li><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystemAliases/55B91E41">TfsPullRequests<wbr>(ICakeContext, <wbr>Uri, <wbr>int, <wbr>IPrcaCredentials)<wbr></a></li>
 				<li><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystemAliases/65D0757F">TfsPullRequests<wbr>(ICakeContext, <wbr>Tfs<wbr>Pull<wbr>Request<wbr>Settings)<wbr></a></li>
 
 
@@ -153,15 +157,15 @@
 
 <section class="content-header">
 			<h3><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystemAliases">Tfs<wbr>Pull<wbr>Request<wbr>System<wbr>Aliases</a>.</h3>
-	<h1>TfsPullRequests<wbr>(ICakeContext, <wbr>Uri, <wbr>int)<wbr> <small>Method</small></h1>
+	<h1>Prca<wbr>Authentication<wbr>Personal<wbr>Access<wbr>Token<wbr>(ICakeContext, <wbr>string)<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-            Gets an object for writing issues to Team Foundation Server or Visual Studio Team Services pull request
-            in a specific repository and with a specific ID.
+            Returns credentials for authentication with a personal access token.
+            Can be used for Team Foundation Server and Visual Studio Team Services.
             </div>
 
 		<div class="panel panel-default">
@@ -181,15 +185,8 @@
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static IPullRequestSystem TfsPullRequests(this ICakeContext context, Uri repositoryUrl, int pullRequestId)</code></pre>
+	<pre><code>public static IPrcaCredentials PrcaAuthenticationPersonalAccessToken(this ICakeContext context, string personalAccessToken)</code></pre>
 
-	<h1 id="Examples">Examples</h1>
-	<div>
-            <p>Report code analysis issues reported as MsBuild warnings to a TFS pull request:</p>
-            <pre><code class="cs">ReportCodeAnalysisIssuesToPullRequest(
-        MsBuildCodeAnalysis(@"C:\build\msbuild.log", MsBuildXmlFileLoggerFormat),
-        TfsPullRequests(new Uri("http://myserver:8080/tfs/defaultcollection/myproject/_git/myrepository"), 5));</code></pre>
-            </div>
 
 
 	<h1 id="Attributes">Attributes</h1>
@@ -232,15 +229,9 @@
 						<td>The context.</td>
 					</tr>
 					<tr>
-						<td>repositoryUrl</td>
-						<td>Uri</td>
-						<td>Full URL of the Git repository,
-            eg. <pre><code class="cs">http://myserver:8080/tfs/defaultcollection/myproject/_git/myrepository</code></pre>.</td>
-					</tr>
-					<tr>
-						<td>pullRequestId</td>
-						<td>int</td>
-						<td>ID of the pull request.</td>
+						<td>personalAccessToken</td>
+						<td>string</td>
+						<td>Personal access token.</td>
 					</tr>
 			</tbody></table>
 		</div>
@@ -257,8 +248,8 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests/IPullRequestSystem">IPullRequestSystem</a></td>
-					<td>Object for writing issues to Team Foundation Server or Visual Studio Team Services pull request.</td>
+					<td><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs/IPrcaCredentials">IPrcaCredentials</a></td>
+					<td>Credentials for authentication with a personal access token.</td>
 				</tr>
 			</tbody></table>
 		</div>

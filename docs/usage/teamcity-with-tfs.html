@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -126,8 +126,6 @@
 		<p>This page describes how to use the Cake Pull Request Code Analysis Addin for builds run on
 TeamCity and with Team Foundation Server as pull request system.</p>
 <p>TFS support is implemented in the <code>Cake.Prca.PullRequests.Tfs</code> addin.</p>
-<div class="alert alert-info"><p>Please note that the addin currently only supports Team Foundation Server on-prem using NTLM authentication.</p>
-</div>
 <p>In your main Cake build script run on TeamCity you need to determine the remote repository URL and
 source branch of the pull request and create the <a href="../../api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystemAliases/">TfsPullRequests</a> object with this information.</p>
 <p>You can retrieve the required information using the <code>Cake.Git</code> Addin:</p>
@@ -147,8 +145,12 @@ Task(&quot;prca&quot;).Does(() =&gt;
         MsBuildCodeAnalysisFromFilePath(
             &#64;&quot;C:\build\msbuild.log&quot;,
             MsBuildXmlFileLoggerFormat,
-            new DirectoryPath(&quot;c:\repo&quot;)),
-        TfsPullRequests(repoRemoteUrl, sourceBranchName));
+            repoRootFolder),
+        TfsPullRequests(
+            repoRemoteUrl,
+            sourceBranchName,
+            PrcaAuthenticationNtlm()),
+        repoRootFolder);
 });
 </code></pre>
 

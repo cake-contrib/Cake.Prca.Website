@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head>
+﻿<!DOCTYPE html><html><head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=Edge">
         <meta name="description">
@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/Cake.Prca.Website/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/Cake.Prca.Website/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake PRCA - API - TfsPullRequestSystemAliases.TfsPullRequests(ICakeContext, Uri, string) Method</title>
+        <title>Cake PRCA - API - IPrcaCredentials Interface</title>
         <link href="/Cake.Prca.Website/assets/css/mermaid.css" rel="stylesheet">
         <link href="/Cake.Prca.Website/assets/css/highlight.css" rel="stylesheet">
         <link href="/Cake.Prca.Website/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -72,12 +72,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
-<p><a href="#Syntax">Syntax</a></p>
-<p><a href="#Examples">Examples</a></p>
-<p><a href="#Attributes">Attributes</a></p>
-<p><a href="#Parameters">Parameters</a></p>
-<p><a href="#ReturnValue">Return Value</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+<p><a href="#ExtensionMethods">Extension Methods</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -132,13 +128,13 @@
 		<li><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs.dll">Cake<wbr>.Prca<wbr>.PullRequests<wbr>.Tfs<wbr>.dll</a></li>
 		<li class="header">Namespace</li>
 		<li><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs">Cake<wbr>.Prca<wbr>.PullRequests<wbr>.Tfs</a></li>
-		<li class="header">Type</li>
-		<li><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystemAliases">Tfs<wbr>Pull<wbr>Request<wbr>System<wbr>Aliases</a></li>
 		<li role="separator" class="divider"></li>
-			<li class="header">Method Members</li>
-				<li class="selected"><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystemAliases/2C297596">TfsPullRequests<wbr>(ICakeContext, <wbr>Uri, <wbr>string)<wbr></a></li>
-				<li><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystemAliases/EEF6DC38">TfsPullRequests<wbr>(ICakeContext, <wbr>Uri, <wbr>int)<wbr></a></li>
-				<li><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystemAliases/65D0757F">TfsPullRequests<wbr>(ICakeContext, <wbr>Tfs<wbr>Pull<wbr>Request<wbr>Settings)<wbr></a></li>
+			<li class="header">Interface Types</li>
+				<li class="selected"><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs/IPrcaCredentials">IPrcaCredentials</a></li>
+			<li class="header">Class Types</li>
+				<li><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSettings">Tfs<wbr>Pull<wbr>Request<wbr>Settings</a></li>
+				<li><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystem">TfsPullRequestSystem</a></li>
+				<li><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystemAliases">Tfs<wbr>Pull<wbr>Request<wbr>System<wbr>Aliases</a></li>
 
 
                     </ul>
@@ -152,118 +148,96 @@
 
 
 <section class="content-header">
-			<h3><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystemAliases">Tfs<wbr>Pull<wbr>Request<wbr>System<wbr>Aliases</a>.</h3>
-	<h1>TfsPullRequests<wbr>(ICakeContext, <wbr>Uri, <wbr>string)<wbr> <small>Method</small></h1>
+	<h1>IPrcaCredentials <small>Interface</small></h1>
 </section>
 <section class="content">
 	
 	
-		<h1 id="Summary">Summary</h1>
-	<div class="lead">
-            Gets an object for writing issues to Team Foundation Server or Visual Studio Team Services pull request
-            in a specific repository and for a specific source branch.
-            </div>
-
+	
 		<div class="panel panel-default">
-  			<div class="panel-body">	
-				<dl class="dl-horizontal">	
-						<dt>Assembly</dt>
-						<dd><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs.dll">Cake<wbr>.Prca<wbr>.PullRequests<wbr>.Tfs<wbr>.dll</a></dd>
-						
-						<dt>Namespace</dt>
-						<dd><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs">Cake<wbr>.Prca<wbr>.PullRequests<wbr>.Tfs</a></dd>
-					
-						<dt>Containing Type</dt>
-						<dd><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystemAliases">Tfs<wbr>Pull<wbr>Request<wbr>System<wbr>Aliases</a></dd>		
-					
-				</dl>
+  			<div class="panel-body">
+				<div class="row">
+					<div class="col-md-6">
+						<dl class="dl-horizontal">		
+								<dt>Assembly</dt>
+								<dd><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs.dll">Cake<wbr>.Prca<wbr>.PullRequests<wbr>.Tfs<wbr>.dll</a></dd>
+
+								<dt>Namespace</dt>
+								<dd><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs">Cake<wbr>.Prca<wbr>.PullRequests<wbr>.Tfs</a></dd>
+											
+							
+							
+							
+								<dt>Implementing Types</dt>
+								<dd>
+									<ul class="list-unstyled">
+											<li><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs.Authentication/PrcaAadCredentials">PrcaAadCredentials</a></li>								
+											<li><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs.Authentication/PrcaOAuthCredentials">PrcaOAuthCredentials</a></li>								
+											<li><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs.Authentication/PrcaNtlmCredentials">PrcaNtlmCredentials</a></li>								
+											<li><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs.Authentication/PrcaBasicCredentials">PrcaBasicCredentials</a></li>								
+									</ul>
+								</dd>				
+						</dl>
+					</div>		
+					<div class="col-md-6">
+						<div class="mermaid">
+							graph TD
+	Type["IPrcaCredentials"]
+class Type type-node
+	Type-.-&gt;Implementing0["PrcaAadCredentials"]
+	click Implementing0 "/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs.Authentication/PrcaAadCredentials"
+	Type-.-&gt;Implementing1["PrcaOAuthCredentials"]
+	click Implementing1 "/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs.Authentication/PrcaOAuthCredentials"
+	Type-.-&gt;Implementing2["PrcaNtlmCredentials"]
+	click Implementing2 "/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs.Authentication/PrcaNtlmCredentials"
+	Type-.-&gt;Implementing3["PrcaBasicCredentials"]
+	click Implementing3 "/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs.Authentication/PrcaBasicCredentials"
+
+						</div>
+					</div>
+				</div>
   			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static IPullRequestSystem TfsPullRequests(this ICakeContext context, Uri repositoryUrl, string sourceBranch)</code></pre>
+	<pre><code>public interface IPrcaCredentials</code></pre>
 
-	<h1 id="Examples">Examples</h1>
-	<div>
-            <p>Report code analysis issues reported as MsBuild warnings to a TFS pull request:</p>
-            <pre><code class="cs">ReportCodeAnalysisIssuesToPullRequest(
-        MsBuildCodeAnalysis(@"C:\build\msbuild.log", MsBuildXmlFileLoggerFormat),
-        TfsPullRequests(new Uri("http://myserver:8080/tfs/defaultcollection/myproject/_git/myrepository"), "refs/heads/feature/myfeature"));</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+			<h1 id="ExtensionMethods">Extension Methods</h1>
+			<div class="box">
+				<div class="box-body no-padding table-responsive">
+					<table class="table table-striped table-hover three-cols">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Value</th>
+								<th>Summary</th>
+							</tr>
+						</thead>
+							<tbody><tr>
+								<td><a href="/Cake.Prca.Website/api/Cake.Prca/PrcaArgumentChecks/3B78CC85">NotNull<wbr>&lt;<wbr>I<wbr>Prca<wbr>Credentials&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Throws an exception if the specified parameter's value is null.
             </div>
-
-
-	<h1 id="Attributes">Attributes</h1>
-	<div class="box">
-		<div class="box-body no-padding table-responsive">
-			<table class="table table-striped table-hover two-cols">
-				<thead>
-					<tr>
-						<th>Type</th>
-						<th>Description</th>
-					</tr>
-				</thead>
-					<tbody><tr>
-						<td>Cake<wbr>Alias<wbr>Category<wbr>Attribute</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>Cake<wbr>Method<wbr>Alias<wbr>Attribute</td>
-						<td></td>
-					</tr>
-			</tbody></table>
-		</div>
-	</div>	
-
-
-	<h1 id="Parameters">Parameters</h1>
-	<div class="box">
-		<div class="box-body no-padding table-responsive">
-			<table class="table table-striped table-hover three-cols">
-				<thead>
-					<tr>
-						<th>Name</th>
-						<th>Type</th>
-						<th>Description</th>
-					</tr>
-				</thead>
-					<tbody><tr>
-						<td>context</td>
-						<td>ICakeContext</td>
-						<td>The context.</td>
-					</tr>
-					<tr>
-						<td>repositoryUrl</td>
-						<td>Uri</td>
-						<td>Full URL of the Git repository,
-            eg. <pre><code class="cs">http://myserver:8080/tfs/defaultcollection/myproject/_git/myrepository</code></pre>.</td>
-					</tr>
-					<tr>
-						<td>sourceBranch</td>
-						<td>string</td>
-						<td>Branch for which the pull request is made.</td>
-					</tr>
-			</tbody></table>
-		</div>
-	</div>	
-
-	<h1 id="ReturnValue">Return Value</h1>
-	<div class="box">
-		<div class="box-body no-padding table-responsive">
-			<table class="table table-striped table-hover two-cols">
-				<thead>
-					<tr>
-						<th>Type</th>
-						<th>Description</th>
-					</tr>
-				</thead>
-				<tbody><tr>
-					<td><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests/IPullRequestSystem">IPullRequestSystem</a></td>
-					<td>Object for writing issues to Team Foundation Server or Visual Studio Team Services pull request.</td>
-				</tr>
-			</tbody></table>
-		</div>
-	</div>	
-
+										<div><small><em>From <a href="/Cake.Prca.Website/api/Cake.Prca/PrcaArgumentChecks">PrcaArgumentChecks</a></em></small></div>
+								</td>
+							</tr>
+					</tbody></table>
+				</div>
+			</div>
+		
 
 	
 </section>

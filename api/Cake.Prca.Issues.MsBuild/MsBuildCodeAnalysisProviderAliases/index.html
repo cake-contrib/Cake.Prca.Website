@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head>
+﻿<!DOCTYPE html><html><head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=Edge">
         <meta name="description">
@@ -72,7 +72,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Methods">Methods</a></p>
 <hr class="infobar-hidden">
@@ -156,7 +157,12 @@
 <section class="content">
 	
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            Contains functionality related to importing code analysis issues from MSBuild logs to write them to
+            pull requests.
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -240,7 +246,9 @@ class Type type-node
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.Issues.MsBuild/MsBuildCodeAnalysisProviderAliases/50251E62">MsBuildCodeAnalysis<wbr>(ICakeContext, <wbr>Ms<wbr>Build<wbr>Code<wbr>Analysis<wbr>Settings)<wbr></a></td>
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.Issues/ICodeAnalysisProvider">I<wbr>Code<wbr>Analysis<wbr>Provider</a></td>
 								<td>
-									<div></div>
+									<div>
+             Gets an instance of a provider for code analysis issues reported as MsBuild warnings using specified settings.
+             </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -248,7 +256,9 @@ class Type type-node
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.Issues.MsBuild/MsBuildCodeAnalysisProviderAliases/2323BDE1">Ms<wbr>Build<wbr>Code<wbr>Analysis<wbr>From<wbr>Content<wbr>(ICakeContext, <wbr>string, <wbr>ILogFileFormat, <wbr>DirectoryPath)<wbr></a></td>
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.Issues/ICodeAnalysisProvider">I<wbr>Code<wbr>Analysis<wbr>Provider</a></td>
 								<td>
-									<div></div>
+									<div>
+            Gets an instance of a provider for code analysis issues reported as MsBuild warnings using log content.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -256,7 +266,9 @@ class Type type-node
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.Issues.MsBuild/MsBuildCodeAnalysisProviderAliases/574714BE">Ms<wbr>Build<wbr>Code<wbr>Analysis<wbr>From<wbr>File<wbr>Path<wbr>(ICakeContext, <wbr>FilePath, <wbr>ILogFileFormat, <wbr>DirectoryPath)<wbr></a></td>
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.Issues/ICodeAnalysisProvider">I<wbr>Code<wbr>Analysis<wbr>Provider</a></td>
 								<td>
-									<div></div>
+									<div>
+            Gets an instance of a provider for code analysis issues reported as MsBuild warnings using a log file from disk.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -264,7 +276,28 @@ class Type type-node
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.Issues.MsBuild/MsBuildCodeAnalysisProviderAliases/19A64D53">Ms<wbr>Build<wbr>Xml<wbr>File<wbr>Logger<wbr>Format<wbr>(ICakeContext)<wbr></a></td>
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.Issues.MsBuild/ILogFileFormat">ILogFileFormat</a></td>
 								<td>
-									<div></div>
+									<div>
+            <p>
+            Gets an instance for the MsBuild log format as written by the </p><pre><code class="cs">XmlFileLogger</code></pre> class
+            from MSBuild Extension Pack.
+            <p></p>
+            <p>
+            You can add the logger to the MSBuildSettings like this:
+            </p><pre><code class="cs">var settings = new MsBuildSettings()
+    .WithLogger(
+        Context.Tools.Resolve("MSBuild.ExtensionPack.Loggers.dll").FullPath,
+        "XmlFileLogger",
+        string.Format(
+            "logfile=\"{0}\";verbosity=Detailed;encoding=UTF-8",
+            @"C:\build\msbuild.log")
+    )</code></pre>
+            <p></p>
+            <p>
+            In order to use the above logger, include the following in your build.cake file to download and
+            install from NuGet.org:
+            </p><pre><code class="cs">#tool "nuget:?package=MSBuild.Extension.Pack"</code></pre>
+            <p></p>
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -272,6 +305,7 @@ class Type type-node
 				</div>
 			</div>
 		
+
 
 
 	

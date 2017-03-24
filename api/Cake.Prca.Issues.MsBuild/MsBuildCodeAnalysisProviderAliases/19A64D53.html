@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head>
+﻿<!DOCTYPE html><html><head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=Edge">
         <meta name="description">
@@ -72,7 +72,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
@@ -157,7 +158,30 @@
 <section class="content">
 	
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            <p>
+            Gets an instance for the MsBuild log format as written by the </p><pre><code class="cs">XmlFileLogger</code></pre> class
+            from MSBuild Extension Pack.
+            <p></p>
+            <p>
+            You can add the logger to the MSBuildSettings like this:
+            </p><pre><code class="cs">var settings = new MsBuildSettings()
+    .WithLogger(
+        Context.Tools.Resolve("MSBuild.ExtensionPack.Loggers.dll").FullPath,
+        "XmlFileLogger",
+        string.Format(
+            "logfile=\"{0}\";verbosity=Detailed;encoding=UTF-8",
+            @"C:\build\msbuild.log")
+    )</code></pre>
+            <p></p>
+            <p>
+            In order to use the above logger, include the following in your build.cake file to download and
+            install from NuGet.org:
+            </p><pre><code class="cs">#tool "nuget:?package=MSBuild.Extension.Pack"</code></pre>
+            <p></p>
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">	
 				<dl class="dl-horizontal">	
@@ -216,7 +240,7 @@
 					<tbody><tr>
 						<td>context</td>
 						<td>ICakeContext</td>
-						<td></td>
+						<td>The context.</td>
 					</tr>
 			</tbody></table>
 		</div>
@@ -234,7 +258,7 @@
 				</thead>
 				<tbody><tr>
 					<td><a href="/Cake.Prca.Website/api/Cake.Prca.Issues.MsBuild/ILogFileFormat">ILogFileFormat</a></td>
-					<td></td>
+					<td>Instance for the MsBuild log format.</td>
 				</tr>
 			</tbody></table>
 		</div>

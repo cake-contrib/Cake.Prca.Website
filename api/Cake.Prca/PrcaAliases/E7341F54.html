@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head>
+﻿<!DOCTYPE html><html><head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=Edge">
         <meta name="description">
@@ -136,7 +136,7 @@
 		<li><a href="/Cake.Prca.Website/api/Cake.Prca/PrcaAliases">PrcaAliases</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Method Members</li>
-				<li><a href="/Cake.Prca.Website/api/Cake.Prca/PrcaAliases/49189862">Report<wbr>Code<wbr>Analysis<wbr>Issues<wbr>To<wbr>Pull<wbr>Request<wbr>(ICakeContext, <wbr>I<wbr>Code<wbr>Analysis<wbr>Provider, <wbr>IPullRequestSystem)<wbr></a></li>
+				<li><a href="/Cake.Prca.Website/api/Cake.Prca/PrcaAliases/1B05E783">Report<wbr>Code<wbr>Analysis<wbr>Issues<wbr>To<wbr>Pull<wbr>Request<wbr>(ICakeContext, <wbr>I<wbr>Code<wbr>Analysis<wbr>Provider, <wbr>IPullRequestSystem, <wbr>DirectoryPath)<wbr></a></li>
 				<li class="selected"><a href="/Cake.Prca.Website/api/Cake.Prca/PrcaAliases/E7341F54">Report<wbr>Code<wbr>Analysis<wbr>Issues<wbr>To<wbr>Pull<wbr>Request<wbr>(ICakeContext, <wbr>I<wbr>Code<wbr>Analysis<wbr>Provider, <wbr>IPullRequestSystem, <wbr>Report<wbr>Code<wbr>Analysis<wbr>Issues<wbr>To<wbr>Pull<wbr>Request<wbr>Settings)<wbr></a></li>
 
 
@@ -185,7 +185,7 @@
 	<div>
              <p>Report code analysis issues reported as MsBuild warnings to a TFS pull request and limit number of comments to ten:</p>
              <pre><code class="cs"> var settings =
-         new ReportCodeAnalysisIssuesToPullRequestSettings
+         new ReportCodeAnalysisIssuesToPullRequestSettings(new DirectoryPath("c:\repo"))
          {
              MaxIssuesToPost = 10
          };
@@ -195,8 +195,11 @@
              @"C:\build\msbuild.log",
              MsBuildXmlFileLoggerFormat,
              new DirectoryPath("c:\repo")),
-         TfsPullRequests(new Uri("http://myserver:8080/tfs/defaultcollection/myproject/_git/myrepository"), "refs/heads/feature/myfeature"));
-         settings);</code></pre>
+         TfsPullRequests(
+             new Uri("http://myserver:8080/tfs/defaultcollection/myproject/_git/myrepository"),
+             "refs/heads/feature/myfeature",
+             PrcaAuthenticationNtlm()),
+         settings));</code></pre>
              </div>
 
 

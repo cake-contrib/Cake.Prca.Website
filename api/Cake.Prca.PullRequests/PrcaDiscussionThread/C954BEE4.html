@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head>
+﻿<!DOCTYPE html><html><head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=Edge">
         <meta name="description">
@@ -182,7 +182,7 @@
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public PrcaDiscussionThread(int id, PrcaDiscussionStatus status, FilePath affectedFileRelativePath, IEnumerable&lt;IPrcaDiscussionComment&gt; comments)</code></pre>
+	<pre><code>public PrcaDiscussionThread(int id, PrcaDiscussionStatus status, FilePath filePath, IEnumerable&lt;IPrcaDiscussionComment&gt; comments)</code></pre>
 
 
 
@@ -210,10 +210,11 @@
 						<td>A value if the thread is active or already fixed.</td>
 					</tr>
 					<tr>
-						<td>affectedFileRelativePath</td>
+						<td>filePath</td>
 						<td>FilePath</td>
 						<td>The path to the file where the message should be posted.
-            The path needs to be relative to the repository root.</td>
+            The path needs to be relative to the repository root.
+            Can be <code class="cs">null</code> if discussion is not related to a change in a file.</td>
 					</tr>
 					<tr>
 						<td>comments</td>

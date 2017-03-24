@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -135,14 +135,17 @@ and support for TFS pull requests is imported:</p>
 <p>Finally you can define a task where you call the core addin with the desired issue provider and pull request system:</p>
 <pre><code class="language-csharp">Task(&quot;prca&quot;).Does(() =&gt;
 {
+    var repoRootFolder = new DirectoryPath(&quot;c:\repo&quot;);
     ReportCodeAnalysisIssuesToPullRequest(
         MsBuildCodeAnalysisFromFilePath(
             &#64;&quot;C:\build\msbuild.log&quot;,
             MsBuildXmlFileLoggerFormat,
-            new DirectoryPath(&quot;c:\repo&quot;)),
+            repoRootFolder),
         TfsPullRequests(
             new Uri(&quot;http://myserver:8080/tfs/defaultcollection/myproject/_git/myrepository&quot;),
-            &quot;refs/heads/feature/myfeature&quot;));
+            &quot;refs/heads/feature/myfeature&quot;,
+            PrcaAuthenticationNtlm()),
+        repoRootFolder);
 });
 </code></pre>
 
