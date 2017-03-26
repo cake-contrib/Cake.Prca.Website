@@ -132,6 +132,15 @@ and support for TFS pull requests is imported:</p>
 <pre><code class="language-csharp">#addin &quot;Cake.Prca.Issues.MsBuild&quot;
 #addin &quot;Cake.Prca.PullRequests.Tfs&quot;
 </code></pre>
+<div class="alert alert-info"><p>Please note that the core addin and all issue providers and pull request systems need to be build
+against a compatible core API.
+You can check the required dependencies through the dependencies on the NuGet package of the addins.</p>
+<p>This means that it's not possible to use a version of an issue provider build against <code>Cake.Prca</code> 1.0.0
+together with a version of a pull request system build against <code>Cake.Prca</code> 2.0.0.</p>
+<p>We use strict [semantic versioning].
+Therefore it's possible to use issue provider and pull request system built against <code>Cake.Prca</code> 1.0.0
+together with <code>Cake.Prca</code> 1.1.0.</p>
+</div>
 <p>Finally you can define a task where you call the core addin with the desired issue provider and pull request system:</p>
 <pre><code class="language-csharp">Task(&quot;prca&quot;).Does(() =&gt;
 {
@@ -150,6 +159,9 @@ and support for TFS pull requests is imported:</p>
 </code></pre>
 <div class="alert alert-info"><p>Please note that you need at least Cake 0.16.2 to use Pull Request Code Analysis.</p>
 </div>
+<pre><code>
+[semantic versioning]: http://semver.org/
+</code></pre>
 
 	</section>
                 

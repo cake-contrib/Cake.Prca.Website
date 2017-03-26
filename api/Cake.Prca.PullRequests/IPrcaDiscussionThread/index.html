@@ -72,7 +72,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Properties">Properties</a></p>
 <p><a href="#ExtensionMethods">Extension Methods</a></p>
 <hr class="infobar-hidden">
@@ -158,7 +159,11 @@
 <section class="content">
 	
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            Description of a collection of comments relating to each other.
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -221,35 +226,47 @@ class Type type-node
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests/IPrcaDiscussionThread/C9053CB0">Affected<wbr>File<wbr>Relative<wbr>Path</a></td>
 								<td>FilePath</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets the path to the file where the message should be posted.
+            The path needs to be relative to the repository root.
+            Can be <code class="cs">null</code> if discussion is not related to a change in a file.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests/IPrcaDiscussionThread/922CC368">Comments</a></td>
 								<td>IList<wbr>&lt;<wbr>I<wbr>Prca<wbr>Discussion<wbr>Comment&gt;<wbr></td>
 								<td>
-									<div></div>
+									<div>
+            Gets all the comments of this thread.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests/IPrcaDiscussionThread/D4FE9FDD">CommentSource</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets a value used to decorate comments created by this addin.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests/IPrcaDiscussionThread/5184FA21">Id</a></td>
 								<td>int</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets the ID of the discussion thread.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests/IPrcaDiscussionThread/4E56789F">Status</a></td>
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests/PrcaDiscussionStatus">PrcaDiscussionStatus</a></td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets if the thread is active or already fixed.
+            </div>
 								</td>
 							</tr>
 					</tbody></table>
@@ -274,7 +291,9 @@ class Type type-node
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca/PrcaArgumentChecks/3B78CC85">NotNull<wbr>&lt;<wbr>I<wbr>Prca<wbr>Discussion<wbr>Thread&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
 										<div><small><em>From <a href="/Cake.Prca.Website/api/Cake.Prca/PrcaArgumentChecks">PrcaArgumentChecks</a></em></small></div>
 								</td>
 							</tr>

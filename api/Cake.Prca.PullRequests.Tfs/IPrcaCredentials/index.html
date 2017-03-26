@@ -72,7 +72,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
 <p><a href="#ExtensionMethods">Extension Methods</a></p>
 <hr class="infobar-hidden">
 </div>
@@ -153,7 +154,11 @@
 <section class="content">
 	
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            Interface for different credential types.
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -172,9 +177,9 @@
 								<dd>
 									<ul class="list-unstyled">
 											<li><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs.Authentication/PrcaNtlmCredentials">PrcaNtlmCredentials</a></li>								
-											<li><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs.Authentication/PrcaOAuthCredentials">PrcaOAuthCredentials</a></li>								
-											<li><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs.Authentication/PrcaAadCredentials">PrcaAadCredentials</a></li>								
 											<li><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs.Authentication/PrcaBasicCredentials">PrcaBasicCredentials</a></li>								
+											<li><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs.Authentication/PrcaAadCredentials">PrcaAadCredentials</a></li>								
+											<li><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs.Authentication/PrcaOAuthCredentials">PrcaOAuthCredentials</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -186,12 +191,12 @@
 class Type type-node
 	Type-.-&gt;Implementing0["PrcaNtlmCredentials"]
 	click Implementing0 "/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs.Authentication/PrcaNtlmCredentials"
-	Type-.-&gt;Implementing1["PrcaOAuthCredentials"]
-	click Implementing1 "/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs.Authentication/PrcaOAuthCredentials"
+	Type-.-&gt;Implementing1["PrcaBasicCredentials"]
+	click Implementing1 "/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs.Authentication/PrcaBasicCredentials"
 	Type-.-&gt;Implementing2["PrcaAadCredentials"]
 	click Implementing2 "/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs.Authentication/PrcaAadCredentials"
-	Type-.-&gt;Implementing3["PrcaBasicCredentials"]
-	click Implementing3 "/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs.Authentication/PrcaBasicCredentials"
+	Type-.-&gt;Implementing3["PrcaOAuthCredentials"]
+	click Implementing3 "/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs.Authentication/PrcaOAuthCredentials"
 
 						</div>
 					</div>
@@ -228,7 +233,9 @@ class Type type-node
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca/PrcaArgumentChecks/3B78CC85">NotNull<wbr>&lt;<wbr>I<wbr>Prca<wbr>Credentials&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
 										<div><small><em>From <a href="/Cake.Prca.Website/api/Cake.Prca/PrcaArgumentChecks">PrcaArgumentChecks</a></em></small></div>
 								</td>
 							</tr>
