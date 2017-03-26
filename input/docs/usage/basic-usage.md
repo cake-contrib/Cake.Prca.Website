@@ -35,3 +35,7 @@ Task("prca").Does(() =>
         repoRootFolder);
 });
 ```
+
+:::{.alert .alert-info}
+Please note that you need at least Cake 0.16.2 to use Pull Request Code Analysis.
+:::
