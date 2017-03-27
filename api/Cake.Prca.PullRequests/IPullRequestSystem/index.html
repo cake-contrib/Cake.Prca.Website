@@ -176,8 +176,8 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystem">TfsPullRequestSystem</a></li>								
 											<li><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests/PullRequestSystem">PullRequestSystem</a></li>								
+											<li><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystem">TfsPullRequestSystem</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -187,10 +187,10 @@
 							graph TD
 	Type["IPullRequestSystem"]
 class Type type-node
-	Type-.-&gt;Implementing0["TfsPullRequestSystem"]
-	click Implementing0 "/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystem"
-	Type-.-&gt;Implementing1["PullRequestSystem"]
-	click Implementing1 "/Cake.Prca.Website/api/Cake.Prca.PullRequests/PullRequestSystem"
+	Type-.-&gt;Implementing0["PullRequestSystem"]
+	click Implementing0 "/Cake.Prca.Website/api/Cake.Prca.PullRequests/PullRequestSystem"
+	Type-.-&gt;Implementing1["TfsPullRequestSystem"]
+	click Implementing1 "/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystem"
 
 						</div>
 					</div>
@@ -270,7 +270,9 @@ class Type type-node
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca/PrcaArgumentChecks/3B78CC85">NotNull<wbr>&lt;<wbr>I<wbr>Pull<wbr>Request<wbr>System&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
 										<div><small><em>From <a href="/Cake.Prca.Website/api/Cake.Prca/PrcaArgumentChecks">PrcaArgumentChecks</a></em></small></div>
 								</td>
 							</tr>

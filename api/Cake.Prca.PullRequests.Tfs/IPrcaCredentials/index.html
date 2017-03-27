@@ -171,9 +171,9 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
+											<li><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs.Authentication/PrcaOAuthCredentials">PrcaOAuthCredentials</a></li>								
 											<li><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs.Authentication/PrcaAadCredentials">PrcaAadCredentials</a></li>								
 											<li><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs.Authentication/PrcaBasicCredentials">PrcaBasicCredentials</a></li>								
-											<li><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs.Authentication/PrcaOAuthCredentials">PrcaOAuthCredentials</a></li>								
 											<li><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs.Authentication/PrcaNtlmCredentials">PrcaNtlmCredentials</a></li>								
 									</ul>
 								</dd>				
@@ -184,12 +184,12 @@
 							graph TD
 	Type["IPrcaCredentials"]
 class Type type-node
-	Type-.-&gt;Implementing0["PrcaAadCredentials"]
-	click Implementing0 "/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs.Authentication/PrcaAadCredentials"
-	Type-.-&gt;Implementing1["PrcaBasicCredentials"]
-	click Implementing1 "/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs.Authentication/PrcaBasicCredentials"
-	Type-.-&gt;Implementing2["PrcaOAuthCredentials"]
-	click Implementing2 "/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs.Authentication/PrcaOAuthCredentials"
+	Type-.-&gt;Implementing0["PrcaOAuthCredentials"]
+	click Implementing0 "/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs.Authentication/PrcaOAuthCredentials"
+	Type-.-&gt;Implementing1["PrcaAadCredentials"]
+	click Implementing1 "/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs.Authentication/PrcaAadCredentials"
+	Type-.-&gt;Implementing2["PrcaBasicCredentials"]
+	click Implementing2 "/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs.Authentication/PrcaBasicCredentials"
 	Type-.-&gt;Implementing3["PrcaNtlmCredentials"]
 	click Implementing3 "/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs.Authentication/PrcaNtlmCredentials"
 
@@ -228,7 +228,9 @@ class Type type-node
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca/PrcaArgumentChecks/3B78CC85">NotNull<wbr>&lt;<wbr>I<wbr>Prca<wbr>Credentials&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
 										<div><small><em>From <a href="/Cake.Prca.Website/api/Cake.Prca/PrcaArgumentChecks">PrcaArgumentChecks</a></em></small></div>
 								</td>
 							</tr>

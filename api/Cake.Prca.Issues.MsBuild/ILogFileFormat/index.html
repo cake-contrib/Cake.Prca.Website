@@ -179,8 +179,8 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/Cake.Prca.Website/api/Cake.Prca.Issues.MsBuild/XmlFileLoggerFormat">XmlFileLoggerFormat</a></li>								
 											<li><a href="/Cake.Prca.Website/api/Cake.Prca.Issues.MsBuild/LogFileFormat">LogFileFormat</a></li>								
+											<li><a href="/Cake.Prca.Website/api/Cake.Prca.Issues.MsBuild/XmlFileLoggerFormat">XmlFileLoggerFormat</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -190,10 +190,10 @@
 							graph TD
 	Type["ILogFileFormat"]
 class Type type-node
-	Type-.-&gt;Implementing0["XmlFileLoggerFormat"]
-	click Implementing0 "/Cake.Prca.Website/api/Cake.Prca.Issues.MsBuild/XmlFileLoggerFormat"
-	Type-.-&gt;Implementing1["LogFileFormat"]
-	click Implementing1 "/Cake.Prca.Website/api/Cake.Prca.Issues.MsBuild/LogFileFormat"
+	Type-.-&gt;Implementing0["LogFileFormat"]
+	click Implementing0 "/Cake.Prca.Website/api/Cake.Prca.Issues.MsBuild/LogFileFormat"
+	Type-.-&gt;Implementing1["XmlFileLoggerFormat"]
+	click Implementing1 "/Cake.Prca.Website/api/Cake.Prca.Issues.MsBuild/XmlFileLoggerFormat"
 
 						</div>
 					</div>
@@ -254,7 +254,9 @@ class Type type-node
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca/PrcaArgumentChecks/3B78CC85">NotNull<wbr>&lt;<wbr>I<wbr>Log<wbr>File<wbr>Format&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Throws an exception if the specified parameter's value is null.
+            </div>
 										<div><small><em>From <a href="/Cake.Prca.Website/api/Cake.Prca/PrcaArgumentChecks">PrcaArgumentChecks</a></em></small></div>
 								</td>
 							</tr>
