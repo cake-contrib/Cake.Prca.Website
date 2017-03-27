@@ -56,8 +56,9 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
                         <ul class="nav navbar-nav">                            
-                                    <li><a href="/Cake.Prca.Website/addins">Addins</a></li>
-        <li><a href="/Cake.Prca.Website/docs">Documentation</a></li>
+                                    <li><a href="/Cake.Prca.Website/docs">Documentation</a></li>
+        <li><a href="/Cake.Prca.Website/dsl">Reference</a></li>
+        <li><a href="/Cake.Prca.Website/addins">Addins</a></li>
         <li class="active"><a href="/Cake.Prca.Website/api">API</a></li>
  
                         </ul>       
@@ -72,7 +73,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Methods">Methods</a></p>
 <hr class="infobar-hidden">
@@ -154,7 +156,12 @@
 <section class="content">
 	
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            Contains functionality related to writing code analysis issues to Team Foundation Server or
+            Visual Studio Team Services pull requests.
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -238,7 +245,9 @@ class Type type-node
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystemAliases/E9DD7BA2">Prca<wbr>Authentication<wbr>Azure<wbr>Active<wbr>Directory<wbr>(ICakeContext, <wbr>string, <wbr>string)<wbr></a></td>
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs/IPrcaCredentials">IPrcaCredentials</a></td>
 								<td>
-									<div></div>
+									<div>
+            Returns credentials for authentication with an Azure Active Directory.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -246,7 +255,11 @@ class Type type-node
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystemAliases/12EAF902">Prca<wbr>Authentication<wbr>Basic<wbr>(ICakeContext, <wbr>string, <wbr>string)<wbr></a></td>
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs/IPrcaCredentials">IPrcaCredentials</a></td>
 								<td>
-									<div></div>
+									<div>
+            Returns credentials for basic authentication.
+            Can only be used for on-premise Team Foundation Server configured for basic authentication.
+            See https://www.visualstudio.com/en-us/docs/integrate/get-started/auth/tfs-basic-auth.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -254,7 +267,10 @@ class Type type-node
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystemAliases/46EEB612">Prca<wbr>Authentication<wbr>Ntlm<wbr>(ICakeContext)<wbr></a></td>
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs/IPrcaCredentials">IPrcaCredentials</a></td>
 								<td>
-									<div></div>
+									<div>
+            Returns credentials for integrated / NTLM authentication.
+            Can only be used for on-premise Team Foundation Server.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -262,7 +278,10 @@ class Type type-node
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystemAliases/A65DCCF0">Prca<wbr>Authentication<wbr>O<wbr>Auth<wbr>(ICakeContext, <wbr>string)<wbr></a></td>
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs/IPrcaCredentials">IPrcaCredentials</a></td>
 								<td>
-									<div></div>
+									<div>
+            Returns credentials for OAuth authentication.
+            Can only be used with Visual Studio Team Services.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -270,7 +289,10 @@ class Type type-node
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystemAliases/9AE041FC">Prca<wbr>Authentication<wbr>Personal<wbr>Access<wbr>Token<wbr>(ICakeContext, <wbr>string)<wbr></a></td>
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs/IPrcaCredentials">IPrcaCredentials</a></td>
 								<td>
-									<div></div>
+									<div>
+            Returns credentials for authentication with a personal access token.
+            Can be used for Team Foundation Server and Visual Studio Team Services.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -289,7 +311,10 @@ class Type type-node
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystemAliases/55B91E41">TfsPullRequests<wbr>(ICakeContext, <wbr>Uri, <wbr>int, <wbr>IPrcaCredentials)<wbr></a></td>
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests/IPullRequestSystem">IPullRequestSystem</a></td>
 								<td>
-									<div></div>
+									<div>
+            Gets an object for writing issues to Team Foundation Server or Visual Studio Team Services pull request
+            in a specific repository and with a specific ID.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -297,7 +322,10 @@ class Type type-node
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystemAliases/ECC9B51D">TfsPullRequests<wbr>(ICakeContext, <wbr>Uri, <wbr>string, <wbr>IPrcaCredentials)<wbr></a></td>
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests/IPullRequestSystem">IPullRequestSystem</a></td>
 								<td>
-									<div></div>
+									<div>
+            Gets an object for writing issues to Team Foundation Server or Visual Studio Team Services pull request
+            in a specific repository and for a specific source branch.
+            </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
