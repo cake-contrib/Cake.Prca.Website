@@ -3,7 +3,7 @@ Settings[DocsKeys.Title] = "Cake PRCA";
 Settings[DocsKeys.BaseEditUrl] = "https://github.com/cake-contrib/Cake.Prca.Website/blob/develop/input/";
 Settings[DocsKeys.IncludeGlobalNamespace] = false;
 
-Pipelines.InsertBefore(DocsPipelines.Code, "Addins",
+Pipelines.InsertBefore(Docs.Code, "Addins",
     ReadFiles("../addins/*.yml").Where(x => x.Path.FileName.ToString() != "Cake.Prca.yml"),
     Yaml()
 );
