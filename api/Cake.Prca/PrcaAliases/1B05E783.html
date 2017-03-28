@@ -59,7 +59,7 @@
                                     <li><a href="/Cake.Prca.Website/docs">Documentation</a></li>
         <li><a href="/Cake.Prca.Website/dsl">Reference</a></li>
         <li><a href="/Cake.Prca.Website/addins">Addins</a></li>
-        <li class="active"><a href="/Cake.Prca.Website/api">API</a></li>
+        <li class="active"><a href="/Cake.Prca.Website/api/Cake.Prca">API</a></li>
  
                         </ul>       
                     </div>
@@ -73,7 +73,9 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Examples">Examples</a></p>
 <p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
@@ -156,7 +158,11 @@
 <section class="content">
 	
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            Reports code analysis issues to pull requests.
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">	
 				<dl class="dl-horizontal">	
@@ -176,6 +182,20 @@
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public static void ReportCodeAnalysisIssuesToPullRequest(this ICakeContext context, ICodeAnalysisProvider codeAnalysisProvider, IPullRequestSystem pullRequestSystem, DirectoryPath repositoryRoot)</code></pre>
 
+	<h1 id="Examples">Examples</h1>
+	<div>
+            <p>Report code analysis issues reported as MsBuild warnings to a TFS pull request:</p>
+            <pre><code class="cs">ReportCodeAnalysisIssuesToPullRequest(
+        MsBuildCodeAnalysisFromFilePath(
+            @"C:\build\msbuild.log",
+            MsBuildXmlFileLoggerFormat,
+            new DirectoryPath("c:\repo")),
+        TfsPullRequests(
+            new Uri("http://myserver:8080/tfs/defaultcollection/myproject/_git/myrepository"),
+            "refs/heads/feature/myfeature",
+            PrcaAuthenticationNtlm()),
+        new DirectoryPath("c:\repo"));</code></pre>
+            </div>
 
 
 	<h1 id="Attributes">Attributes</h1>
@@ -211,22 +231,22 @@
 					<tbody><tr>
 						<td>context</td>
 						<td>ICakeContext</td>
-						<td></td>
+						<td>The context.</td>
 					</tr>
 					<tr>
 						<td>codeAnalysisProvider</td>
 						<td><a href="/Cake.Prca.Website/api/Cake.Prca.Issues/ICodeAnalysisProvider">I<wbr>Code<wbr>Analysis<wbr>Provider</a></td>
-						<td></td>
+						<td>The provider for code analysis issues.</td>
 					</tr>
 					<tr>
 						<td>pullRequestSystem</td>
 						<td><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests/IPullRequestSystem">IPullRequestSystem</a></td>
-						<td></td>
+						<td>The pull request system.</td>
 					</tr>
 					<tr>
 						<td>repositoryRoot</td>
 						<td>DirectoryPath</td>
-						<td></td>
+						<td>Root path of the repository.</td>
 					</tr>
 			</tbody></table>
 		</div>

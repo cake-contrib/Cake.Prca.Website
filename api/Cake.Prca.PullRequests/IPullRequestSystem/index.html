@@ -59,7 +59,7 @@
                                     <li><a href="/Cake.Prca.Website/docs">Documentation</a></li>
         <li><a href="/Cake.Prca.Website/dsl">Reference</a></li>
         <li><a href="/Cake.Prca.Website/addins">Addins</a></li>
-        <li class="active"><a href="/Cake.Prca.Website/api">API</a></li>
+        <li class="active"><a href="/Cake.Prca.Website/api/Cake.Prca">API</a></li>
  
                         </ul>       
                     </div>
@@ -73,7 +73,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Methods">Methods</a></p>
 <p><a href="#ExtensionMethods">Extension Methods</a></p>
 <hr class="infobar-hidden">
@@ -159,7 +160,11 @@
 <section class="content">
 	
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            Interface describing a pull request server.
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -177,8 +182,8 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests/PullRequestSystem">PullRequestSystem</a></li>								
 											<li><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystem">TfsPullRequestSystem</a></li>								
+											<li><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests/PullRequestSystem">PullRequestSystem</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -188,10 +193,10 @@
 							graph TD
 	Type["IPullRequestSystem"]
 class Type type-node
-	Type-.-&gt;Implementing0["PullRequestSystem"]
-	click Implementing0 "/Cake.Prca.Website/api/Cake.Prca.PullRequests/PullRequestSystem"
-	Type-.-&gt;Implementing1["TfsPullRequestSystem"]
-	click Implementing1 "/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystem"
+	Type-.-&gt;Implementing0["TfsPullRequestSystem"]
+	click Implementing0 "/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystem"
+	Type-.-&gt;Implementing1["PullRequestSystem"]
+	click Implementing1 "/Cake.Prca.Website/api/Cake.Prca.PullRequests/PullRequestSystem"
 
 						</div>
 					</div>
