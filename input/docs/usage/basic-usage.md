@@ -49,8 +49,4 @@ Task("prca").Does(() =>
 });
 ```
 
-:::{.alert .alert-info}
-Please note that you need at least Cake 0.16.2 to use Pull Request Code Analysis.
-:::
-
 [semantic versioning]: http://semver.org/
