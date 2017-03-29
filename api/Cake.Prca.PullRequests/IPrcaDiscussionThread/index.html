@@ -227,35 +227,47 @@ class Type type-node
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests/IPrcaDiscussionThread/C9053CB0">Affected<wbr>File<wbr>Relative<wbr>Path</a></td>
 								<td>FilePath</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets the path to the file where the message should be posted.
+            The path needs to be relative to the repository root.
+            Can be <code class="cs">null</code> if discussion is not related to a change in a file.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests/IPrcaDiscussionThread/922CC368">Comments</a></td>
 								<td>IList<wbr>&lt;<wbr>I<wbr>Prca<wbr>Discussion<wbr>Comment&gt;<wbr></td>
 								<td>
-									<div></div>
+									<div>
+            Gets all the comments of this thread.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests/IPrcaDiscussionThread/D4FE9FDD">CommentSource</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets a value used to decorate comments created by this addin.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests/IPrcaDiscussionThread/5184FA21">Id</a></td>
 								<td>int</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets the ID of the discussion thread.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests/IPrcaDiscussionThread/4E56789F">Status</a></td>
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests/PrcaDiscussionStatus">PrcaDiscussionStatus</a></td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets if the thread is active or already fixed.
+            </div>
 								</td>
 							</tr>
 					</tbody></table>

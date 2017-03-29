@@ -182,8 +182,8 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystem">TfsPullRequestSystem</a></li>								
 											<li><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests/PullRequestSystem">PullRequestSystem</a></li>								
+											<li><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystem">TfsPullRequestSystem</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -193,10 +193,10 @@
 							graph TD
 	Type["IPullRequestSystem"]
 class Type type-node
-	Type-.-&gt;Implementing0["TfsPullRequestSystem"]
-	click Implementing0 "/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystem"
-	Type-.-&gt;Implementing1["PullRequestSystem"]
-	click Implementing1 "/Cake.Prca.Website/api/Cake.Prca.PullRequests/PullRequestSystem"
+	Type-.-&gt;Implementing0["PullRequestSystem"]
+	click Implementing0 "/Cake.Prca.Website/api/Cake.Prca.PullRequests/PullRequestSystem"
+	Type-.-&gt;Implementing1["TfsPullRequestSystem"]
+	click Implementing1 "/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystem"
 
 						</div>
 					</div>
@@ -231,28 +231,36 @@ class Type type-node
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests/IPullRequestSystem/A01EB2E0">Fetch<wbr>Active<wbr>Discussion<wbr>Threads<wbr>(string)<wbr></a></td>
 								<td>IEnumerable<wbr>&lt;<wbr>I<wbr>Prca<wbr>Discussion<wbr>Thread&gt;<wbr></td>
 								<td>
-									<div></div>
+									<div>
+            Returns a list of all active discussion threads.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests/IPullRequestSystem/81A5B03C">Get<wbr>Modified<wbr>Files<wbr>In<wbr>Pull<wbr>Request<wbr>()<wbr></a></td>
 								<td>IEnumerable<wbr>&lt;FilePath&gt;<wbr></td>
 								<td>
-									<div></div>
+									<div>
+            Returns a list of all files modified in a pull request.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests/IPullRequestSystem/92718D4A">MarkThreadsAsFixed<wbr>(IEnumerable<wbr>&lt;<wbr>I<wbr>Prca<wbr>Discussion<wbr>Thread&gt;<wbr>)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Marks a list of discussion threads as resolved.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests/IPullRequestSystem/CC0B7A19">Post<wbr>Discussion<wbr>Threads<wbr>(IEnumerable<wbr>&lt;<wbr>I<wbr>Code<wbr>Analysis<wbr>Issue&gt;<wbr>, <wbr>string)<wbr></a></td>
 								<td>void</td>
 								<td>
-									<div></div>
+									<div>
+            Posts discussion threads for all issues which need to be posted.
+            </div>
 								</td>
 							</tr>
 					</tbody></table>
