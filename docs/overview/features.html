@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/Cake.Prca.Website/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/Cake.Prca.Website/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake PRCA - Using with TeamCity and TFS</title>
+        <title>Cake PRCA - Features</title>
         <link href="/Cake.Prca.Website/assets/css/mermaid.css" rel="stylesheet">
         <link href="/Cake.Prca.Website/assets/css/highlight.css" rel="stylesheet">
         <link href="/Cake.Prca.Website/assets/css/bootstrap/bootstrap.css" rel="stylesheet" />
@@ -75,7 +75,7 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-        <div><p><a href="https://github.com/cake-contrib/Cake.Prca.Website/blob/develop/input/docs/usage/teamcity-with-tfs.md"><i class="fa fa-pencil-square" aria-hidden="true"></i> Edit Content</a></p></div>
+        <div><p><a href="https://github.com/cake-contrib/Cake.Prca.Website/blob/develop/input/docs/overview/features.md"><i class="fa fa-pencil-square" aria-hidden="true"></i> Edit Content</a></p></div>
     <div id="infobar-headings"></div>
 
                 </section>
@@ -84,10 +84,10 @@
 
                     <ul class="sidebar-menu">
                         
-                <li class="treeview">
+                <li class="treeview active">
                     <a href="/Cake.Prca.Website/docs/overview">Overview</a> <a href="#" class="expand"></a>
                     <ul class="treeview-menu">
-                                        <li><a href="/Cake.Prca.Website/docs/overview/features">Features</a></li>
+                                        <li class="selected"><a href="/Cake.Prca.Website/docs/overview/features">Features</a></li>
                 <li><a href="/Cake.Prca.Website/docs/overview/requirements">Requirements</a></li>
 
                     </ul>
@@ -101,11 +101,11 @@
 
                     </ul>
                 </li>
-                <li class="treeview active">
+                <li class="treeview">
                     <a href="/Cake.Prca.Website/docs/usage">Usage</a> <a href="#" class="expand"></a>
                     <ul class="treeview-menu">
                                         <li><a href="/Cake.Prca.Website/docs/usage/basic-usage">Basic usage</a></li>
-                <li class="selected"><a href="/Cake.Prca.Website/docs/usage/teamcity-with-tfs">Using with TeamCity and TFS</a></li>
+                <li><a href="/Cake.Prca.Website/docs/usage/teamcity-with-tfs">Using with TeamCity and TFS</a></li>
 
                     </ul>
                 </li>
@@ -129,39 +129,24 @@
 
 
 	<section class="content-header">
-		<h1>Using with TeamCity and TFS</h1>
+		<h1>Features</h1>
 	</section>
 	<section class="content">
-		<p>This page describes how to use the Cake Pull Request Code Analysis Addin for builds run on
-TeamCity and with Team Foundation Server as pull request system.</p>
-<p>TFS support is implemented in the <code>Cake.Prca.PullRequests.Tfs</code> addin.</p>
-<p>In your main Cake build script run on TeamCity you need to determine the remote repository URL and
-source branch of the pull request and create the <a href="../../api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystemAliases/">TfsPullRequests</a> object with this information.</p>
-<p>You can retrieve the required information using the <code>Cake.Git</code> Addin:</p>
-<pre><code class="language-csharp">#addin &quot;Cake.Git&quot;
-#addin &quot;Cake.Prca&quot;
-#addin &quot;Cake.Prca.Issues.MsBuild&quot;
-#addin &quot;Cake.Prca.PullRequests.Tfs&quot;
-
-Task(&quot;prca&quot;).Does(() =&gt;
-{
-    var repoRootFolder = MakeAbsolute(Directory(&quot;./&quot;));
-    var currentBranch = GitBranchCurrent(repoRootFolder);
-    var repoRemoteUrl = new Uri(currentBranch.Remotes.Single(x =&gt; x.Name == &quot;origin&quot;).Url);
-    var sourceBranchName = currentBranch.CanonicalName;
-
-    ReportCodeAnalysisIssuesToPullRequest(
-        MsBuildCodeAnalysisFromFilePath(
-            &#64;&quot;C:\build\msbuild.log&quot;,
-            MsBuildXmlFileLoggerFormat,
-            repoRootFolder),
-        TfsPullRequests(
-            repoRemoteUrl,
-            sourceBranchName,
-            PrcaAuthenticationNtlm()),
-        repoRootFolder);
-});
-</code></pre>
+		<p>The Pull Request Code Analysis Addin for Cake allows you to add issues from any analyzer or linter to comments in pull requests.</p>
+<h2 id="supported-core-functionality">Supported Core Functionality</h2>
+<p>The core addin provides the following functionality:</p>
+<ul>
+<li>Modular architecture, allowing to easily enhance it for supporting additional analyzers, linters and code review systems.</li>
+<li>Support for reporting issues from multiple issue providers.</li>
+<li>Filtering issues to only those related to changes in a pull request.</li>
+<li>Automatic resolving of issues fixed in subsequent commits.</li>
+<li>Comparing issues by content to not rely on line numbers.</li>
+<li>Limit number of maximum issues to post.</li>
+</ul>
+<h2 id="supported-issue-providers">Supported Issue Providers</h2>
+<p>See <a href="../../addins/issue-provider/">Issue Provider Addins</a> for a list of currently supported analyzers and linters.</p>
+<h2 id="supported-pull-request-systems">Supported Pull Request Systems</h2>
+<p>See <a href="../../addins/pull-request-system/">Pull Request System Addins</a> for a list of currently supported pull request systems.</p>
 
 	</section>
                 

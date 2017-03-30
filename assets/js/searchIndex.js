@@ -34,102 +34,6 @@ var searchModule = function() {
 
     a({
         id:0,
-        title:"IPullRequestSystem",
-        content:"IPullRequestSystem",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:1,
-        title:"CodeAnalysisProvider",
-        content:"CodeAnalysisProvider",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:2,
-        title:"TfsPullRequestSettings",
-        content:"TfsPullRequestSettings",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:3,
-        title:"IPrcaDiscussionComment",
-        content:"IPrcaDiscussionComment",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:4,
-        title:"InspectCodeSettings",
-        content:"InspectCodeSettings",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:5,
-        title:"LogFileFormat",
-        content:"LogFileFormat",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:6,
-        title:"ICodeAnalysisIssue",
-        content:"ICodeAnalysisIssue",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:7,
-        title:"PrcaDiscussionStatus",
-        content:"PrcaDiscussionStatus",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:8,
-        title:"IPrcaDiscussionThread",
-        content:"IPrcaDiscussionThread",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:9,
-        title:"ReportCodeAnalysisIssuesToPullRequestSettings",
-        content:"ReportCodeAnalysisIssuesToPullRequestSettings",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:10,
-        title:"PrcaAadCredentials",
-        content:"PrcaAadCredentials",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:11,
-        title:"XmlFileLoggerFormat",
-        content:"XmlFileLoggerFormat",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:12,
         title:"ICodeAnalysisProvider",
         content:"ICodeAnalysisProvider",
         description:'',
@@ -137,119 +41,7 @@ var searchModule = function() {
     });
 
     a({
-        id:13,
-        title:"CodeAnalysisIssue",
-        content:"CodeAnalysisIssue",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:14,
-        title:"MsBuildCodeAnalysisSettings",
-        content:"MsBuildCodeAnalysisSettings",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:15,
-        title:"PullRequestSystem",
-        content:"PullRequestSystem",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:16,
-        title:"IPrcaCredentials",
-        content:"IPrcaCredentials",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:17,
-        title:"PrcaBasicCredentials",
-        content:"PrcaBasicCredentials",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:18,
-        title:"PrcaNtlmCredentials",
-        content:"PrcaNtlmCredentials",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:19,
-        title:"StringPathExtensions",
-        content:"StringPathExtensions",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:20,
-        title:"CakeAliasConstants",
-        content:"CakeAliasConstants",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:21,
-        title:"TfsPullRequestSystem",
-        content:"TfsPullRequestSystem",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:22,
-        title:"PrcaDiscussionThread",
-        content:"PrcaDiscussionThread",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:23,
-        title:"MsBuildCodeAnalysisProviderAliases",
-        content:"MsBuildCodeAnalysisProviderAliases",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:24,
-        title:"PrcaException",
-        content:"PrcaException",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:25,
-        title:"TfsPullRequestSystemAliases",
-        content:"TfsPullRequestSystemAliases",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:26,
-        title:"InspectCodeProvider",
-        content:"InspectCodeProvider",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:27,
+        id:1,
         title:"PrcaArgumentChecks",
         content:"PrcaArgumentChecks",
         description:'',
@@ -257,15 +49,127 @@ var searchModule = function() {
     });
 
     a({
-        id:28,
-        title:"MsBuildCodeAnalysisProvider",
-        content:"MsBuildCodeAnalysisProvider",
+        id:2,
+        title:"PrcaAadCredentials",
+        content:"PrcaAadCredentials",
         description:'',
         tags:''
     });
 
     a({
-        id:29,
+        id:3,
+        title:"XmlFileLoggerFormat",
+        content:"XmlFileLoggerFormat",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:4,
+        title:"TfsPullRequestSystem",
+        content:"TfsPullRequestSystem",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:5,
+        title:"CodeAnalysisProvider",
+        content:"CodeAnalysisProvider",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:6,
+        title:"InspectCodeProvider",
+        content:"InspectCodeProvider",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:7,
+        title:"MsBuildCodeAnalysisProviderAliases",
+        content:"MsBuildCodeAnalysisProviderAliases",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:8,
+        title:"StringPathExtensions",
+        content:"StringPathExtensions",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:9,
+        title:"LogFileFormat",
+        content:"LogFileFormat",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:10,
+        title:"ReportCodeAnalysisIssuesToPullRequestSettings",
+        content:"ReportCodeAnalysisIssuesToPullRequestSettings",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:11,
+        title:"PrcaOAuthCredentials",
+        content:"PrcaOAuthCredentials",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:12,
+        title:"MsBuildCodeAnalysisSettings",
+        content:"MsBuildCodeAnalysisSettings",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:13,
+        title:"CakeAliasConstants",
+        content:"CakeAliasConstants",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:14,
+        title:"ICodeAnalysisIssue",
+        content:"ICodeAnalysisIssue",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:15,
+        title:"IPrcaCredentials",
+        content:"IPrcaCredentials",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:16,
+        title:"PrcaNtlmCredentials",
+        content:"PrcaNtlmCredentials",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:17,
         title:"ILogFileFormat",
         content:"ILogFileFormat",
         description:'',
@@ -273,7 +177,15 @@ var searchModule = function() {
     });
 
     a({
-        id:30,
+        id:18,
+        title:"IPrcaDiscussionComment",
+        content:"IPrcaDiscussionComment",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:19,
         title:"PrcaDiscussionComment",
         content:"PrcaDiscussionComment",
         description:'',
@@ -281,7 +193,15 @@ var searchModule = function() {
     });
 
     a({
-        id:31,
+        id:20,
+        title:"PrcaException",
+        content:"PrcaException",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:21,
         title:"InspectCodeProviderAliases",
         content:"InspectCodeProviderAliases",
         description:'',
@@ -289,7 +209,71 @@ var searchModule = function() {
     });
 
     a({
-        id:32,
+        id:22,
+        title:"TfsPullRequestSystemAliases",
+        content:"TfsPullRequestSystemAliases",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:23,
+        title:"PrcaBasicCredentials",
+        content:"PrcaBasicCredentials",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:24,
+        title:"IPullRequestSystem",
+        content:"IPullRequestSystem",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:25,
+        title:"IPrcaDiscussionThread",
+        content:"IPrcaDiscussionThread",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:26,
+        title:"InspectCodeSettings",
+        content:"InspectCodeSettings",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:27,
+        title:"PrcaDiscussionStatus",
+        content:"PrcaDiscussionStatus",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:28,
+        title:"PrcaDiscussionThread",
+        content:"PrcaDiscussionThread",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:29,
+        title:"MsBuildCodeAnalysisProvider",
+        content:"MsBuildCodeAnalysisProvider",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:30,
         title:"PrcaAliases",
         content:"PrcaAliases",
         description:'',
@@ -297,70 +281,38 @@ var searchModule = function() {
     });
 
     a({
+        id:31,
+        title:"TfsPullRequestSettings",
+        content:"TfsPullRequestSettings",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:32,
+        title:"CodeAnalysisIssue",
+        content:"CodeAnalysisIssue",
+        description:'',
+        tags:''
+    });
+
+    a({
         id:33,
-        title:"PrcaOAuthCredentials",
-        content:"PrcaOAuthCredentials",
+        title:"PullRequestSystem",
+        content:"PullRequestSystem",
         description:'',
         tags:''
     });
 
     y({
-        url:'/Cake.Prca.Website/Cake.Prca.Website/api/Cake.Prca.PullRequests/IPullRequestSystem',
-        title:"IPullRequestSystem",
+        url:'/Cake.Prca.Website/Cake.Prca.Website/api/Cake.Prca.Issues/ICodeAnalysisProvider',
+        title:"ICodeAnalysisProvider",
         description:""
     });
 
     y({
-        url:'/Cake.Prca.Website/Cake.Prca.Website/api/Cake.Prca.Issues/CodeAnalysisProvider',
-        title:"CodeAnalysisProvider",
-        description:""
-    });
-
-    y({
-        url:'/Cake.Prca.Website/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSettings',
-        title:"TfsPullRequestSettings",
-        description:""
-    });
-
-    y({
-        url:'/Cake.Prca.Website/Cake.Prca.Website/api/Cake.Prca.PullRequests/IPrcaDiscussionComment',
-        title:"IPrcaDiscussionComment",
-        description:""
-    });
-
-    y({
-        url:'/Cake.Prca.Website/Cake.Prca.Website/api/Cake.Prca.Issues.InspectCode/InspectCodeSettings',
-        title:"InspectCodeSettings",
-        description:""
-    });
-
-    y({
-        url:'/Cake.Prca.Website/Cake.Prca.Website/api/Cake.Prca.Issues.MsBuild/LogFileFormat',
-        title:"LogFileFormat",
-        description:""
-    });
-
-    y({
-        url:'/Cake.Prca.Website/Cake.Prca.Website/api/Cake.Prca.Issues/ICodeAnalysisIssue',
-        title:"ICodeAnalysisIssue",
-        description:""
-    });
-
-    y({
-        url:'/Cake.Prca.Website/Cake.Prca.Website/api/Cake.Prca.PullRequests/PrcaDiscussionStatus',
-        title:"PrcaDiscussionStatus",
-        description:""
-    });
-
-    y({
-        url:'/Cake.Prca.Website/Cake.Prca.Website/api/Cake.Prca.PullRequests/IPrcaDiscussionThread',
-        title:"IPrcaDiscussionThread",
-        description:""
-    });
-
-    y({
-        url:'/Cake.Prca.Website/Cake.Prca.Website/api/Cake.Prca/ReportCodeAnalysisIssuesToPullRequestSettings',
-        title:"ReportCodeAnalysisIssuesToPullRequestSettings",
+        url:'/Cake.Prca.Website/Cake.Prca.Website/api/Cake.Prca/PrcaArgumentChecks',
+        title:"PrcaArgumentChecks",
         description:""
     });
 
@@ -377,86 +329,14 @@ var searchModule = function() {
     });
 
     y({
-        url:'/Cake.Prca.Website/Cake.Prca.Website/api/Cake.Prca.Issues/ICodeAnalysisProvider',
-        title:"ICodeAnalysisProvider",
-        description:""
-    });
-
-    y({
-        url:'/Cake.Prca.Website/Cake.Prca.Website/api/Cake.Prca.Issues/CodeAnalysisIssue',
-        title:"CodeAnalysisIssue",
-        description:""
-    });
-
-    y({
-        url:'/Cake.Prca.Website/Cake.Prca.Website/api/Cake.Prca.Issues.MsBuild/MsBuildCodeAnalysisSettings',
-        title:"MsBuildCodeAnalysisSettings",
-        description:""
-    });
-
-    y({
-        url:'/Cake.Prca.Website/Cake.Prca.Website/api/Cake.Prca.PullRequests/PullRequestSystem',
-        title:"PullRequestSystem",
-        description:""
-    });
-
-    y({
-        url:'/Cake.Prca.Website/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs/IPrcaCredentials',
-        title:"IPrcaCredentials",
-        description:""
-    });
-
-    y({
-        url:'/Cake.Prca.Website/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs.Authentication/PrcaBasicCredentials',
-        title:"PrcaBasicCredentials",
-        description:""
-    });
-
-    y({
-        url:'/Cake.Prca.Website/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs.Authentication/PrcaNtlmCredentials',
-        title:"PrcaNtlmCredentials",
-        description:""
-    });
-
-    y({
-        url:'/Cake.Prca.Website/Cake.Prca.Website/api/Cake.Prca.Issues/StringPathExtensions',
-        title:"StringPathExtensions",
-        description:""
-    });
-
-    y({
-        url:'/Cake.Prca.Website/Cake.Prca.Website/api/Cake.Prca/CakeAliasConstants',
-        title:"CakeAliasConstants",
-        description:""
-    });
-
-    y({
         url:'/Cake.Prca.Website/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystem',
         title:"TfsPullRequestSystem",
         description:""
     });
 
     y({
-        url:'/Cake.Prca.Website/Cake.Prca.Website/api/Cake.Prca.PullRequests/PrcaDiscussionThread',
-        title:"PrcaDiscussionThread",
-        description:""
-    });
-
-    y({
-        url:'/Cake.Prca.Website/Cake.Prca.Website/api/Cake.Prca.Issues.MsBuild/MsBuildCodeAnalysisProviderAliases',
-        title:"MsBuildCodeAnalysisProviderAliases",
-        description:""
-    });
-
-    y({
-        url:'/Cake.Prca.Website/Cake.Prca.Website/api/Cake.Prca/PrcaException',
-        title:"PrcaException",
-        description:""
-    });
-
-    y({
-        url:'/Cake.Prca.Website/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystemAliases',
-        title:"TfsPullRequestSystemAliases",
+        url:'/Cake.Prca.Website/Cake.Prca.Website/api/Cake.Prca.Issues/CodeAnalysisProvider',
+        title:"CodeAnalysisProvider",
         description:""
     });
 
@@ -467,14 +347,62 @@ var searchModule = function() {
     });
 
     y({
-        url:'/Cake.Prca.Website/Cake.Prca.Website/api/Cake.Prca/PrcaArgumentChecks',
-        title:"PrcaArgumentChecks",
+        url:'/Cake.Prca.Website/Cake.Prca.Website/api/Cake.Prca.Issues.MsBuild/MsBuildCodeAnalysisProviderAliases',
+        title:"MsBuildCodeAnalysisProviderAliases",
         description:""
     });
 
     y({
-        url:'/Cake.Prca.Website/Cake.Prca.Website/api/Cake.Prca.Issues.MsBuild/MsBuildCodeAnalysisProvider',
-        title:"MsBuildCodeAnalysisProvider",
+        url:'/Cake.Prca.Website/Cake.Prca.Website/api/Cake.Prca.Issues/StringPathExtensions',
+        title:"StringPathExtensions",
+        description:""
+    });
+
+    y({
+        url:'/Cake.Prca.Website/Cake.Prca.Website/api/Cake.Prca.Issues.MsBuild/LogFileFormat',
+        title:"LogFileFormat",
+        description:""
+    });
+
+    y({
+        url:'/Cake.Prca.Website/Cake.Prca.Website/api/Cake.Prca/ReportCodeAnalysisIssuesToPullRequestSettings',
+        title:"ReportCodeAnalysisIssuesToPullRequestSettings",
+        description:""
+    });
+
+    y({
+        url:'/Cake.Prca.Website/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs.Authentication/PrcaOAuthCredentials',
+        title:"PrcaOAuthCredentials",
+        description:""
+    });
+
+    y({
+        url:'/Cake.Prca.Website/Cake.Prca.Website/api/Cake.Prca.Issues.MsBuild/MsBuildCodeAnalysisSettings',
+        title:"MsBuildCodeAnalysisSettings",
+        description:""
+    });
+
+    y({
+        url:'/Cake.Prca.Website/Cake.Prca.Website/api/Cake.Prca/CakeAliasConstants',
+        title:"CakeAliasConstants",
+        description:""
+    });
+
+    y({
+        url:'/Cake.Prca.Website/Cake.Prca.Website/api/Cake.Prca.Issues/ICodeAnalysisIssue',
+        title:"ICodeAnalysisIssue",
+        description:""
+    });
+
+    y({
+        url:'/Cake.Prca.Website/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs/IPrcaCredentials',
+        title:"IPrcaCredentials",
+        description:""
+    });
+
+    y({
+        url:'/Cake.Prca.Website/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs.Authentication/PrcaNtlmCredentials',
+        title:"PrcaNtlmCredentials",
         description:""
     });
 
@@ -485,8 +413,20 @@ var searchModule = function() {
     });
 
     y({
+        url:'/Cake.Prca.Website/Cake.Prca.Website/api/Cake.Prca.PullRequests/IPrcaDiscussionComment',
+        title:"IPrcaDiscussionComment",
+        description:""
+    });
+
+    y({
         url:'/Cake.Prca.Website/Cake.Prca.Website/api/Cake.Prca.PullRequests/PrcaDiscussionComment',
         title:"PrcaDiscussionComment",
+        description:""
+    });
+
+    y({
+        url:'/Cake.Prca.Website/Cake.Prca.Website/api/Cake.Prca/PrcaException',
+        title:"PrcaException",
         description:""
     });
 
@@ -497,14 +437,74 @@ var searchModule = function() {
     });
 
     y({
+        url:'/Cake.Prca.Website/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystemAliases',
+        title:"TfsPullRequestSystemAliases",
+        description:""
+    });
+
+    y({
+        url:'/Cake.Prca.Website/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs.Authentication/PrcaBasicCredentials',
+        title:"PrcaBasicCredentials",
+        description:""
+    });
+
+    y({
+        url:'/Cake.Prca.Website/Cake.Prca.Website/api/Cake.Prca.PullRequests/IPullRequestSystem',
+        title:"IPullRequestSystem",
+        description:""
+    });
+
+    y({
+        url:'/Cake.Prca.Website/Cake.Prca.Website/api/Cake.Prca.PullRequests/IPrcaDiscussionThread',
+        title:"IPrcaDiscussionThread",
+        description:""
+    });
+
+    y({
+        url:'/Cake.Prca.Website/Cake.Prca.Website/api/Cake.Prca.Issues.InspectCode/InspectCodeSettings',
+        title:"InspectCodeSettings",
+        description:""
+    });
+
+    y({
+        url:'/Cake.Prca.Website/Cake.Prca.Website/api/Cake.Prca.PullRequests/PrcaDiscussionStatus',
+        title:"PrcaDiscussionStatus",
+        description:""
+    });
+
+    y({
+        url:'/Cake.Prca.Website/Cake.Prca.Website/api/Cake.Prca.PullRequests/PrcaDiscussionThread',
+        title:"PrcaDiscussionThread",
+        description:""
+    });
+
+    y({
+        url:'/Cake.Prca.Website/Cake.Prca.Website/api/Cake.Prca.Issues.MsBuild/MsBuildCodeAnalysisProvider',
+        title:"MsBuildCodeAnalysisProvider",
+        description:""
+    });
+
+    y({
         url:'/Cake.Prca.Website/Cake.Prca.Website/api/Cake.Prca/PrcaAliases',
         title:"PrcaAliases",
         description:""
     });
 
     y({
-        url:'/Cake.Prca.Website/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs.Authentication/PrcaOAuthCredentials',
-        title:"PrcaOAuthCredentials",
+        url:'/Cake.Prca.Website/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSettings',
+        title:"TfsPullRequestSettings",
+        description:""
+    });
+
+    y({
+        url:'/Cake.Prca.Website/Cake.Prca.Website/api/Cake.Prca.Issues/CodeAnalysisIssue',
+        title:"CodeAnalysisIssue",
+        description:""
+    });
+
+    y({
+        url:'/Cake.Prca.Website/Cake.Prca.Website/api/Cake.Prca.PullRequests/PullRequestSystem',
+        title:"PullRequestSystem",
         description:""
     });
 
