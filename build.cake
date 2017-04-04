@@ -44,6 +44,7 @@ class AddinSpec
     public bool Prerelease { get; set; }
     public List<string> Assemblies { get; set; }
     public string Repository { get; set; }
+    public string Documentation { get; set; }
     public string Author { get; set; }
     public string Description { get; set; }
     public List<string> Categories { get; set; }
