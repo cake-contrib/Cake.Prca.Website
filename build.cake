@@ -21,6 +21,11 @@ var target = Argument("target", "Default");
 // Define variables
 var isRunningOnAppVeyor = AppVeyor.IsRunningOnAppVeyor;
 var isPullRequest       = AppVeyor.Environment.PullRequest.IsPullRequest;
+var isMasterBranch      = StringComparer.OrdinalIgnoreCase.Equals("master", AppVeyor.Environment.Repository.Branch);
+var isTagged = (
+    AppVeyor.Environment.Repository.Tag.IsTag &&
+    !string.IsNullOrWhiteSpace(AppVeyor.Environment.Repository.Tag.Name)
+);
 var accessToken         = EnvironmentVariable("WYAM_ACCESS_TOKEN");
 var deployRemote        = EnvironmentVariable("WYAM_DEPLOY_REMOTE");
 var deployBranch        = EnvironmentVariable("WYAM_DEPLOY_BRANCH");
@@ -154,6 +159,8 @@ Task("Debug")
 Task("Deploy")
     .WithCriteria(isRunningOnAppVeyor)
     .WithCriteria(!isPullRequest)
+    .WithCriteria(isMasterBranch)
+    .WithCriteria(isTagged)
     .WithCriteria(!string.IsNullOrEmpty(accessToken))
     .WithCriteria(!string.IsNullOrEmpty(deployRemote))
     .WithCriteria(!string.IsNullOrEmpty(deployBranch))
@@ -197,7 +204,7 @@ Task("GetArtifacts")
     .IsDependentOn("GetAddinPackages");
 
 Task("AppVeyor")
-    .IsDependentOn(isPullRequest ? "Build" : "Deploy");
+    .IsDependentOn(!isPullRequest && isMasterBranch && isTagged ? "Deploy" : "Build");
 
 
 //////////////////////////////////////////////////////////////////////
