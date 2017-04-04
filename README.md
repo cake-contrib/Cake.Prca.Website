@@ -53,3 +53,9 @@ Note that due to the number of addins and the complexity of generating complete 
 This lets you shorten the build cycle by avoiding the time to obtain those resources if you've already downloaded them, or to bypass them altogether if you're just working on something like general documentation pages.
 This target will also launch a preview server to look at the generated site from a local web browser.
 The URL of the generated preview site is `http://localhost:5080/`.
+
+## Deployment
+
+The site is deployed for every release tagged on the `master` branch.
+Release numbering is in sync with numbering of the core `Cake.Prca` addin.
+
