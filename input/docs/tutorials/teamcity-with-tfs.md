@@ -1,5 +1,5 @@
 ---
-Order: 20
+Order: 10
 Title: Using with TeamCity and TFS
 ---
 This page describes how to use the Cake Pull Request Code Analysis Addin for builds run on
