@@ -1,0 +1,9 @@
+Name: Cake Pull Request Code Analysis
+NuGet: Cake.Prca
+Repository: https://github.com/cake-contrib/Cake.Prca
+Assemblies:
+- "/**/Cake.Prca.dll"
+Author: BBT Software AG
+Description: "Core Cake Pull Requests Code Analysis Addin"
+Categories:
+- Core

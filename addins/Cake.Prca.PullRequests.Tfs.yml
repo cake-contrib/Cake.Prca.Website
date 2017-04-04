@@ -1,0 +1,9 @@
+Name: Team Foundation Server (TFS) & Visual Studio Team Services (VSTS) Support
+NuGet: Cake.Prca.PullRequests.Tfs
+Repository: https://github.com/cake-contrib/Cake.Prca.PullRequests.Tfs
+Assemblies:
+- "/**/Cake.Prca.PullRequests.Tfs.dll"
+Author: BBT Software AG
+Description: "Support for writing issues as comments to Team Foundation Server or Visual Studio Team Services pull requests."
+Categories:
+- Pull Request System
