@@ -1,6 +1,7 @@
 Name: MsBuild Log Support
 NuGet: Cake.Prca.Issues.MsBuild
 Repository: https://github.com/cake-contrib/Cake.Prca.Issues.MsBuild
+Documentation: https://cake-contrib.github.io/Cake.Prca.Website/docs/issue-provider/msbuild
 Assemblies:
 - "/**/Cake.Prca.Issues.MsBuild.dll"
 Author: BBT Software AG

@@ -17,6 +17,7 @@
     string author = @addin.String("Author");
     string nuget = @addin.String("NuGet");
     string repository = @addin.String("repository");
+    string documentation = @addin.String("documentation");
 
     <a id="@(nuget)"></a>
     <div class="panel panel-default">
@@ -43,6 +44,11 @@
                 {
                     <dt>Repository</dt>
                     <dd><a href="@(repository)">@repository</a></dd>
+                }
+                @if(!string.IsNullOrEmpty(documentation))
+                {
+                    <dt>Documentation</dt>
+                    <dd><a href="@(documentation)">@documentation</a></dd>
                 }
             </dl>
         </div>
