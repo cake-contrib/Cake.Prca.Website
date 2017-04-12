@@ -11,6 +11,7 @@ Support for reading issues reported by [JetBrains InsepectCode] is implemented i
 ## Features
 
 * Reads warnings from JetBrains InspectCode log files.
+* Provides URLs for issues containing a Wiki URL.
 
 [JetBrains InsepectCode]: https://www.jetbrains.com/help/resharper/2017.1/InspectCode.html
 [Cake.Prca.Issues.InspectCode addin]: https://www.nuget.org/packages/Cake.Prca.Issues.InspectCode
