@@ -39,12 +39,11 @@ Task("prca").Does(() =>
     ReportCodeAnalysisIssuesToPullRequest(
         MsBuildCodeAnalysisFromFilePath(
             @"C:\build\msbuild.log",
-            MsBuildXmlFileLoggerFormat,
-            repoRootFolder),
+            MsBuildXmlFileLoggerFormat),
         TfsPullRequests(
             new Uri("http://myserver:8080/tfs/defaultcollection/myproject/_git/myrepository"),
             "refs/heads/feature/myfeature",
-            PrcaAuthenticationNtlm()),
+            TfsAuthenticationNtlm()),
         repoRootFolder);
 });
 ```
