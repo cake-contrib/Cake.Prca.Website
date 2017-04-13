@@ -133,6 +133,9 @@
 		<li><a href="/Cake.Prca.Website/api/Cake.Prca.Issues">Cake<wbr>.Prca<wbr>.Issues</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Class Types</li>
+				<li><a href="/Cake.Prca.Website/api/Cake.Prca.Issues/BaseRuleDescription">BaseRuleDescription</a></li>
+				<li><a href="/Cake.Prca.Website/api/Cake.Prca.Issues/BaseRuleUrlResolver_1">BaseRuleUrlResolver<wbr>&lt;T&gt;<wbr></a></li>
+				<li><a href="/Cake.Prca.Website/api/Cake.Prca.Issues/CodeAnalysisIssue_1">CodeAnalysisIssue<wbr>&lt;T&gt;<wbr></a></li>
 				<li><a href="/Cake.Prca.Website/api/Cake.Prca.Issues/CodeAnalysisIssue">CodeAnalysisIssue</a></li>
 				<li><a href="/Cake.Prca.Website/api/Cake.Prca.Issues/CodeAnalysisProvider">CodeAnalysisProvider</a></li>
 				<li><a href="/Cake.Prca.Website/api/Cake.Prca.Issues/StringPathExtensions">StringPathExtensions</a></li>
@@ -179,9 +182,10 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
+											<li><a href="/Cake.Prca.Website/api/Cake.Prca.Issues.InspectCode/InspectCodeProvider">InspectCodeProvider</a></li>								
+											<li><a href="/Cake.Prca.Website/api/Cake.Prca.Issues.Markdownlint/MarkdownlintProvider">MarkdownlintProvider</a></li>								
 											<li><a href="/Cake.Prca.Website/api/Cake.Prca.Issues.MsBuild/MsBuildCodeAnalysisProvider">Ms<wbr>Build<wbr>Code<wbr>Analysis<wbr>Provider</a></li>								
 											<li><a href="/Cake.Prca.Website/api/Cake.Prca.Issues/CodeAnalysisProvider">CodeAnalysisProvider</a></li>								
-											<li><a href="/Cake.Prca.Website/api/Cake.Prca.Issues.InspectCode/InspectCodeProvider">InspectCodeProvider</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -191,12 +195,14 @@
 							graph TD
 	Type["ICodeAnalysisProvider"]
 class Type type-node
-	Type-.-&gt;Implementing0["MsBuildCodeAnalysisProvider"]
-	click Implementing0 "/Cake.Prca.Website/api/Cake.Prca.Issues.MsBuild/MsBuildCodeAnalysisProvider"
-	Type-.-&gt;Implementing1["CodeAnalysisProvider"]
-	click Implementing1 "/Cake.Prca.Website/api/Cake.Prca.Issues/CodeAnalysisProvider"
-	Type-.-&gt;Implementing2["InspectCodeProvider"]
-	click Implementing2 "/Cake.Prca.Website/api/Cake.Prca.Issues.InspectCode/InspectCodeProvider"
+	Type-.-&gt;Implementing0["InspectCodeProvider"]
+	click Implementing0 "/Cake.Prca.Website/api/Cake.Prca.Issues.InspectCode/InspectCodeProvider"
+	Type-.-&gt;Implementing1["MarkdownlintProvider"]
+	click Implementing1 "/Cake.Prca.Website/api/Cake.Prca.Issues.Markdownlint/MarkdownlintProvider"
+	Type-.-&gt;Implementing2["MsBuildCodeAnalysisProvider"]
+	click Implementing2 "/Cake.Prca.Website/api/Cake.Prca.Issues.MsBuild/MsBuildCodeAnalysisProvider"
+	Type-.-&gt;Implementing3["CodeAnalysisProvider"]
+	click Implementing3 "/Cake.Prca.Website/api/Cake.Prca.Issues/CodeAnalysisProvider"
 
 						</div>
 					</div>
@@ -228,7 +234,16 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/Cake.Prca.Website/api/Cake.Prca.Issues/ICodeAnalysisProvider/012FAFA0">ReadIssues<wbr>()<wbr></a></td>
+								<td><a href="/Cake.Prca.Website/api/Cake.Prca.Issues/ICodeAnalysisProvider/BF1EB687">Initialize<wbr>(<wbr>Report<wbr>Code<wbr>Analysis<wbr>Issues<wbr>To<wbr>Pull<wbr>Request<wbr>Settings)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Initializes the code analysis provider.
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/Cake.Prca.Website/api/Cake.Prca.Issues/ICodeAnalysisProvider/5C01E272">ReadIssues<wbr>(PrcaCommentFormat)<wbr></a></td>
 								<td>IEnumerable<wbr>&lt;<wbr>I<wbr>Code<wbr>Analysis<wbr>Issue&gt;<wbr></td>
 								<td>
 									<div>

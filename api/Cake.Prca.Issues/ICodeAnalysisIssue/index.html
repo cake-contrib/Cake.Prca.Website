@@ -133,6 +133,9 @@
 		<li><a href="/Cake.Prca.Website/api/Cake.Prca.Issues">Cake<wbr>.Prca<wbr>.Issues</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Class Types</li>
+				<li><a href="/Cake.Prca.Website/api/Cake.Prca.Issues/BaseRuleDescription">BaseRuleDescription</a></li>
+				<li><a href="/Cake.Prca.Website/api/Cake.Prca.Issues/BaseRuleUrlResolver_1">BaseRuleUrlResolver<wbr>&lt;T&gt;<wbr></a></li>
+				<li><a href="/Cake.Prca.Website/api/Cake.Prca.Issues/CodeAnalysisIssue_1">CodeAnalysisIssue<wbr>&lt;T&gt;<wbr></a></li>
 				<li><a href="/Cake.Prca.Website/api/Cake.Prca.Issues/CodeAnalysisIssue">CodeAnalysisIssue</a></li>
 				<li><a href="/Cake.Prca.Website/api/Cake.Prca.Issues/CodeAnalysisProvider">CodeAnalysisProvider</a></li>
 				<li><a href="/Cake.Prca.Website/api/Cake.Prca.Issues/StringPathExtensions">StringPathExtensions</a></li>
@@ -180,6 +183,7 @@
 								<dd>
 									<ul class="list-unstyled">
 											<li><a href="/Cake.Prca.Website/api/Cake.Prca.Issues/CodeAnalysisIssue">CodeAnalysisIssue</a></li>								
+											<li><a href="/Cake.Prca.Website/api/Cake.Prca.Issues/CodeAnalysisIssue_1">CodeAnalysisIssue<wbr>&lt;T&gt;<wbr></a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -191,6 +195,8 @@
 class Type type-node
 	Type-.-&gt;Implementing0["CodeAnalysisIssue"]
 	click Implementing0 "/Cake.Prca.Website/api/Cake.Prca.Issues/CodeAnalysisIssue"
+	Type-.-&gt;Implementing1["CodeAnalysisIssue&lt;T&gt;"]
+	click Implementing1 "/Cake.Prca.Website/api/Cake.Prca.Issues/CodeAnalysisIssue_1"
 
 						</div>
 					</div>
@@ -261,11 +267,30 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/Cake.Prca.Website/api/Cake.Prca.Issues/ICodeAnalysisIssue/C203CA5C">ProviderType</a></td>
+								<td>string</td>
+								<td>
+									<div>
+            Gets the type of the issue provider.
+            </div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.Issues/ICodeAnalysisIssue/A62FD0CA">Rule</a></td>
 								<td>string</td>
 								<td>
 									<div>
             Gets the rule of the code analysis issue.
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/Cake.Prca.Website/api/Cake.Prca.Issues/ICodeAnalysisIssue/EFC80185">RuleUrl</a></td>
+								<td>Uri</td>
+								<td>
+									<div>
+            Gets the URL containing information about the failing rule.
+            Can be <code class="cs">null</code> if the issue provider provides no URL.
             </div>
 								</td>
 							</tr>

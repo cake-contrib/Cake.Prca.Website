@@ -138,8 +138,8 @@
 		<li role="separator" class="divider"></li>
 			<li class="header">Method Members</li>
 				<li class="selected"><a href="/Cake.Prca.Website/api/Cake.Prca.Issues.InspectCode/InspectCodeProviderAliases/16AEA0DF">InspectCode<wbr>(ICakeContext, <wbr>InspectCodeSettings)<wbr></a></li>
-				<li><a href="/Cake.Prca.Website/api/Cake.Prca.Issues.InspectCode/InspectCodeProviderAliases/87B5C3B7">Inspect<wbr>Code<wbr>From<wbr>Content<wbr>(ICakeContext, <wbr>string, <wbr>DirectoryPath)<wbr></a></li>
-				<li><a href="/Cake.Prca.Website/api/Cake.Prca.Issues.InspectCode/InspectCodeProviderAliases/24D09F3E">Inspect<wbr>Code<wbr>From<wbr>File<wbr>Path<wbr>(ICakeContext, <wbr>FilePath, <wbr>DirectoryPath)<wbr></a></li>
+				<li><a href="/Cake.Prca.Website/api/Cake.Prca.Issues.InspectCode/InspectCodeProviderAliases/415EFCD5">Inspect<wbr>Code<wbr>From<wbr>Content<wbr>(ICakeContext, <wbr>string)<wbr></a></li>
+				<li><a href="/Cake.Prca.Website/api/Cake.Prca.Issues.InspectCode/InspectCodeProviderAliases/E61219D8">Inspect<wbr>Code<wbr>From<wbr>File<wbr>Path<wbr>(ICakeContext, <wbr>FilePath)<wbr></a></li>
 
 
                     </ul>
@@ -189,15 +189,14 @@
              <pre><code class="cs"> var repoRoot = new DirectoryPath("c:\repo");
      var settings =
          new InspectCodeSettings(
-             new FilePath("C:\build\InspectCode.log"),
-             repoRoot);
+             new FilePath("C:\build\InspectCode.log"));
 
      ReportCodeAnalysisIssuesToPullRequest(
          InspectCode(settings),
          TfsPullRequests(
              new Uri("http://myserver:8080/tfs/defaultcollection/myproject/_git/myrepository"),
              "refs/heads/feature/myfeature",
-             PrcaAuthenticationNtlm()),
+             TfsAuthenticationNtlm()),
          repoRoot);</code></pre>
              </div>
 

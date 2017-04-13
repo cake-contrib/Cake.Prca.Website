@@ -138,7 +138,9 @@
 		<li role="separator" class="divider"></li>
 			<li class="header">Method Members</li>
 				<li class="selected"><a href="/Cake.Prca.Website/api/Cake.Prca/PrcaAliases/1B05E783">Report<wbr>Code<wbr>Analysis<wbr>Issues<wbr>To<wbr>Pull<wbr>Request<wbr>(ICakeContext, <wbr>I<wbr>Code<wbr>Analysis<wbr>Provider, <wbr>IPullRequestSystem, <wbr>DirectoryPath)<wbr></a></li>
+				<li><a href="/Cake.Prca.Website/api/Cake.Prca/PrcaAliases/0A8B1759">Report<wbr>Code<wbr>Analysis<wbr>Issues<wbr>To<wbr>Pull<wbr>Request<wbr>(ICakeContext, <wbr>IEnumerable<wbr>&lt;<wbr>I<wbr>Code<wbr>Analysis<wbr>Provider&gt;<wbr>, <wbr>IPullRequestSystem, <wbr>DirectoryPath)<wbr></a></li>
 				<li><a href="/Cake.Prca.Website/api/Cake.Prca/PrcaAliases/E7341F54">Report<wbr>Code<wbr>Analysis<wbr>Issues<wbr>To<wbr>Pull<wbr>Request<wbr>(ICakeContext, <wbr>I<wbr>Code<wbr>Analysis<wbr>Provider, <wbr>IPullRequestSystem, <wbr>Report<wbr>Code<wbr>Analysis<wbr>Issues<wbr>To<wbr>Pull<wbr>Request<wbr>Settings)<wbr></a></li>
+				<li><a href="/Cake.Prca.Website/api/Cake.Prca/PrcaAliases/EE9C1BC1">Report<wbr>Code<wbr>Analysis<wbr>Issues<wbr>To<wbr>Pull<wbr>Request<wbr>(ICakeContext, <wbr>IEnumerable<wbr>&lt;<wbr>I<wbr>Code<wbr>Analysis<wbr>Provider&gt;<wbr>, <wbr>IPullRequestSystem, <wbr>Report<wbr>Code<wbr>Analysis<wbr>Issues<wbr>To<wbr>Pull<wbr>Request<wbr>Settings)<wbr></a></li>
 
 
                     </ul>
@@ -188,12 +190,11 @@
             <pre><code class="cs">ReportCodeAnalysisIssuesToPullRequest(
         MsBuildCodeAnalysisFromFilePath(
             @"C:\build\msbuild.log",
-            MsBuildXmlFileLoggerFormat,
-            new DirectoryPath("c:\repo")),
+            MsBuildXmlFileLoggerFormat),
         TfsPullRequests(
             new Uri("http://myserver:8080/tfs/defaultcollection/myproject/_git/myrepository"),
             "refs/heads/feature/myfeature",
-            PrcaAuthenticationNtlm()),
+            TfsAuthenticationNtlm()),
         new DirectoryPath("c:\repo"));</code></pre>
             </div>
 
