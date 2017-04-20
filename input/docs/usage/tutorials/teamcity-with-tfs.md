@@ -37,4 +37,4 @@ Task("prca").Does(() =>
 });
 ```
 
-[TfsPullRequests]: ../../api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystemAliases/
+[TfsPullRequests]: ../../../api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystemAliases/
