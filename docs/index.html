@@ -104,6 +104,13 @@
                     <a href="/Cake.Prca.Website/docs/usage">Usage</a> <a href="#" class="expand"></a>
                     <ul class="treeview-menu">
                                         <li><a href="/Cake.Prca.Website/docs/usage/basic-usage">Basic usage</a></li>
+                <li class="treeview">
+                    <a href="/Cake.Prca.Website/docs/usage/tutorials">Tutorials</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                                        <li><a href="/Cake.Prca.Website/docs/usage/tutorials/teamcity-with-tfs">Using with TeamCity and TFS</a></li>
+
+                    </ul>
+                </li>
 
                     </ul>
                 </li>
@@ -120,13 +127,6 @@
                     <a href="/Cake.Prca.Website/docs/pull-request-system">Pull Request System</a> <a href="#" class="expand"></a>
                     <ul class="treeview-menu">
                                         <li><a href="/Cake.Prca.Website/docs/pull-request-system/tfs">TFS &amp; VSTS</a></li>
-
-                    </ul>
-                </li>
-                <li class="treeview">
-                    <a href="/Cake.Prca.Website/docs/tutorials">Tutorials</a> <a href="#" class="expand"></a>
-                    <ul class="treeview-menu">
-                                        <li><a href="/Cake.Prca.Website/docs/tutorials/teamcity-with-tfs">Using with TeamCity and TFS</a></li>
 
                     </ul>
                 </li>
@@ -154,7 +154,7 @@
 	</section>
 	<section class="content">
 		<p>This user guide, like Cake.Prca itself, is under very active development. Some parts of it aren't 
-documented as completely as they need to be, but we glady accept your contributions.</p>
+documented as completely as they need to be, but we gladly accept your contributions.</p>
 
 <p>We need your help to improve the documentation for Cake.Prca, so if there is something that you 
 would like to add then you can edit the content directly on GitHub.</p>
@@ -218,6 +218,11 @@ would like to add then you can edit the content directly on GitHub.</p>
 									<td>
 									</td>
 								</tr>
+								<tr>
+									<td><strong><a href="/Cake.Prca.Website/docs/usage/tutorials">Tutorials</a></strong></td>
+									<td>
+Tutorials how to use the Cake Pull Request Code Analysis Addin with different build and pull request systems.									</td>
+								</tr>
 						</tbody>				
 					</table>
 				</div>
@@ -264,22 +269,6 @@ would like to add then you can edit the content directly on GitHub.</p>
 					</table>
 				</div>
 			</div> 
-    <h1>Tutorials</h1>
-        <p>Tutorials how to use the Cake Pull Request Code Analysis Addin with different build and pull request systems.</p>
-			<div class="box">
-				<div class="box-body no-padding">
-					<table class="table table-striped table-hover two-cols-alt table-responsive">
-						
-						<tbody>
-								<tr>
-									<td><strong><a href="/Cake.Prca.Website/docs/tutorials/teamcity-with-tfs">Using with TeamCity and TFS</a></strong></td>
-									<td>
-									</td>
-								</tr>
-						</tbody>				
-					</table>
-				</div>
-			</div> 
     <h1>Extending</h1>
         <p>Instructions how to add support for additional analyzers and pull request system to the Pull Request Code Analysis Addin.</p>
 			<div class="box">
@@ -317,7 +306,62 @@ would like to add then you can edit the content directly on GitHub.</p>
             </footer>
         </div>
         <a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
-        
+        <div class="github-button">
+    <a href="https://github.com/cake-contrib/Cake.Prca" target="_blank"><i class="fa fa-github"></i> GitHub</a>
+</div>
+<script>
+    ((window.gitter = {}).chat = {}).options = {
+        room: 'cake-contrib/Lobby'
+    };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+<script type="text/javascript" src="/Cake.Prca.Website/assets/js/anchor.min.js"></script>
+<script type="text/javascript" src="/Cake.Prca.Website/assets/js/clipboard.min.js"></script>
+<script type="text/javascript">
+    anchors.options.placement = 'left';
+    anchors.add('#content > h1,h2,h3,h4');
+
+    var snippets = document.querySelectorAll("pre > code");
+    [].forEach.call(snippets, function(snippet) {
+        snippet.insertAdjacentHTML("beforebegin", "<button class='btn-copy' data-clipboard-snippet><img class='clippy' width=13 src='/Cake.Prca.Website/assets/images/clippy.svg' alt='Copy to clipboard'></button>");
+    });
+    var clipboardSnippets = new Clipboard('[data-clipboard-snippet]', {
+        target: function(trigger) {
+            return trigger.nextElementSibling;
+        }
+    });
+    clipboardSnippets.on('success', function(e) {
+        e.clearSelection();
+        showTooltip(e.trigger, "Copied!");
+    });
+    clipboardSnippets.on('error', function(e) {
+        showTooltip(e.trigger, fallbackMessage(e.action));
+    });
+    var btns = document.querySelectorAll('.btn-copy');
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener('mouseleave', function(e) {
+            e.currentTarget.setAttribute('class', 'btn-copy');
+            e.currentTarget.removeAttribute('aria-label');
+        });
+    }    
+    function showTooltip(elem, msg) {
+        elem.setAttribute('class', 'btn-copy tooltipped tooltipped-s');
+        elem.setAttribute('aria-label', msg);
+    }
+    function fallbackMessage(action) {
+        var actionMsg = '';
+        var actionKey = (action === 'cut' ? 'X' : 'C');
+        if (/iPhone|iPad/i.test(navigator.userAgent)) {
+            actionMsg = 'No support :(';
+        } else if (/Mac/i.test(navigator.userAgent)) {
+            actionMsg = 'Press ⌘-' + actionKey + ' to ' + action;
+        } else {
+            actionMsg = 'Press Ctrl-' + actionKey + ' to ' + action;
+        }
+        return actionMsg;
+    }    
+</script>
         <script>           
             // Close the sidebar if we select an anchor link
             $(".main-sidebar a[href^='#']:not('.expand')").click(function(){
