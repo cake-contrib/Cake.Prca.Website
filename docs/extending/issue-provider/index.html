@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/Cake.Prca.Website/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/Cake.Prca.Website/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake PRCA - How to implement pull request systems</title>
+        <title>Cake PRCA - Issue Provider</title>
         <link href="/Cake.Prca.Website/assets/css/mermaid.css" rel="stylesheet">
         <link href="/Cake.Prca.Website/assets/css/highlight.css" rel="stylesheet">
         <link href="/Cake.Prca.Website/assets/css/bootstrap/bootstrap.css" rel="stylesheet" />
@@ -75,7 +75,7 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-        <div><p><a href="https://github.com/cake-contrib/Cake.Prca.Website/blob/develop/input/docs/extending/how-to-implement-pull-request-systems.md"><i class="fa fa-pencil-square" aria-hidden="true"></i> Edit Content</a></p></div>
+        <div><p><a href="https://github.com/cake-contrib/Cake.Prca.Website/blob/develop/input/docs/extending/issue-provider/index.cshtml"><i class="fa fa-pencil-square" aria-hidden="true"></i> Edit Content</a></p></div>
     <div id="infobar-headings"></div>
 
                 </section>
@@ -134,8 +134,24 @@
                 <li class="treeview active">
                     <a href="/Cake.Prca.Website/docs/extending">Extending</a> <a href="#" class="expand"></a>
                     <ul class="treeview-menu">
-                                        <li><a href="/Cake.Prca.Website/docs/extending/how-to-implement-issue-providers">How to implement issue providers</a></li>
-                <li class="selected"><a href="/Cake.Prca.Website/docs/extending/how-to-implement-pull-request-systems">How to implement pull request systems</a></li>
+                                        <li class="treeview active selected">
+                    <a href="/Cake.Prca.Website/docs/extending/issue-provider">Issue Provider</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                                        <li><a href="/Cake.Prca.Website/docs/extending/issue-provider/overview">Overview</a></li>
+                <li><a href="/Cake.Prca.Website/docs/extending/issue-provider/categories">Alias categories</a></li>
+                <li><a href="/Cake.Prca.Website/docs/extending/issue-provider/rule-url-resolving">Implementing rule URL resolving</a></li>
+                <li><a href="/Cake.Prca.Website/docs/extending/issue-provider/helper">Helper</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/Cake.Prca.Website/docs/extending/pull-request-system">Pull Request System</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                                        <li><a href="/Cake.Prca.Website/docs/extending/pull-request-system/overview">Overview</a></li>
+                <li><a href="/Cake.Prca.Website/docs/extending/pull-request-system/categories">Alias categories</a></li>
+
+                    </ul>
+                </li>
 
                     </ul>
                 </li>
@@ -151,25 +167,40 @@
 
 
 	<section class="content-header">
-		<h1>How to implement pull request systems</h1>
+		<h1>Issue Provider</h1>
 	</section>
 	<section class="content">
-		<html><head></head><body><p>Pull Request Systems need to implement the <a href="../../api/Cake.Prca.PullRequests/IPullRequestSystem">IPullRequestSystem</a> interface.
-For simplyfing implementation there exists an abstract <a href="../../api/Cake.Prca.PullRequests/PullRequestSystem">PullRequestSystem</a> base class from which concrete implementation can be inherited.</p>
-<p>Pull request system aliases should use the <code>CakeAliasConstants.MainCakeAliasCategory</code> and  <code>CakeAliasConstants.PullRequestSystemCakeAliasCategory</code>
-constants for defining their category:</p>
-<pre><code class="language-csharp">[CakeAliasCategory(CakeAliasConstants.MainCakeAliasCategory)]
-public static class MyPullRequestSystemAliases
-{
-    [CakeMethodAlias]
-    [CakeAliasCategory(CakeAliasConstants.PullRequestSystemCakeAliasCategory)]
-    public static <a href="/Cake.Prca.Website/api/Cake.Prca.Issues/ICodeAnalysisProvider">ICodeAnalysisProvider</a> MyPullRequestSystem(
-        this ICakeContext context)
-    {
-    }
-}
-</code></pre>
-</body></html>
+		
+			<div class="box">
+				<div class="box-body no-padding">
+					<table class="table table-striped table-hover two-cols-alt table-responsive">
+						
+						<tbody>
+								<tr>
+									<td><strong><a href="/Cake.Prca.Website/docs/extending/issue-provider/overview">Overview</a></strong></td>
+									<td>
+Overview how to implement support for an analyzer or linter.									</td>
+								</tr>
+								<tr>
+									<td><strong><a href="/Cake.Prca.Website/docs/extending/issue-provider/categories">Alias categories</a></strong></td>
+									<td>
+Instructions how to set the alias category.									</td>
+								</tr>
+								<tr>
+									<td><strong><a href="/Cake.Prca.Website/docs/extending/issue-provider/rule-url-resolving">Implementing rule URL resolving</a></strong></td>
+									<td>
+Instructions how to implement rule URL resolving.									</td>
+								</tr>
+								<tr>
+									<td><strong><a href="/Cake.Prca.Website/docs/extending/issue-provider/helper">Helper</a></strong></td>
+									<td>
+Overview of different helper classes for implementing issue providers.									</td>
+								</tr>
+						</tbody>				
+					</table>
+				</div>
+			</div> 
+
 	</section>
                 
             </div>           

@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/Cake.Prca.Website/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/Cake.Prca.Website/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake PRCA - Requirements</title>
+        <title>Cake PRCA - Alias categories</title>
         <link href="/Cake.Prca.Website/assets/css/mermaid.css" rel="stylesheet">
         <link href="/Cake.Prca.Website/assets/css/highlight.css" rel="stylesheet">
         <link href="/Cake.Prca.Website/assets/css/bootstrap/bootstrap.css" rel="stylesheet" />
@@ -75,7 +75,7 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-        <div><p><a href="https://github.com/cake-contrib/Cake.Prca.Website/blob/develop/input/docs/overview/requirements.md"><i class="fa fa-pencil-square" aria-hidden="true"></i> Edit Content</a></p></div>
+        <div><p><a href="https://github.com/cake-contrib/Cake.Prca.Website/blob/develop/input/docs/extending/issue-provider/categories.md"><i class="fa fa-pencil-square" aria-hidden="true"></i> Edit Content</a></p></div>
     <div id="infobar-headings"></div>
 
                 </section>
@@ -84,11 +84,11 @@
 
                     <ul class="sidebar-menu">
                         
-                <li class="treeview active">
+                <li class="treeview">
                     <a href="/Cake.Prca.Website/docs/overview">Overview</a> <a href="#" class="expand"></a>
                     <ul class="treeview-menu">
                                         <li><a href="/Cake.Prca.Website/docs/overview/features">Features</a></li>
-                <li class="selected"><a href="/Cake.Prca.Website/docs/overview/requirements">Requirements</a></li>
+                <li><a href="/Cake.Prca.Website/docs/overview/requirements">Requirements</a></li>
 
                     </ul>
                 </li>
@@ -131,14 +131,14 @@
 
                     </ul>
                 </li>
-                <li class="treeview">
+                <li class="treeview active">
                     <a href="/Cake.Prca.Website/docs/extending">Extending</a> <a href="#" class="expand"></a>
                     <ul class="treeview-menu">
-                                        <li class="treeview">
+                                        <li class="treeview active">
                     <a href="/Cake.Prca.Website/docs/extending/issue-provider">Issue Provider</a> <a href="#" class="expand"></a>
                     <ul class="treeview-menu">
                                         <li><a href="/Cake.Prca.Website/docs/extending/issue-provider/overview">Overview</a></li>
-                <li><a href="/Cake.Prca.Website/docs/extending/issue-provider/categories">Alias categories</a></li>
+                <li class="selected"><a href="/Cake.Prca.Website/docs/extending/issue-provider/categories">Alias categories</a></li>
                 <li><a href="/Cake.Prca.Website/docs/extending/issue-provider/rule-url-resolving">Implementing rule URL resolving</a></li>
                 <li><a href="/Cake.Prca.Website/docs/extending/issue-provider/helper">Helper</a></li>
 
@@ -167,15 +167,23 @@
 
 
 	<section class="content-header">
-		<h1>Requirements</h1>
+		<h1>Alias categories</h1>
 	</section>
 	<section class="content">
-		<h2 id="cake">Cake</h2>
-<p>The core Pull Request Code Analysis Addin requires Cake 0.16.2 or higher.</p>
-<div class="alert alert-info"><p>Note that individual addins might require a newer version of Cake.
-Please see in the documentation of the specific addin additional requirements for individual addins.</p>
-</div>
-
+		<html><head></head><body><p>Issue provider aliases should use the <a href="../../../api/Cake.Prca/CakeAliasConstants/4481299D">CakeAliasConstants.MainCakeAliasCategory</a> and
+<a href="../../../api/Cake.Prca/CakeAliasConstants/077189B4">CakeAliasConstants.CodeAnalysisProviderCakeAliasCategory</a> constants for defining their category:</p>
+<pre><code class="language-csharp">[CakeAliasCategory(CakeAliasConstants.MainCakeAliasCategory)]
+public static class MyIssueProviderAliases
+{
+    [CakeMethodAlias]
+    [CakeAliasCategory(CakeAliasConstants.CodeAnalysisProviderCakeAliasCategory)]
+    public static <a href="/Cake.Prca.Website/api/Cake.Prca.Issues/ICodeAnalysisProvider">ICodeAnalysisProvider</a> MyIssueProvider(
+        this ICakeContext context)
+    {
+    }
+}
+</code></pre>
+</body></html>
 	</section>
                 
             </div>           
