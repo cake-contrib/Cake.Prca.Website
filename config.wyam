@@ -5,6 +5,7 @@ Settings[DocsKeys.IncludeGlobalNamespace] = false;
 
 Pipelines.InsertBefore(Docs.Code, "Addins",
     ReadFiles("../addins/*.yml").Where(x => x.Path.FileName.ToString() != "Cake.Prca.yml"),
+    OrderBy(@doc.String(Keys.SourceFileName)),
     Yaml()
 );
 
