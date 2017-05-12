@@ -8,4 +8,4 @@ See [Issue Provider] for a list of currently supported analyzers and linters.
 See [How to implement issue providers] for instruction on how to implement support for additional issue providers.
 
 [Issue Provider]: ../../addins/issue-provider/
-[How to implement issue providers]: ../extending/how-to-implement-issue-providers
+[How to implement issue providers]: ../extending/issue-provider/

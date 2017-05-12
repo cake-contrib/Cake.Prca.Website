@@ -10,4 +10,4 @@ See [How to implement pull request systems] for instruction on how to implement 
 additional pull request systems.
 
 [Pull Request Systems]: ../../addins/pull-request-system/
-[How to implement pull request systems]: ../extending/how-to-implement-pull-request-systems
+[How to implement pull request systems]: ../extending/pull-request-system/
