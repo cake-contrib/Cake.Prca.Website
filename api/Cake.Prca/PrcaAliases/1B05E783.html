@@ -182,7 +182,7 @@
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static void ReportCodeAnalysisIssuesToPullRequest(this ICakeContext context, ICodeAnalysisProvider codeAnalysisProvider, IPullRequestSystem pullRequestSystem, DirectoryPath repositoryRoot)</code></pre>
+	<pre><code>public static IEnumerable&lt;ICodeAnalysisIssue&gt; ReportCodeAnalysisIssuesToPullRequest(this ICakeContext context, ICodeAnalysisProvider codeAnalysisProvider, IPullRequestSystem pullRequestSystem, DirectoryPath repositoryRoot)</code></pre>
 
 	<h1 id="Examples">Examples</h1>
 	<div>
@@ -264,8 +264,8 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>void</td>
-					<td></td>
+					<td>IEnumerable<wbr>&lt;<wbr>I<wbr>Code<wbr>Analysis<wbr>Issue&gt;<wbr></td>
+					<td>Issues which were posted to the pull request.</td>
 				</tr>
 			</tbody></table>
 		</div>
