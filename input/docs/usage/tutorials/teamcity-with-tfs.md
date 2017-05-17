@@ -5,12 +5,12 @@ Title: Using with TeamCity and TFS
 This page describes how to use the Cake Pull Request Code Analysis Addin for builds run on
 TeamCity and with Team Foundation Server (TFS) as pull request system.
 
-Team Foundation Server support is implemented in the `Cake.Prca.PullRequests.Tfs` addin.
+Team Foundation Server support is implemented in the [Cake.Prca.PullRequests.Tfs] addin.
 
 In your main Cake build script run on TeamCity you need to determine the remote repository URL and
 source branch of the pull request and create the [TfsPullRequests] object with this information.
 
-You can retrieve the required information using the `Cake.Git` Addin:
+You can retrieve the required information using the [Cake.Git] addin:
 
 ```csharp
 #addin "Cake.Git"
@@ -37,4 +37,6 @@ Task("prca").Does(() =>
 });
 ```
 
+[Cake.Prca.PullRequests.Tfs]: ../../pull-request-system/tfs
 [TfsPullRequests]: ../../../api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystemAliases/
+[Cake.Git]: https://www.nuget.org/packages/Cake.Git/
