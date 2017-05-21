@@ -1,6 +1,7 @@
 ---
 Order: 10
 Title: TFS & VSTS
+Description: Support for Team Foundation Server and Visual Studio Team Services.
 ---
 Support for Team Foundation Server (TFS) and Visual Studio Team Services (VSTS) is implemented in the `Cake.Prca.PullRequests.Tfs` addin.
 

@@ -1,6 +1,7 @@
 ---
 Order: 10
 Title: Using with TeamCity and TFS
+Description: Tutorial how to use Cake.Prca with TeamCity and Team Foundation Server.
 ---
 This page describes how to use the Cake Pull Request Code Analysis Addin for builds run on
 TeamCity and with Team Foundation Server (TFS) as pull request system.

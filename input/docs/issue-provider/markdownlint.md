@@ -1,6 +1,7 @@
 ---
 Order: 30
 Title: Markdownlint
+Description: Issue provider which allows you to write any issues logged by markdownlint as comments to a pull request.
 ---
 Support for reading issues reported by [Markdownlint] is implemented in the [Cake.Prca.Issues.Markdownlint addin].
 

@@ -1,5 +1,6 @@
 ---
 Order: 10
+Description: Architecture overview.
 ---
 
 The Cake Pull Request Code Analysis addin is built in a modular architecture, allowing to easily

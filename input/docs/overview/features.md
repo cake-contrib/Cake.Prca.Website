@@ -1,5 +1,6 @@
 ---
 Order: 10
+Description: Overview about core features.
 ---
 The Pull Request Code Analysis Addin for Cake allows you to add issues from any analyzer or linter to comments in pull requests.
 
