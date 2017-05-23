@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/Cake.Prca.Website/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/Cake.Prca.Website/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake PRCA - API - ICodeAnalysisIssue Interface</title>
+        <title>Cake PRCA - API - PrcaResult Class</title>
         <link href="/Cake.Prca.Website/assets/css/mermaid.css" rel="stylesheet">
         <link href="/Cake.Prca.Website/assets/css/highlight.css" rel="stylesheet">
         <link href="/Cake.Prca.Website/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -75,6 +75,7 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Constructors">Constructors</a></p>
 <p><a href="#Properties">Properties</a></p>
 <p><a href="#ExtensionMethods">Extension Methods</a></p>
 <hr class="infobar-hidden">
@@ -130,18 +131,17 @@
 			<li class="header">Assembly</li>
 		<li><a href="/Cake.Prca.Website/api/Cake.Prca.dll">Cake<wbr>.Prca<wbr>.dll</a></li>
 		<li class="header">Namespace</li>
-		<li><a href="/Cake.Prca.Website/api/Cake.Prca.Issues">Cake<wbr>.Prca<wbr>.Issues</a></li>
+		<li><a href="/Cake.Prca.Website/api/Cake.Prca">Cake<wbr>.Prca</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Class Types</li>
-				<li><a href="/Cake.Prca.Website/api/Cake.Prca.Issues/BaseRuleDescription">BaseRuleDescription</a></li>
-				<li><a href="/Cake.Prca.Website/api/Cake.Prca.Issues/BaseRuleUrlResolver_1">BaseRuleUrlResolver<wbr>&lt;T&gt;<wbr></a></li>
-				<li><a href="/Cake.Prca.Website/api/Cake.Prca.Issues/CodeAnalysisIssue_1">CodeAnalysisIssue<wbr>&lt;T&gt;<wbr></a></li>
-				<li><a href="/Cake.Prca.Website/api/Cake.Prca.Issues/CodeAnalysisIssue">CodeAnalysisIssue</a></li>
-				<li><a href="/Cake.Prca.Website/api/Cake.Prca.Issues/CodeAnalysisProvider">CodeAnalysisProvider</a></li>
-				<li><a href="/Cake.Prca.Website/api/Cake.Prca.Issues/StringPathExtensions">StringPathExtensions</a></li>
-			<li class="header">Interface Types</li>
-				<li class="selected"><a href="/Cake.Prca.Website/api/Cake.Prca.Issues/ICodeAnalysisIssue">ICodeAnalysisIssue</a></li>
-				<li><a href="/Cake.Prca.Website/api/Cake.Prca.Issues/ICodeAnalysisProvider">I<wbr>Code<wbr>Analysis<wbr>Provider</a></li>
+				<li><a href="/Cake.Prca.Website/api/Cake.Prca/CakeAliasConstants">CakeAliasConstants</a></li>
+				<li><a href="/Cake.Prca.Website/api/Cake.Prca/PrcaAliases">PrcaAliases</a></li>
+				<li><a href="/Cake.Prca.Website/api/Cake.Prca/PrcaArgumentChecks">PrcaArgumentChecks</a></li>
+				<li><a href="/Cake.Prca.Website/api/Cake.Prca/PrcaException">PrcaException</a></li>
+				<li class="selected"><a href="/Cake.Prca.Website/api/Cake.Prca/PrcaResult">PrcaResult</a></li>
+				<li><a href="/Cake.Prca.Website/api/Cake.Prca/ReportCodeAnalysisIssuesToPullRequestSettings">Report<wbr>Code<wbr>Analysis<wbr>Issues<wbr>To<wbr>Pull<wbr>Request<wbr>Settings</a></li>
+			<li class="header">Enum Types</li>
+				<li><a href="/Cake.Prca.Website/api/Cake.Prca/PrcaCommentFormat">PrcaCommentFormat</a></li>
 
 
                     </ul>
@@ -155,14 +155,14 @@
 
 
 <section class="content-header">
-	<h1>ICodeAnalysisIssue <small>Interface</small></h1>
+	<h1>PrcaResult <small>Class</small></h1>
 </section>
 <section class="content">
 	
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-            Description of a code analysis issue.
+            Result from a pull request code analysis call.
             </div>
 
 		<div class="panel panel-default">
@@ -174,29 +174,25 @@
 								<dd><a href="/Cake.Prca.Website/api/Cake.Prca.dll">Cake<wbr>.Prca<wbr>.dll</a></dd>
 
 								<dt>Namespace</dt>
-								<dd><a href="/Cake.Prca.Website/api/Cake.Prca.Issues">Cake<wbr>.Prca<wbr>.Issues</a></dd>
+								<dd><a href="/Cake.Prca.Website/api/Cake.Prca">Cake<wbr>.Prca</a></dd>
 											
 							
-							
-							
-								<dt>Implementing Types</dt>
+								<dt>Base Types</dt>
 								<dd>
-									<ul class="list-unstyled">
-											<li><a href="/Cake.Prca.Website/api/Cake.Prca.Issues/CodeAnalysisIssue_1">CodeAnalysisIssue<wbr>&lt;T&gt;<wbr></a></li>								
-											<li><a href="/Cake.Prca.Website/api/Cake.Prca.Issues/CodeAnalysisIssue">CodeAnalysisIssue</a></li>								
+									<ul class="list-unstyled">										
+											<li>object</li>								
 									</ul>
 								</dd>				
+							
+							
 						</dl>
 					</div>		
 					<div class="col-md-6">
 						<div class="mermaid">
 							graph TD
-	Type["ICodeAnalysisIssue"]
+	Base0["object"]--&gt;Type
+	Type["PrcaResult"]
 class Type type-node
-	Type-.-&gt;Implementing0["CodeAnalysisIssue&lt;T&gt;"]
-	click Implementing0 "/Cake.Prca.Website/api/Cake.Prca.Issues/CodeAnalysisIssue_1"
-	Type-.-&gt;Implementing1["CodeAnalysisIssue"]
-	click Implementing1 "/Cake.Prca.Website/api/Cake.Prca.Issues/CodeAnalysisIssue"
 
 						</div>
 					</div>
@@ -205,13 +201,33 @@ class Type type-node
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public interface ICodeAnalysisIssue</code></pre>
+	<pre><code>public class PrcaResult</code></pre>
 
 
 
 
 
 
+			<h1 id="Constructors">Constructors</h1>
+			<div class="box">
+				<div class="box-body no-padding table-responsive">
+					<table class="table table-striped table-hover two-cols">
+						<thead>
+							<tr>
+								<th>Name</th>
+									<th>Summary</th>
+							</tr>
+						</thead>
+							<tbody><tr>
+								<td><a href="/Cake.Prca.Website/api/Cake.Prca/PrcaResult/0B4AB6E2">PrcaResult<wbr>(IEnumerable<wbr>&lt;<wbr>I<wbr>Code<wbr>Analysis<wbr>Issue&gt;<wbr>, <wbr>IEnumerable<wbr>&lt;<wbr>I<wbr>Code<wbr>Analysis<wbr>Issue&gt;<wbr>)<wbr></a></td>
+									<td>
+            Initializes a new instance of the <code class="cs"><a href="/Cake.Prca.Website/api/Cake.Prca/PrcaResult">PrcaResult</a></code> class.
+            </td>
+							</tr>
+					</tbody></table>
+				</div>
+			</div>
+		
 
 
 
@@ -227,70 +243,20 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/Cake.Prca.Website/api/Cake.Prca.Issues/ICodeAnalysisIssue/334D8D18">Affected<wbr>File<wbr>Relative<wbr>Path</a></td>
-								<td>FilePath</td>
+								<td><a href="/Cake.Prca.Website/api/Cake.Prca/PrcaResult/AD68B4CE">PostedIssues</a></td>
+								<td>IEnumerable<wbr>&lt;<wbr>I<wbr>Code<wbr>Analysis<wbr>Issue&gt;<wbr></td>
 								<td>
 									<div>
-            Gets the path to the file affacted by the issue.
-            The path is relative to the repository root.
-            Can be <code class="cs">null</code> if issue is not related to a change in a file.
+            Gets the issues posted to the pull request.
             </div>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/Cake.Prca.Website/api/Cake.Prca.Issues/ICodeAnalysisIssue/9C371C5D">Line</a></td>
-								<td>int?</td>
+								<td><a href="/Cake.Prca.Website/api/Cake.Prca/PrcaResult/36D3ABD7">ReportedIssues</a></td>
+								<td>IEnumerable<wbr>&lt;<wbr>I<wbr>Code<wbr>Analysis<wbr>Issue&gt;<wbr></td>
 								<td>
 									<div>
-            Gets the line in the file where the issues has occurred.
-            Nothing if the issue affects the whole file or an asssembly.
-            </div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/Cake.Prca.Website/api/Cake.Prca.Issues/ICodeAnalysisIssue/BF3D88ED">Message</a></td>
-								<td>string</td>
-								<td>
-									<div>
-            Gets the message of the code analysis issue.
-            </div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/Cake.Prca.Website/api/Cake.Prca.Issues/ICodeAnalysisIssue/9A2B99F9">Priority</a></td>
-								<td>int</td>
-								<td>
-									<div>
-            Gets the priority of the message used to filter out issues if there are more issues than should be posted.
-            Issues with a lower priority are filtered if there are more issues to post than is allowed.
-            </div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/Cake.Prca.Website/api/Cake.Prca.Issues/ICodeAnalysisIssue/C203CA5C">ProviderType</a></td>
-								<td>string</td>
-								<td>
-									<div>
-            Gets the type of the issue provider.
-            </div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/Cake.Prca.Website/api/Cake.Prca.Issues/ICodeAnalysisIssue/A62FD0CA">Rule</a></td>
-								<td>string</td>
-								<td>
-									<div>
-            Gets the rule of the code analysis issue.
-            </div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/Cake.Prca.Website/api/Cake.Prca.Issues/ICodeAnalysisIssue/EFC80185">RuleUrl</a></td>
-								<td>Uri</td>
-								<td>
-									<div>
-            Gets the URL containing information about the failing rule.
-            Can be <code class="cs">null</code> if the issue provider provides no URL.
+            Gets all issues reported by the issue providers.
             </div>
 								</td>
 							</tr>
@@ -313,7 +279,7 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/Cake.Prca.Website/api/Cake.Prca/PrcaArgumentChecks/3B78CC85">NotNull<wbr>&lt;<wbr>I<wbr>Code<wbr>Analysis<wbr>Issue&gt;<wbr><wbr>(string)<wbr></a></td>
+								<td><a href="/Cake.Prca.Website/api/Cake.Prca/PrcaArgumentChecks/3B78CC85">NotNull<wbr>&lt;PrcaResult&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>void</td>
 								<td>
 									<div>
