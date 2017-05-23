@@ -27,7 +27,7 @@ Task("prca").Does(() =>
     var sourceBranchName = currentBranch.CanonicalName;
 
     ReportCodeAnalysisIssuesToPullRequest(
-        MsBuildCodeAnalysisFromFilePath(
+        MsBuildIssuesFromFilePath(
             @"C:\build\msbuild.log",
             MsBuildXmlFileLoggerFormat),
         TfsPullRequests(
