@@ -1,6 +1,7 @@
 ---
 Order: 50
 Title: DocFx warnings
+Description: Issue provider which allows you to write any warnings logged by DocFx as comments to a pull request.
 ---
 Support for reading warnings reported by [DocFx] is implemented in the [Cake.Prca.Issues.DocFx addin].
 

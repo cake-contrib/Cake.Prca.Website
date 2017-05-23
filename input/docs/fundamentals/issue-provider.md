@@ -1,5 +1,6 @@
 ---
 Order: 20
+Description: Overview about issue providers.
 ---
 Issue provider Addins are responsible for providing the output of an analyzer or linter to the Cake Pull Request Code Analysis Addin.
 
