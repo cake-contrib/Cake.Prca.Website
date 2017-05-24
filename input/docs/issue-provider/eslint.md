@@ -19,4 +19,4 @@ Support for reading issues reported by ESLint is implemented in the [Cake.Prca.I
 
 [Cake.Prca.Issues.EsLint addin]: https://www.nuget.org/packages/Cake.Prca.Issues.EsLint
 [json formatter]: http://eslint.org/docs/user-guide/formatters/#json
-[EsLintAddRuleUrlResolver]: ../../api/Cake.Prca.Issues.EsLint/EsLintProviderAliases/D0CBC4B6
+[EsLintAddRuleUrlResolver]: ../../api/Cake.Prca.Issues.EsLint/EsLintIssuesAliases/66FCBDE8
