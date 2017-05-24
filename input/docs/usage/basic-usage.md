@@ -1,6 +1,7 @@
 ---
 Order: 10
 Title: Basic usage
+Description: Basic usage instructions.
 ---
 To use Pull Request Code Analysis in your Cake file you need to import the core addin:
 
@@ -37,7 +38,7 @@ Task("prca").Does(() =>
 {
     var repoRootFolder = new DirectoryPath("c:\repo");
     ReportCodeAnalysisIssuesToPullRequest(
-        MsBuildCodeAnalysisFromFilePath(
+        MsBuildIssuesFromFilePath(
             @"C:\build\msbuild.log",
             MsBuildXmlFileLoggerFormat),
         TfsPullRequests(

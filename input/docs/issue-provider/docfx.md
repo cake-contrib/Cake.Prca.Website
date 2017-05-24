@@ -1,6 +1,7 @@
 ---
 Order: 50
 Title: DocFx warnings
+Description: Issue provider which allows you to write any warnings logged by DocFx as comments to a pull request.
 ---
 Support for reading warnings reported by [DocFx] is implemented in the [Cake.Prca.Issues.DocFx addin].
 
@@ -35,9 +36,11 @@ Task("prca").Does(() =>
     });
 
     // Run PRCA.
-    var repoRootFolder = new DirectoryPath("c:\repo");
+    var repoRootFolder = new DirectoryPath(@"c:\repo");
     ReportCodeAnalysisIssuesToPullRequest(
-        DocFxIssuesFromFilePath(logPath),
+        DocFxIssuesFromFilePath(
+            logPath,
+            @"c:\repo\docs"),
         TfsPullRequests(
             new Uri("http://myserver:8080/tfs/defaultcollection/myproject/_git/myrepository"),
             "refs/heads/feature/myfeature",
