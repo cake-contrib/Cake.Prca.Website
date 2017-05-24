@@ -14,6 +14,8 @@ The core addin provides the following functionality:
 * Automatic resolving of issues fixed in subsequent commits.
 * Comparing issues by content to not rely on line numbers.
 * Limit number of maximum issues to post.
+* Returns all issues as provided by the issue providers and the issues reported to the pull request.
+  This can be used to fail builds on certain conditions.
 
 ## Supported Issue Providers
 

@@ -38,7 +38,7 @@ Task("prca").Does(() =>
 {
     var repoRootFolder = new DirectoryPath("c:\repo");
     ReportCodeAnalysisIssuesToPullRequest(
-        MsBuildCodeAnalysisFromFilePath(
+        MsBuildIssuesFromFilePath(
             @"C:\build\msbuild.log",
             MsBuildXmlFileLoggerFormat),
         TfsPullRequests(
