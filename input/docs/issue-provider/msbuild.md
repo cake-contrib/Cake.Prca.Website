@@ -19,4 +19,4 @@ Support for reading warnings reported by MSBuild is implemented in the [Cake.Prc
 
 [Cake.Prca.Issues.MsBuild addin]: https://www.nuget.org/packages/Cake.Prca.Issues.MsBuild
 [MSBuild Extension Pack XmlFileLogger]: http://www.msbuildextensionpack.com/help/4.0.5.0/html/242ab4fd-c2e2-f6aa-325b-7588725aed24.htm
-[MsBuildAddRuleUrlResolver]: ../../api/Cake.Prca.Issues.MsBuild/MsBuildCodeAnalysisProviderAliases/6F6FE38C
+[MsBuildAddRuleUrlResolver]: ../../api/Cake.Prca.Issues.MsBuild/MsBuildIssuesAliases/7C1DC9B7
