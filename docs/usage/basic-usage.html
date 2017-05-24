@@ -195,7 +195,7 @@ together with <code>Cake.Prca</code> 1.1.0.</p>
 {
     var repoRootFolder = new DirectoryPath(&quot;c:\repo&quot;);
     ReportCodeAnalysisIssuesToPullRequest(
-        MsBuildCodeAnalysisFromFilePath(
+        MsBuildIssuesFromFilePath(
             &#64;&quot;C:\build\msbuild.log&quot;,
             MsBuildXmlFileLoggerFormat),
         TfsPullRequests(

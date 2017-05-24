@@ -200,9 +200,11 @@ Task(&quot;prca&quot;).Does(() =&gt;
     });
 
     // Run PRCA.
-    var repoRootFolder = new DirectoryPath(&quot;c:\repo&quot;);
+    var repoRootFolder = new DirectoryPath(&#64;&quot;c:\repo&quot;);
     ReportCodeAnalysisIssuesToPullRequest(
-        DocFxIssuesFromFilePath(logPath),
+        DocFxIssuesFromFilePath(
+            logPath,
+            &#64;&quot;c:\repo\docs&quot;),
         TfsPullRequests(
             new Uri(&quot;http://myserver:8080/tfs/defaultcollection/myproject/_git/myrepository&quot;),
             &quot;refs/heads/feature/myfeature&quot;,
