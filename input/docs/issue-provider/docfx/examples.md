@@ -1,20 +1,8 @@
 ---
-Order: 50
-Title: DocFx warnings
-Description: Issue provider which allows you to write any warnings logged by DocFx as comments to a pull request.
+Order: 30
+Title: Examples
+Description: Examples for using the Cake.Prca.Issues.DocFx addin.
 ---
-Support for reading warnings reported by [DocFx] is implemented in the [Cake.Prca.Issues.DocFx addin].
-
-## Requirements
-
-* Cake 0.16.2 or newer.
-
-## Features
-
-* Reads warnings from [DocFx] log files.
-
-## Example
-
 The following example will call [DocFx] to generate the documentation and report any warnings from
 the build as comments to the Team Foundation Server pull request.
 

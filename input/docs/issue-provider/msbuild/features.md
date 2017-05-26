@@ -1,15 +1,9 @@
 ---
-Order: 10
-Title: MsBuild Warnings
-Description: Issue provider which allows you to write any warnings logged by MsBuild as comments to a pull request.
+Order: 20
+Title: Features
+Description: Features of the Cake.Prca.Issues.MsBuild addin.
 ---
-Support for reading warnings reported by MSBuild is implemented in the [Cake.Prca.Issues.MsBuild addin].
-
-## Requirements
-
-* Cake 0.16.2 or newer.
-
-## Features
+The [Cake.Prca.Issues.MsBuild addin] provides the following features:
 
 * Reads warnings from MSBuild log files.
 * Supported log file formats:
