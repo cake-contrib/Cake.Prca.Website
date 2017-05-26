@@ -6,6 +6,7 @@
 #addin "nuget:https://api.nuget.org/v3/index.json?package=Cake.Yaml"
 #addin "nuget:https://api.nuget.org/v3/index.json?package=Octokit"
 
+
 using Octokit;
 
 //////////////////////////////////////////////////////////////////////
@@ -39,8 +40,10 @@ class AddinSpec
     public string NuGet { get; set; }
     public bool Prerelease { get; set; }
     public List<string> Assemblies { get; set; }
-    public string Repository { get; set; }
+    public string RepositoryOwner { get; set; }
+    public string RepositoryName { get; set; }
     public string Documentation { get; set; }
+    public string ReleaseNotesFilePath { get; set; }
     public string Author { get; set; }
     public string Description { get; set; }
     public List<string> Categories { get; set; }
@@ -100,6 +103,19 @@ Task("GetAddinPackages")
                             {"NUGET_EXE",  Context.Tools.Resolve("nuget.exe").FullPath }
                         }
                 });
+        }
+    });
+
+Task("GetReleaseNotes")
+    .IsDependentOn("GetAddinSpecs")
+    .WithCriteria(!string.IsNullOrEmpty(accessToken))
+    .Does(() =>
+    {
+        var packagesPath = MakeAbsolute(Directory("./output")).Combine("packages");
+        foreach(var addinSpec in addinSpecs.Where(x => !string.IsNullOrEmpty(x.RepositoryOwner) && !string.IsNullOrEmpty(x.RepositoryName) && !string.IsNullOrEmpty(x.ReleaseNotesFilePath)))
+        {
+            Information("Retrieving release notes for " + addinSpec.Name);
+            GitReleaseManagerExport("pat", accessToken, addinSpec.RepositoryOwner, addinSpec.RepositoryName, addinSpec.ReleaseNotesFilePath);
         }
     });
 
@@ -197,7 +213,8 @@ Task("Default")
     .IsDependentOn("Build");
 
 Task("GetArtifacts")
-    .IsDependentOn("GetAddinPackages");
+    .IsDependentOn("GetAddinPackages")
+    .IsDependentOn("GetReleaseNotes");
 
 Task("AppVeyor")
     .IsDependentOn(!isPullRequest && isMasterBranch ? "Deploy" : "Build");
