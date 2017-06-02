@@ -1,5 +1,6 @@
 #tool "nuget:https://api.nuget.org/v3/index.json?package=KuduSync.NET"
 #tool "nuget:https://api.nuget.org/v3/index.json?package=Wyam&prerelease"
+#tool "nuget:https://api.nuget.org/v3/index.json?package=gitreleasemanager"
 #addin "nuget:https://api.nuget.org/v3/index.json?package=Cake.Git"
 #addin "nuget:https://api.nuget.org/v3/index.json?package=Cake.Kudu"
 #addin "nuget:https://api.nuget.org/v3/index.json?package=Cake.Wyam&prerelease"
