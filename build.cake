@@ -1,38 +1,9 @@
-#tool "nuget:https://api.nuget.org/v3/index.json?package=KuduSync.NET"
-#tool "nuget:https://api.nuget.org/v3/index.json?package=Wyam&prerelease"
-#tool "nuget:https://api.nuget.org/v3/index.json?package=gitreleasemanager"
-#addin "nuget:https://api.nuget.org/v3/index.json?package=Cake.Git"
-#addin "nuget:https://api.nuget.org/v3/index.json?package=Cake.Kudu"
-#addin "nuget:https://api.nuget.org/v3/index.json?package=Cake.Wyam&prerelease"
+#load nuget:https://www.myget.org/F/cake-contrib/api/v2?package=Cake.Wyam.Recipe&prerelease
 #addin "nuget:https://api.nuget.org/v3/index.json?package=Cake.Yaml"
-#addin "nuget:https://api.nuget.org/v3/index.json?package=Octokit"
-
-
-using Octokit;
 
 //////////////////////////////////////////////////////////////////////
-// ARGUMENTS
+// PARAMETERS
 //////////////////////////////////////////////////////////////////////
-
-var target = Argument("target", "Default");
-
-//////////////////////////////////////////////////////////////////////
-// PREPARATION
-//////////////////////////////////////////////////////////////////////
-
-// Define variables
-var isRunningOnAppVeyor = AppVeyor.IsRunningOnAppVeyor;
-var isPullRequest       = AppVeyor.Environment.PullRequest.IsPullRequest;
-var isMasterBranch      = StringComparer.OrdinalIgnoreCase.Equals("master", AppVeyor.Environment.Repository.Branch);
-var accessToken         = EnvironmentVariable("WYAM_ACCESS_TOKEN");
-var deployRemote        = EnvironmentVariable("WYAM_DEPLOY_REMOTE");
-var deployBranch        = EnvironmentVariable("WYAM_DEPLOY_BRANCH");
-
-// Define directories.
-var releaseDir          = Directory("./release");
-var addinDir            = releaseDir + Directory("addins");
-var outputPath          = MakeAbsolute(Directory("./output"));
-var rootPublishFolder   = MakeAbsolute(Directory("publish"));
 
 // Definitions
 class AddinSpec
@@ -51,11 +22,29 @@ class AddinSpec
 }
 
 // Variables
-List<AddinSpec> addinSpecs = new List<AddinSpec>();
+var addinDir = Directory("./release/addins");
+var addinSpecs = new List<AddinSpec>();
 
+// Cake.Wyam.Recipe parameters
+Environment.SetVariableNames();
+
+BuildParameters.SetParameters(
+    context: Context,
+    buildSystem: BuildSystem,
+    title: "Cake PRCA",
+    repositoryOwner: "cake-contrib",
+    repositoryName: "Cake.Prca.Website",
+    appVeyorAccountName: "cake-contrib",
+    webHost: "cake-contrib.github.io",
+    webLinkRoot: "Cake.Prca.Website",
+    wyamRecipe: "Docs",
+    wyamTheme: "Samson",
+    shouldPublishDocumentation: StringComparer.OrdinalIgnoreCase.Equals("master", AppVeyor.Environment.Repository.Branch));
+
+BuildParameters.PrintParameters(Context);
 
 //////////////////////////////////////////////////////////////////////
-// TASKS
+// CUSTOM TASKS
 //////////////////////////////////////////////////////////////////////
 
 Task("CleanAddinPackages")
@@ -76,6 +65,12 @@ Task("GetAddinSpecs")
                 return DeserializeYamlFromFile<AddinSpec>(x);
             })
         );
+
+    foreach (var addinSpec in addinSpecs.Where(x => x.Assemblies != null).SelectMany(x => x.Assemblies).Select(x => "../release/addins" + x))
+    {
+        Verbose("Add '{0}' to Wyam", addinSpec);
+        BuildParameters.WyamAssemblyFiles.Add(addinSpec);
+    }
 });
 
 Task("GetAddinPackages")
@@ -109,123 +104,29 @@ Task("GetAddinPackages")
 
 Task("GetReleaseNotes")
     .IsDependentOn("GetAddinSpecs")
-    .WithCriteria(!string.IsNullOrEmpty(accessToken))
-    .Does(() =>
+    .WithCriteria(!string.IsNullOrEmpty(BuildParameters.Wyam.AccessToken))
+    .Does(() => RequireTool(GitReleaseManagerTool, () =>
     {
         var packagesPath = MakeAbsolute(Directory("./output")).Combine("packages");
         foreach(var addinSpec in addinSpecs.Where(x => !string.IsNullOrEmpty(x.RepositoryOwner) && !string.IsNullOrEmpty(x.RepositoryName) && !string.IsNullOrEmpty(x.ReleaseNotesFilePath)))
         {
             Information("Retrieving release notes for " + addinSpec.Name);
-            GitReleaseManagerExport("pat", accessToken, addinSpec.RepositoryOwner, addinSpec.RepositoryName, addinSpec.ReleaseNotesFilePath);
+            GitReleaseManagerExport("pat", BuildParameters.Wyam.AccessToken, addinSpec.RepositoryOwner, addinSpec.RepositoryName, addinSpec.ReleaseNotesFilePath);
         }
-    });
-
-Task("Build")
-    .IsDependentOn("GetArtifacts")
-    .Does(() =>
-    {
-        Wyam(new WyamSettings
-        {
-            Recipe = "Docs",
-            Theme = "Samson",
-            UpdatePackages = true,
-            Settings = new Dictionary<string, object>
-            {
-                { "AssemblyFiles",  addinSpecs.Where(x => x.Assemblies != null).SelectMany(x => x.Assemblies).Select(x => "../release/addins" + x) },
-                { "Host",  "cake-contrib.github.io" },
-                { "LinkRoot",  "Cake.Prca.Website" },
-                { "BaseEditUrl", "https://github.com/cake-contrib/Cake.Prca.Website/tree/develop/docs/input/" },
-            }
-        });
-    });
-
-// Does not download artifacts (run Build or GetArtifacts target first)
-Task("Preview")
-    .IsDependentOn("GetAddinSpecs")
-    .Does(() =>
-    {
-        Wyam(new WyamSettings
-        {
-            Recipe = "Docs",
-            Theme = "Samson",
-            UpdatePackages = true,
-            Preview = true,
-            Watch = true,
-            PreviewVirtualDirectory = "Cake.Prca.Website",
-            Settings = new Dictionary<string, object>
-            {
-                { "AssemblyFiles",  addinSpecs.Where(x => x.Assemblies != null).SelectMany(x => x.Assemblies).Select(x => "../release/addins" + x) },
-                { "Host",  "cake-contrib.github.io" },
-                { "LinkRoot",  "Cake.Prca.Website" },
-                { "BaseEditUrl", "https://github.com/cake-contrib/Cake.Prca.Website/tree/develop/docs/input/" },
-            }
-        });
-    });
-
-// Assumes Wyam source is local and at ../Wyam
-Task("Debug")
-    .Does(() =>
-    {
-        StartProcess("../Wyam/src/clients/Wyam/bin/Debug/wyam.exe",
-            "-a \"../Wyam/src/**/bin/Debug/*.dll\" -r \"docs -i\" -t \"../Wyam/themes/Docs/Samson\" -p --attach");
-    });
-
-Task("Deploy")
-    .WithCriteria(isRunningOnAppVeyor)
-    .WithCriteria(!isPullRequest)
-    .WithCriteria(isMasterBranch)
-    .WithCriteria(!string.IsNullOrEmpty(accessToken))
-    .WithCriteria(!string.IsNullOrEmpty(deployRemote))
-    .WithCriteria(!string.IsNullOrEmpty(deployBranch))
-    .IsDependentOn("Build")
-    .Does(() =>
-    {
-        EnsureDirectoryExists(rootPublishFolder);
-        var sourceCommit = GitLogTip("./");
-        var publishFolder = rootPublishFolder.Combine(DateTime.Now.ToString("yyyyMMdd_HHmmss"));
-        Information("Getting publish branch {0}...", deployBranch);
-        GitClone(deployRemote, publishFolder, new GitCloneSettings{ BranchName = deployBranch });
-
-        Information("Sync output files...");
-        Kudu.Sync(outputPath, publishFolder, new KuduSyncSettings {
-            PathsToIgnore = new []{ ".git", "appveyor.yml" }
-        });
-
-        Information("Stage all changes...");
-        GitAddAll(publishFolder);
-
-        Information("Commit all changes...");
-        GitCommit(
-            publishFolder,
-            sourceCommit.Committer.Name,
-            sourceCommit.Committer.Email,
-            string.Format("AppVeyor Publish: {0}\r\n{1}", sourceCommit.Sha, sourceCommit.Message)
-            );
-
-        Information("Pushing all changes...");
-        GitPush(publishFolder, accessToken, "x-oauth-basic", deployBranch);
-    });
-
-//////////////////////////////////////////////////////////////////////
-// TASK TARGETS
-//////////////////////////////////////////////////////////////////////
-
-Task("Default")
-    .IsDependentOn("Build");
+    }));
 
 Task("GetArtifacts")
     .IsDependentOn("GetAddinPackages")
     .IsDependentOn("GetReleaseNotes");
 
-Task("AppVeyor")
-    .IsDependentOn(!isPullRequest && isMasterBranch ? "Deploy" : "Build");
+BuildParameters.Tasks.BuildDocumentationTask
+    .IsDependentOn("GetArtifacts");
 
+BuildParameters.Tasks.PreviewDocumentationTask
+    .IsDependentOn("GetAddinSpecs");
 
 //////////////////////////////////////////////////////////////////////
 // EXECUTION
 //////////////////////////////////////////////////////////////////////
 
-if (!StringComparer.OrdinalIgnoreCase.Equals(target, "Deploy"))
-{
-    RunTarget(target);
-}
+Build.Run();
