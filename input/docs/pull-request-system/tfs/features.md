@@ -21,6 +21,7 @@ The [Cake.Prca.PullRequests.Tfs addin] provides the following features:
 * Comments written by the addin will be rendered with a specific icon corresponding to the state of the issue.
 * Adds rule number and, if provided by the issue provider, link to the rule description to the comment.
 * Support for issues messages formatted in Markdown format.
+* Alias for approving or voting pull requests.
 
 [Cake.Prca.PullRequests.Tfs addin]: https://www.nuget.org/packages/Cake.Prca.PullRequests.Tfs
 [Core features]: ../overview/features#supported-core-functionality
