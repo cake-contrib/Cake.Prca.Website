@@ -1,7 +1,9 @@
 Name: ESLint Support
 NuGet: Cake.Prca.Issues.EsLint
-Repository: https://github.com/cake-contrib/Cake.Prca.Issues.EsLint
+RepositoryOwner: cake-contrib
+RepositoryName: Cake.Prca.Issues.EsLint
 Documentation: https://cake-contrib.github.io/Cake.Prca.Website/docs/issue-provider/eslint
+ReleaseNotesFilePath: "input/docs/issue-provider/eslint/release-notes.md"
 Assemblies:
 - "/**/Cake.Prca.Issues.EsLint.dll"
 Author: BBT Software AG

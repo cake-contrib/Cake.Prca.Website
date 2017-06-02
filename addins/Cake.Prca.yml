@@ -1,6 +1,8 @@
 Name: Cake Pull Request Code Analysis
 NuGet: Cake.Prca
-Repository: https://github.com/cake-contrib/Cake.Prca
+RepositoryOwner: cake-contrib
+RepositoryName: Cake.Prca
+ReleaseNotesFilePath: "input/docs/overview/release-notes.md"
 Assemblies:
 - "/**/Cake.Prca.dll"
 Author: BBT Software AG
