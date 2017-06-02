@@ -16,7 +16,8 @@
     string description = @addin.String("Description");
     string author = @addin.String("Author");
     string nuget = @addin.String("NuGet");
-    string repository = @addin.String("repository");
+    string repositoryOwner = @addin.String("repositoryOwner");
+    string repositoryName = @addin.String("repositoryName");
     string documentation = @addin.String("documentation");
 
     <a id="@(nuget)"></a>
@@ -40,10 +41,10 @@
                     <dt>NuGet</dt>
                     <dd><a href="https://www.nuget.org/packages/@(nuget)">@nuget</a></dd>
                 }
-                @if(!string.IsNullOrEmpty(repository))
+                @if(!string.IsNullOrEmpty(repositoryOwner) && !string.IsNullOrEmpty(repositoryName))
                 {
                     <dt>Repository</dt>
-                    <dd><a href="@(repository)">@repository</a></dd>
+                    <dd><a href="https://github.com/@(repositoryOwner)/@(repositoryName)">@(repositoryOwner)/@(repositoryName)</a></dd>
                 }
                 @if(!string.IsNullOrEmpty(documentation))
                 {

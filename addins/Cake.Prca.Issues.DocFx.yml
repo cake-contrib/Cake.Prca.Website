@@ -1,7 +1,9 @@
 Name: DocFx Support
 NuGet: Cake.Prca.Issues.DocFx
-Repository: https://github.com/cake-contrib/Cake.Prca.Issues.DocFx
+RepositoryOwner: cake-contrib
+RepositoryName: Cake.Prca.Issues.DocFx
 Documentation: https://cake-contrib.github.io/Cake.Prca.Website/docs/issue-provider/docfx
+ReleaseNotesFilePath: "input/docs/issue-provider/docfx/release-notes.md"
 Assemblies:
 - "/**/Cake.Prca.Issues.DocFx.dll"
 Author: BBT Software AG

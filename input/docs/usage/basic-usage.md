@@ -21,7 +21,7 @@ and support for TFS pull requests is imported:
 :::{.alert .alert-info}
 Please note that the core addin and all issue providers and pull request systems need to be build
 against a compatible core API.
-You can check the required dependencies through the dependencies on the NuGet package of the addins.
+You can check the required dependencies in the release notes of the addin.
 
 This means that it's not possible to use a version of an issue provider build against `Cake.Prca` 1.0.0
 together with a version of a pull request system build against `Cake.Prca` 2.0.0.

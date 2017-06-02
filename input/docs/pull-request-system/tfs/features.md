@@ -1,16 +1,9 @@
 ---
-Order: 10
-Title: TFS & VSTS
-Description: Support for Team Foundation Server and Visual Studio Team Services.
+Order: 20
+Title: Features
+Description: Features of the Cake.Prca.PullRequests.Tfs addin.
 ---
-Support for Team Foundation Server (TFS) and Visual Studio Team Services (VSTS) is implemented in the `Cake.Prca.PullRequests.Tfs` addin.
-
-## Requirements
-
-* Cake 0.16.2 or newer.
-* Team Foundation Server 2017 or newer or Visual Studio Team Services.
-
-## Features
+The [Cake.Prca.PullRequests.Tfs addin] provides the following features:
 
 * Writes issues as comments to Team Foundation Server (TFS) or Visual Studio Team Services (VSTS) pull requests.
 * Full support for all [Core features].
@@ -28,7 +21,9 @@ Support for Team Foundation Server (TFS) and Visual Studio Team Services (VSTS) 
 * Comments written by the addin will be rendered with a specific icon corresponding to the state of the issue.
 * Adds rule number and, if provided by the issue provider, link to the rule description to the comment.
 * Support for issues messages formatted in Markdown format.
+* Alias for approving or voting pull requests.
 
+[Cake.Prca.PullRequests.Tfs addin]: https://www.nuget.org/packages/Cake.Prca.PullRequests.Tfs
 [Core features]: ../overview/features#supported-core-functionality
 [TfsAuthenticationNtlm]: ../../api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystemAliases/7DFCE6F3
 [TfsAuthenticationBasic]: ../../api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystemAliases/3A473143

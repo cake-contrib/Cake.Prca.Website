@@ -1,15 +1,9 @@
 ---
-Order: 40
-Title: ESLint Issues
-Description: Issue provider which allows you to write any issues logged by ESLint as comments to a pull request.
+Order: 20
+Title: Features
+Description: Features of the Cake.Prca.Issues.EsLint addin.
 ---
-Support for reading issues reported by ESLint is implemented in the [Cake.Prca.Issues.EsLint addin].
-
-## Requirements
-
-* Cake 0.16.2 or newer.
-
-## Features
+The [Cake.Prca.Issues.EsLint addin] provides the following features:
 
 * Reads issues reported by ESLint.
 * Supported ESLint formatters:

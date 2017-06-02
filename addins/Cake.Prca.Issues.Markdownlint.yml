@@ -1,7 +1,9 @@
 Name: Markdownlint Support
 NuGet: Cake.Prca.Issues.Markdownlint
-Repository: https://github.com/cake-contrib/Cake.Prca.Issues.Markdownlint
+RepositoryOwner: cake-contrib
+RepositoryName: Cake.Prca.Issues.Markdownlint
 Documentation: https://cake-contrib.github.io/Cake.Prca.Website/docs/issue-provider/markdownlint
+ReleaseNotesFilePath: "input/docs/issue-provider/markdownlint/release-notes.md"
 Assemblies:
 - "/**/Cake.Prca.Issues.Markdownlint.dll"
 Author: BBT Software AG

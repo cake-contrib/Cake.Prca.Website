@@ -5,3 +5,6 @@
 [Rr]elease/
 nuget.exe
 [Ll]ocal[Dd]eploy/
+
+release-notes.md
+BuildArtifacts
