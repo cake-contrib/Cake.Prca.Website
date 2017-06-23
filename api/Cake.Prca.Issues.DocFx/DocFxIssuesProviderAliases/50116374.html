@@ -192,7 +192,7 @@
      var settings =
          new DocFxIssuesSettings("C:\build\docfx.log");
 
-     ReportCodeAnalysisIssuesToPullRequest(
+     ReportIssuesToPullRequest(
          DocFxIssues(settings),
          TfsPullRequests(
              new Uri("http://myserver:8080/tfs/defaultcollection/myproject/_git/myrepository"),

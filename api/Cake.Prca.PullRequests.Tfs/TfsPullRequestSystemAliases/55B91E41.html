@@ -194,7 +194,7 @@
 	<div>
             <p>Report code analysis issues reported as MsBuild warnings to a TFS pull request:</p>
             <pre><code class="cs">var repoRoot = new DirectoryPath("c:\repo");
-    ReportCodeAnalysisIssuesToPullRequest(
+    ReportIssuesToPullRequest(
         MsBuildCodeAnalysis(
             @"C:\build\msbuild.log",
             MsBuildXmlFileLoggerFormat),

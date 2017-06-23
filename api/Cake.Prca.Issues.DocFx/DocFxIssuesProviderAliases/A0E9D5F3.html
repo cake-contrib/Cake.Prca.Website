@@ -190,7 +190,7 @@
 	<div>
             <p>Report warnings reported by DocFx to a TFS pull request:</p>
             <pre><code class="cs">var repoRoot = new DirectoryPath("c:\repo");
-    ReportCodeAnalysisIssuesToPullRequest(
+    ReportIssuesToPullRequest(
         DocFxIssuesFromContent(
             logFileContent),
         TfsPullRequests(

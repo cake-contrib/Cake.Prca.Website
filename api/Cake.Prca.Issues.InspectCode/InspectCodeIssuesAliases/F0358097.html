@@ -187,7 +187,7 @@
 	<div>
             <p>Report code analysis issues reported by JetBrains Inspect Code to a TFS pull request:</p>
             <pre><code class="cs">var repoRoot = new DirectoryPath("c:\repo");
-    ReportCodeAnalysisIssuesToPullRequest(
+    ReportIssuesToPullRequest(
         InspectCodeIssuesFromFilePath(
             new FilePath("C:\build\InspectCode.log")),
         TfsPullRequests(
