@@ -26,7 +26,7 @@ Task("prca").Does(() =>
     var repoRemoteUrl = new Uri(currentBranch.Remotes.Single(x => x.Name == "origin").Url);
     var sourceBranchName = currentBranch.CanonicalName;
 
-    ReportCodeAnalysisIssuesToPullRequest(
+    ReportIssuesToPullRequest(
         MsBuildIssuesFromFilePath(
             @"C:\build\msbuild.log",
             MsBuildXmlFileLoggerFormat),
