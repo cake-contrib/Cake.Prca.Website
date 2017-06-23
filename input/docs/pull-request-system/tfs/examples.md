@@ -52,7 +52,7 @@ Task("prca").Does(() =>
 
     // Run PRCA.
     var prcaResult =
-        ReportCodeAnalysisIssuesToPullRequest(
+        ReportIssuesToPullRequest(
             MsBuildIssuesFromFilePath(
                 @"c:\build\msbuild.log",
                 @"c:\repo\docs"),
