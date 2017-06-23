@@ -37,7 +37,7 @@ Finally you can define a task where you call the core addin with the desired iss
 Task("prca").Does(() =>
 {
     var repoRootFolder = new DirectoryPath("c:\repo");
-    ReportCodeAnalysisIssuesToPullRequest(
+    ReportIssuesToPullRequest(
         MsBuildIssuesFromFilePath(
             @"C:\build\msbuild.log",
             MsBuildXmlFileLoggerFormat),

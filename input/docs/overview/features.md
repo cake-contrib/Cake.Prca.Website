@@ -15,7 +15,8 @@ The core addin provides the following functionality:
 * Comparing issues by content to not rely on line numbers.
 * Limit number of maximum issues to post.
 * Returns all issues as provided by the issue providers and the issues reported to the pull request.
-  This can be used to fail builds on certain conditions.
+* `ReadIssues` alias for reading issues from multiple issue providers without interacting with a pull request system.
+  This can for example be used to fail builds on certain conditions.
 
 ## Supported Issue Providers
 

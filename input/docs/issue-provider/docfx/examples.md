@@ -25,7 +25,7 @@ Task("prca").Does(() =>
 
     // Run PRCA.
     var repoRootFolder = new DirectoryPath(@"c:\repo");
-    ReportCodeAnalysisIssuesToPullRequest(
+    ReportIssuesToPullRequest(
         DocFxIssuesFromFilePath(
             logPath,
             @"c:\repo\docs"),
