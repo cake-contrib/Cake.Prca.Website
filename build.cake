@@ -1,4 +1,4 @@
-#load nuget:https://api.nuget.org/v3/index.json?package=Cake.Wyam.Recipe&version=0.4.0
+#load nuget:https://www.myget.org/F/cake-contrib/api/v2?package=Cake.Wyam.Recipe&prerelease
 #addin "nuget:https://api.nuget.org/v3/index.json?package=Cake.Yaml"
 
 //////////////////////////////////////////////////////////////////////
