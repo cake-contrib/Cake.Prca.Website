@@ -31,10 +31,9 @@ Environment.SetVariableNames();
 BuildParameters.SetParameters(
     context: Context,
     buildSystem: BuildSystem,
-    title: "Cake PRCA",
+    title: "Cake.Prca.Website",
     repositoryOwner: "cake-contrib",
     repositoryName: "Cake.Prca.Website",
-    appVeyorAccountName: "cake-contrib",
     webHost: "cake-contrib.github.io",
     webLinkRoot: "Cake.Prca.Website",
     wyamRecipe: "Docs",
