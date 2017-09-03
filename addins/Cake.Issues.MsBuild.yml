@@ -1,11 +1,12 @@
 Name: MsBuild Log Support
-NuGet: Cake.Prca.Issues.MsBuild
+NuGet: Cake.Issues.MsBuild
+Prerelease: true
 RepositoryOwner: cake-contrib
-RepositoryName: Cake.Prca.Issues.MsBuild
-Documentation: https://cake-contrib.github.io/Cake.Prca.Website/docs/issue-provider/msbuild
+RepositoryName: Cake.Issues.MsBuild
+Documentation: https://cake-contrib.github.io/Cake.Issues.Website/docs/issue-provider/msbuild
 ReleaseNotesFilePath: "input/docs/issue-provider/msbuild/release-notes.md"
 Assemblies:
-- "/**/Cake.Prca.Issues.MsBuild.dll"
+- "/**/Cake.Issues.MsBuild.dll"
 Author: BBT Software AG
 Description: "Support for reading issues reported as warnings from MSBuild"
 Categories:

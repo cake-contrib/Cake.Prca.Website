@@ -24,11 +24,11 @@ The format of an addin file generally looks like:
 
 ```yml
 Name: Team Foundation Server (TFS) & Visual Studio Team Services (VSTS) Support
-NuGet: Cake.Prca.PullRequests.Tfs
+NuGet: Cake.Issues.PullRequests.Tfs
 Prerelease: true
-Repository: https://github.com/cake-contrib/Cake.Prca.PullRequests.Tfs
+Repository: https://github.com/cake-contrib/Cake.Issues.PullRequests.Tfs
 Assemblies:
-- "/**/Cake.Prca.PullRequests.Tfs.dll"
+- "/**/Cake.Issues.PullRequests.Tfs.dll"
 Author: BBT Software AG
 Description: "Support for writing issues as comments to Team Foundation Server or Visual Studio Team Services pull requests."
 Categories:
@@ -57,5 +57,5 @@ The URL of the generated preview site is `http://localhost:5080/`.
 ## Deployment
 
 The site is deployed for every release tagged on the `master` branch.
-Release numbering is in sync with numbering of the core `Cake.Prca` addin.
+Release numbering is in sync with numbering of the core `Cake.Issues` addin.
 

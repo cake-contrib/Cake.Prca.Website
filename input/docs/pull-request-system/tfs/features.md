@@ -1,9 +1,9 @@
 ---
 Order: 20
 Title: Features
-Description: Features of the Cake.Prca.PullRequests.Tfs addin.
+Description: Features of the Cake.Issues.PullRequests.Tfs addin.
 ---
-The [Cake.Prca.PullRequests.Tfs addin] provides the following features:
+The [Cake.Issues.PullRequests.Tfs addin] provides the following features:
 
 * Writes issues as comments to Team Foundation Server (TFS) or Visual Studio Team Services (VSTS) pull requests.
 * Full support for all [Core features].
@@ -23,11 +23,11 @@ The [Cake.Prca.PullRequests.Tfs addin] provides the following features:
 * Support for issues messages formatted in Markdown format.
 * Alias for approving or voting pull requests.
 
-[Cake.Prca.PullRequests.Tfs addin]: https://www.nuget.org/packages/Cake.Prca.PullRequests.Tfs
+[Cake.Issues.PullRequests.Tfs addin]: https://www.nuget.org/packages/Cake.Issues.PullRequests.Tfs
 [Core features]: ../overview/features#supported-core-functionality
-[TfsAuthenticationNtlm]: ../../api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystemAliases/7DFCE6F3
-[TfsAuthenticationBasic]: ../../api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystemAliases/3A473143
-[TfsAuthenticationPersonalAccessToken]: ../../api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystemAliases/B24D89BD
-[TfsAuthenticationOAuth]: ../../api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystemAliases/BEDAF9BF
-[TfsAuthenticationAzureActiveDirectory]: ../../api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystemAliases/DF54F8F0
+[TfsAuthenticationNtlm]: ../../api/Cake.Issues.PullRequests.Tfs/TfsPullRequestSystemAliases/7DFCE6F3
+[TfsAuthenticationBasic]: ../../api/Cake.Issues.PullRequests.Tfs/TfsPullRequestSystemAliases/3A473143
+[TfsAuthenticationPersonalAccessToken]: ../../api/Cake.Issues.PullRequests.Tfs/TfsPullRequestSystemAliases/B24D89BD
+[TfsAuthenticationOAuth]: ../../api/Cake.Issues.PullRequests.Tfs/TfsPullRequestSystemAliases/BEDAF9BF
+[TfsAuthenticationAzureActiveDirectory]: ../../api/Cake.Issues.PullRequests.Tfs/TfsPullRequestSystemAliases/DF54F8F0
 [configured for basic authentication]: https://www.visualstudio.com/en-us/docs/integrate/get-started/auth/tfs-basic-auth

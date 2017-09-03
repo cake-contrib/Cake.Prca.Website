@@ -3,21 +3,21 @@ Order: 30
 Title: Alias categories
 Description: Instructions how to set the alias category.
 ---
-Pull request system aliases should use the [CakeAliasConstants.MainCakeAliasCategory] and
-[CakeAliasConstants.PullRequestSystemCakeAliasCategory] constants for defining their category:
+Pull request system aliases should use the [IssuesAliasConstants.MainCakeAliasCategory] and
+[PullRequestsAliasConstants.PullRequestSystemCakeAliasCategory] constants for defining their category:
 
 ```csharp
-[CakeAliasCategory(CakeAliasConstants.MainCakeAliasCategory)]
+[CakeAliasCategory(IssuesAliasConstants.MainCakeAliasCategory)]
 public static class MyPullRequestSystemAliases
 {
     [CakeMethodAlias]
-    [CakeAliasCategory(CakeAliasConstants.PullRequestSystemCakeAliasCategory)]
-    public static ICodeAnalysisProvider MyPullRequestSystem(
+    [CakeAliasCategory(PullRequestsAliasConstants.PullRequestSystemCakeAliasCategory)]
+    public static IPullRequestSystem MyPullRequestSystem(
         this ICakeContext context)
     {
     }
 }
 ```
 
-[CakeAliasConstants.MainCakeAliasCategory]: ../../../api/Cake.Prca/CakeAliasConstants/4481299D
-[CakeAliasConstants.PullRequestSystemCakeAliasCategory]: ../../../api/Cake.Prca/CakeAliasConstants/1AFE170C
+[IssuesAliasConstants.MainCakeAliasCategory]: ../../../api/Cake.Issues/IssuesAliasConstants/41CCADF8
+[PullRequestsAliasConstants.PullRequestSystemCakeAliasCategory]: ../../../api/Cake.Issues.PullRequests/PullRequestsAliasConstants/B4C013A1

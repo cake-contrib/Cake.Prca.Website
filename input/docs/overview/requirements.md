@@ -1,10 +1,10 @@
 ---
 Order: 20
-Description: Requirements for using Cake.Prca.
+Description: Requirements for using Cake.Issues.
 ---
 ## Cake
 
-The core Pull Request Code Analysis Addin requires Cake 0.16.2 or higher.
+The core addins requires Cake 0.16.2 or higher.
 
 :::{.alert .alert-info}
 Note that individual addins might require a newer version of Cake.

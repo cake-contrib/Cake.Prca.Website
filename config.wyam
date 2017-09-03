@@ -1,10 +1,10 @@
-Settings[Keys.Host] = "cake-contrib.github.io/Cake.Prca";
-Settings[DocsKeys.Title] = "Cake PRCA";
-Settings[DocsKeys.BaseEditUrl] = "https://github.com/cake-contrib/Cake.Prca.Website/blob/develop/input/";
+Settings[Keys.Host] = "cake-contrib.github.io/Cake.Issues";
+Settings[DocsKeys.Title] = "Cake Issues";
+Settings[DocsKeys.BaseEditUrl] = "https://github.com/cake-contrib/Cake.Issues.Website/blob/develop/input/";
 Settings[DocsKeys.IncludeGlobalNamespace] = false;
 
 Pipelines.InsertBefore(Docs.Code, "Addins",
-    ReadFiles("../addins/*.yml").Where(x => x.Path.FileName.ToString() != "Cake.Prca.yml"),
+    ReadFiles("../addins/*.yml"),
     OrderBy(@doc.String(Keys.SourceFileName)),
     Yaml()
 );

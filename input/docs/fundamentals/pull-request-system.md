@@ -1,9 +1,9 @@
 ---
-Order: 30
+Order: 40
 Description: Overview about pull request system implementations.
 ---
-Pull Request Addins implement specific Pull Request Systems and allow the
-Cake Pull Request Code Analysis Addin to write found issues as comments to pull requests.
+Pull request addins implement specific Pull Request Systems and allow the
+Cake Issues addin to write found issues as comments to pull requests.
 
 See [Pull Request Systems] for a list of currently supported pull request systems.
 

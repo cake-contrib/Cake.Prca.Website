@@ -1,11 +1,12 @@
 Name: JetBrains Inspect Code Support
-NuGet: Cake.Prca.Issues.InspectCode
+NuGet: Cake.Issues.InspectCode
+Prerelease: true
 RepositoryOwner: cake-contrib
-RepositoryName: Cake.Prca.Issues.InspectCode
-Documentation: https://cake-contrib.github.io/Cake.Prca.Website/docs/issue-provider/inspectcode
+RepositoryName: Cake.Issues.InspectCode
+Documentation: https://cake-contrib.github.io/Cake.Issues.Website/docs/issue-provider/inspectcode
 ReleaseNotesFilePath: "input/docs/issue-provider/inspectcode/release-notes.md"
 Assemblies:
-- "/**/Cake.Prca.Issues.InspectCode.dll"
+- "/**/Cake.Issues.InspectCode.dll"
 Author: BBT Software AG
 Description: "Support for reading issues reported by JetBrains Inspect Code"
 Categories:

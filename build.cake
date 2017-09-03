@@ -31,11 +31,11 @@ Environment.SetVariableNames();
 BuildParameters.SetParameters(
     context: Context,
     buildSystem: BuildSystem,
-    title: "Cake.Prca.Website",
+    title: "Cake.Issues.Website",
     repositoryOwner: "cake-contrib",
-    repositoryName: "Cake.Prca.Website",
+    repositoryName: "Cake.Issues.Website",
     webHost: "cake-contrib.github.io",
-    webLinkRoot: "Cake.Prca.Website",
+    webLinkRoot: "Cake.Issues.Website",
     wyamRecipe: "Docs",
     wyamTheme: "Samson",
     shouldPublishDocumentation: StringComparer.OrdinalIgnoreCase.Equals("master", AppVeyor.Environment.Repository.Branch));

@@ -1,0 +1,12 @@
+Name: Cake.Issues
+NuGet: Cake.Issues
+Prerelease: true
+RepositoryOwner: cake-contrib
+RepositoryName: Cake.Issues
+ReleaseNotesFilePath: "input/docs/overview/release-notes.md"
+Assemblies:
+- "/**/Cake.Issues.dll"
+Author: BBT Software AG
+Description: "The issues addin for Cake allows you to read issue from any code analyzer or linter."
+Categories:
+- Core

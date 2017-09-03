@@ -3,21 +3,21 @@ Order: 30
 Title: Alias categories
 Description: Instructions how to set the alias category.
 ---
-Issue provider aliases should use the [CakeAliasConstants.MainCakeAliasCategory] and
-[CakeAliasConstants.CodeAnalysisProviderCakeAliasCategory] constants for defining their category:
+Issue provider aliases should use the [IssuesAliasConstants.MainCakeAliasCategory] and
+[IssuesAliasConstants.IssueProviderCakeAliasCategory] constants for defining their category:
 
 ```csharp
-[CakeAliasCategory(CakeAliasConstants.MainCakeAliasCategory)]
+[CakeAliasCategory(IssuesAliasConstants.MainCakeAliasCategory)]
 public static class MyIssueProviderAliases
 {
     [CakeMethodAlias]
-    [CakeAliasCategory(CakeAliasConstants.CodeAnalysisProviderCakeAliasCategory)]
-    public static ICodeAnalysisProvider MyIssueProvider(
+    [CakeAliasCategory(IssuesAliasConstants.IssueProviderCakeAliasCategory)]
+    public static IIssueProvider MyIssueProvider(
         this ICakeContext context)
     {
     }
 }
 ```
 
-[CakeAliasConstants.MainCakeAliasCategory]: ../../../api/Cake.Prca/CakeAliasConstants/4481299D
-[CakeAliasConstants.CodeAnalysisProviderCakeAliasCategory]: ../../../api/Cake.Prca/CakeAliasConstants/077189B4
+[IssuesAliasConstants.MainCakeAliasCategory]: ../../../api/Cake.Issues/IssuesAliasConstants/41CCADF8
+[IssuesAliasConstants.IssueProviderCakeAliasCategory]: ../../../api/Cake.Issues/IssuesAliasConstants/D265B28D

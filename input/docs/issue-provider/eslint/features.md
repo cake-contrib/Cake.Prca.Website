@@ -1,9 +1,9 @@
 ---
 Order: 20
 Title: Features
-Description: Features of the Cake.Prca.Issues.EsLint addin.
+Description: Features of the Cake.Issues.EsLint addin.
 ---
-The [Cake.Prca.Issues.EsLint addin] provides the following features:
+The [Cake.Issues.EsLint addin] provides the following features:
 
 * Reads issues reported by ESLint.
 * Supported ESLint formatters:
@@ -11,6 +11,6 @@ The [Cake.Prca.Issues.EsLint addin] provides the following features:
 * Provides URLs for all issues.
 * Support for custom URL resolving using the [EsLintAddRuleUrlResolver] alias.
 
-[Cake.Prca.Issues.EsLint addin]: https://www.nuget.org/packages/Cake.Prca.Issues.EsLint
+[Cake.Issues.EsLint addin]: https://www.nuget.org/packages/Cake.Issues.EsLint
 [json formatter]: http://eslint.org/docs/user-guide/formatters/#json
-[EsLintAddRuleUrlResolver]: ../../api/Cake.Prca.Issues.EsLint/EsLintIssuesAliases/66FCBDE8
+[EsLintAddRuleUrlResolver]: ../../api/Cake.Issues.EsLint/EsLintIssuesAliases/66FCBDE8

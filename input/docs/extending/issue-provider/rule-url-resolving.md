@@ -3,8 +3,8 @@ Order: 40
 Title: Implementing rule URL resolving
 Description: Instructions how to implement rule URL resolving.
 ---
-For cases where additional logic is required to determine the URL for a rule, the `Cake.Prca`
-assembly provides the [BaseRuleDescription] and [BaseRuleUrlResolver] classes for
+For cases where additional logic is required to determine the URL for a rule, the `Cake.Issue`
+addin provides the [BaseRuleDescription] and [BaseRuleUrlResolver] classes for
 simplifying implementation of providing URLs linking to site providing information about issues.
 
 ## Implementing RuleUrlResolver
@@ -105,8 +105,7 @@ internal class MyRuleUrlResolver : BaseUrlResolver<MyRuleDescription>
     public static MyRuleUrlResolver Instance => InstanceValue.Value;
 }
 
-[CakeAliasCategory(CakeAliasConstants.MainCakeAliasCategory)]
-[CakeNamespaceImport("Cake.Prca.Issues.MyIssueProvider")]
+[CakeAliasCategory(IssuesAliasConstants.MainCakeAliasCategory)]
 public static class MyIssueProviderAliases
 {
     /// <summary>
@@ -116,7 +115,7 @@ public static class MyIssueProviderAliases
     /// <param name="resolver">Resolver which returns an <see cref="Uri"/> linking to a site
     /// containing help for a specific <see cref="MyRuleDescription"/>.</param>
     [CakeMethodAlias]
-    [CakeAliasCategory(CakeAliasConstants.CodeAnalysisProviderCakeAliasCategory)]
+    [CakeAliasCategory(IssuesAliasConstants.IssueProviderCakeAliasCategory)]
     public static void MyIssueProviderAddRuleUrlResolver(
         this ICakeContext context,
         Func<MyRuleDescription, Uri> resolver)
@@ -128,8 +127,8 @@ public static class MyIssueProviderAliases
     }
 ```
 
-[BaseRuleDescription]: ../../../api/Cake.Prca.Issues/BaseRuleDescription/
-[BaseRuleUrlResolver]: ../../../api/Cake.Prca.Issues/BaseRuleUrlResolver_1/
-[TryGetRuleDescription]: ../../../api/Cake.Prca.Issues/BaseRuleUrlResolver_1/364293D9
-[AddUrlResolver]: ../../../api/Cake.Prca.Issues/BaseRuleUrlResolver_1/B4CCC92D
-[ResolveRuleUrl]: ../../../api/Cake.Prca.Issues/BaseRuleUrlResolver_1/BBC7350A
+[BaseRuleDescription]: ../../../api/Cake.Issues/BaseRuleDescription/
+[BaseRuleUrlResolver]: ../../../api/Cake.Issues/BaseRuleUrlResolver_1/
+[TryGetRuleDescription]: ../../../api/Cake.Issues/BaseRuleUrlResolver_1/D9DB5D44
+[AddUrlResolver]: ../../../api/Cake.Issues/BaseRuleUrlResolver_1/AAA4FB20
+[ResolveRuleUrl]: ../../../api/Cake.Issues/BaseRuleUrlResolver_1/6B23EC74

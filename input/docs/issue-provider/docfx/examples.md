@@ -1,7 +1,7 @@
 ---
 Order: 30
 Title: Examples
-Description: Examples for using the Cake.Prca.Issues.DocFx addin.
+Description: Examples for using the CakE.Issues.DocFx addin.
 ---
 The following example will call [DocFx] to generate the documentation and report any warnings from
 the build as comments to the Team Foundation Server pull request.
@@ -10,11 +10,12 @@ To call [DocFx] from a Cake script you can use the [Cake.DocFx] addin.
 
 ```csharp
 #addin "Cake.DocFx"
-#addin "Cake.Prca"
-#addin "Cake.Prca.Issues.MsBuild"
-#addin "Cake.Prca.PullRequests.Tfs"
+#addin "Cake.Issues"
+#addin "Cake.Issues.MsBuild"
+#addin "Cake.PullRequests"
+#addin "Cake.PullRequests.Tfs"
 
-Task("prca").Does(() =>
+Task("Build-Documentation").Does(() =>
 {
     // Run DocFx.
     var logPath = @"c:\build\docfx.log";
@@ -23,7 +24,7 @@ Task("prca").Does(() =>
         LogPath = logPath
     });
 
-    // Run PRCA.
+    // Report issues to pull request.
     var repoRootFolder = new DirectoryPath(@"c:\repo");
     ReportIssuesToPullRequest(
         DocFxIssuesFromFilePath(
@@ -38,5 +39,4 @@ Task("prca").Does(() =>
 ```
 
 [DocFx]: https://dotnet.github.io/docfx/
-[Cake.Prca.Issues.DocFx addin]: https://www.nuget.org/packages/Cake.Prca.Issues.DocFx
 [Cake.DocFx]: https://www.nuget.org/packages/Cake.DocFx/
