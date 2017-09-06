@@ -231,19 +231,19 @@ simplifying implementation of providing URLs linking to site providing informati
 <p>In the issue provider a concrete class inheriting from <a href="../../../api/Cake.Prca.Issues/BaseRuleDescription/">BaseRuleDescription</a> should be implemented
 containing all properties required to determine the URL to a rule.
 The following class adds two properties <code>Category</code> and <code>RuleId</code> to the description:</p>
-<pre><code class="language-csharp">/// <summary>
+<pre><code class="language-csharp">/// &lt;summary&gt;
 /// Class describing rules for my issue provider.
-/// </summary>
+/// &lt;/summary&gt;
 public class MyRuleDescription : <a href="/Cake.Prca.Website/api/Cake.Prca.Issues/BaseRuleDescription">BaseRuleDescription</a>
 {
-    /// <summary>
+    /// &lt;summary&gt;
     /// Gets or sets the category of the rule.
-    /// </summary>
+    /// &lt;/summary&gt;
     public string Category { get; set; }
 
-    /// <summary>
+    /// &lt;summary&gt;
     /// Gets or sets the identifier of the rule.
-    /// </summary>
+    /// &lt;/summary&gt;
     public int RuleId { get; set; }
 }
 </code></pre>

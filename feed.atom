@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<link rel="self" href="http://cake-contrib.github.io/Cake.Prca/Cake.Prca.Website" />
+	<id>http://cake-contrib.github.io/Cake.Prca/Cake.Prca.Website</id>
+	<title>Cake PRCA</title>
+	<rights>2017</rights>
+	<updated>2017-09-06T23:02:27Z</updated>
+</feed>
