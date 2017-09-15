@@ -111,7 +111,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -123,6 +123,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -283,15 +290,22 @@ class Type type-node
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.Issues/CodeAnalysisIssue/5B9E7274">Affected<wbr>File<wbr>Relative<wbr>Path</a></td>
 								<td>FilePath</td>
 								<td>
-									<div></div>
+									<div>
+            Gets the path to the file affacted by the issue.
+            The path is relative to the repository root.
+            Can be <code class="cs">null</code> if issue is not related to a change in a file.
+            </div>
 											<div><small><em>Inherited from <a href="/Cake.Prca.Website/api/Cake.Prca.Issues/CodeAnalysisIssue">CodeAnalysisIssue</a></em></small></div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.Issues/CodeAnalysisIssue/5E16C4EB">Line</a></td>
-								<td>int?</td>
+								<td>Nullable<wbr>&lt;T&gt;<wbr></td>
 								<td>
-									<div></div>
+									<div>
+            Gets the line in the file where the issues has occurred.
+            Nothing if the issue affects the whole file or an asssembly.
+            </div>
 											<div><small><em>Inherited from <a href="/Cake.Prca.Website/api/Cake.Prca.Issues/CodeAnalysisIssue">CodeAnalysisIssue</a></em></small></div>
 								</td>
 							</tr>
@@ -299,7 +313,9 @@ class Type type-node
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.Issues/CodeAnalysisIssue/2230347B">Message</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Gets the message of the code analysis issue.
+            </div>
 											<div><small><em>Inherited from <a href="/Cake.Prca.Website/api/Cake.Prca.Issues/CodeAnalysisIssue">CodeAnalysisIssue</a></em></small></div>
 								</td>
 							</tr>
@@ -307,7 +323,10 @@ class Type type-node
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.Issues/CodeAnalysisIssue/6E78B177">Priority</a></td>
 								<td>int</td>
 								<td>
-									<div></div>
+									<div>
+            Gets the priority of the message used to filter out issues if there are more issues than should be posted.
+            Issues with a lower priority are filtered if there are more issues to post than is allowed.
+            </div>
 											<div><small><em>Inherited from <a href="/Cake.Prca.Website/api/Cake.Prca.Issues/CodeAnalysisIssue">CodeAnalysisIssue</a></em></small></div>
 								</td>
 							</tr>
@@ -315,7 +334,9 @@ class Type type-node
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.Issues/CodeAnalysisIssue/5612696C">ProviderType</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Gets the type of the issue provider.
+            </div>
 											<div><small><em>Inherited from <a href="/Cake.Prca.Website/api/Cake.Prca.Issues/CodeAnalysisIssue">CodeAnalysisIssue</a></em></small></div>
 								</td>
 							</tr>
@@ -323,7 +344,9 @@ class Type type-node
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.Issues/CodeAnalysisIssue/640E087C">Rule</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Gets the rule of the code analysis issue.
+            </div>
 											<div><small><em>Inherited from <a href="/Cake.Prca.Website/api/Cake.Prca.Issues/CodeAnalysisIssue">CodeAnalysisIssue</a></em></small></div>
 								</td>
 							</tr>
@@ -331,7 +354,10 @@ class Type type-node
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.Issues/CodeAnalysisIssue/72C5BD13">RuleUrl</a></td>
 								<td>Uri</td>
 								<td>
-									<div></div>
+									<div>
+            Gets the URL containing information about the failing rule.
+            Can be <code class="cs">null</code> if the issue provider provides no URL.
+            </div>
 											<div><small><em>Inherited from <a href="/Cake.Prca.Website/api/Cake.Prca.Issues/CodeAnalysisIssue">CodeAnalysisIssue</a></em></small></div>
 								</td>
 							</tr>

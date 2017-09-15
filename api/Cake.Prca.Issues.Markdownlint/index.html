@@ -106,7 +106,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -118,6 +118,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -146,12 +153,8 @@
 				<li class="treeview">
 				<a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests">Cake<wbr>.Prca<wbr>.PullRequests</a> <a href="#" class="expand"></a>
 				<ul class="treeview-menu">
-			
-				<li class="treeview">
-				<a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs">Cake<wbr>.Prca<wbr>.PullRequests<wbr>.Tfs</a> <a href="#" class="expand"></a>
-				<ul class="treeview-menu">
-						<li><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs.Authentication">Cake<wbr>.Prca<wbr>.PullRequests<wbr>.Tfs<wbr>.Authentication</a></li>
-</ul></li></ul></li></ul></li></ul></li>      
+						<li><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs">Cake<wbr>.Prca<wbr>.PullRequests<wbr>.Tfs</a></li>
+</ul></li></ul></li></ul></li>      
 
                     </ul>
                 </section>                
@@ -191,7 +194,7 @@
 							<tr>
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.Issues.Markdownlint/MarkdownlintIssuesSettings">Markdownlint<wbr>Issues<wbr>Settings</a></td>
 									<td>
-            Settings for <code class="cs"><a href="/Cake.Prca.Website">MarkdownlintIssuesProvider</a></code>.
+            Settings for <code class="cs">Cake.Prca.Issues.Markdownlint.MarkdownlintIssuesProvider</code>.
             </td>
 							</tr>
 					</tbody></table>

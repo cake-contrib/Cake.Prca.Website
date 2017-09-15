@@ -109,7 +109,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -121,6 +121,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -251,7 +258,7 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca/PrcaAliases/DEDE1734">ReadIssues<wbr>(ICakeContext, <wbr>I<wbr>Code<wbr>Analysis<wbr>Provider, <wbr>DirectoryPath)<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;<wbr>I<wbr>Code<wbr>Analysis<wbr>Issue&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
             Reads issues from a single issue provider.
@@ -261,7 +268,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca/PrcaAliases/AC051CB3">ReadIssues<wbr>(ICakeContext, <wbr>I<wbr>Code<wbr>Analysis<wbr>Provider, <wbr>ReadIssuesSettings)<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;<wbr>I<wbr>Code<wbr>Analysis<wbr>Issue&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
              Reads issues from a single issue provider using the specified settings.
@@ -271,7 +278,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca/PrcaAliases/A47E4CF2">ReadIssues<wbr>(ICakeContext, <wbr>IEnumerable<wbr>&lt;<wbr>I<wbr>Code<wbr>Analysis<wbr>Provider&gt;<wbr>, <wbr>DirectoryPath)<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;<wbr>I<wbr>Code<wbr>Analysis<wbr>Issue&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
             Reads issues from issue providers.
@@ -281,7 +288,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca/PrcaAliases/63F11AB0">ReadIssues<wbr>(ICakeContext, <wbr>IEnumerable<wbr>&lt;<wbr>I<wbr>Code<wbr>Analysis<wbr>Provider&gt;<wbr>, <wbr>ReadIssuesSettings)<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;<wbr>I<wbr>Code<wbr>Analysis<wbr>Issue&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
              Reads issues from issue providers using the specified settings.

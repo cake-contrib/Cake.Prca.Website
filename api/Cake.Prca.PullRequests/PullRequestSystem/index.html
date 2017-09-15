@@ -111,7 +111,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -123,6 +123,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -289,7 +296,7 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests/PullRequestSystem/495D1D3B">Fetch<wbr>Active<wbr>Discussion<wbr>Threads<wbr>(string)<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;<wbr>I<wbr>Prca<wbr>Discussion<wbr>Thread&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
             Returns a list of all active discussion threads.
@@ -298,7 +305,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests/PullRequestSystem/CB78097F">Get<wbr>Modified<wbr>Files<wbr>In<wbr>Pull<wbr>Request<wbr>()<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;FilePath&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
             Returns a list of all files modified in a pull request.
@@ -325,7 +332,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests/PullRequestSystem/B531F6DD">Internal<wbr>Fetch<wbr>Active<wbr>Discussion<wbr>Threads<wbr>(string)<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;<wbr>I<wbr>Prca<wbr>Discussion<wbr>Thread&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
             Returns a list of all active discussion threads.
@@ -335,7 +342,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests/PullRequestSystem/482C5CA6">Internal<wbr>Get<wbr>Modified<wbr>Files<wbr>In<wbr>Pull<wbr>Request<wbr>()<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;FilePath&gt;<wbr></td>
+								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
 								<td>
 									<div>
             Returns a list of all files modified in a pull request.

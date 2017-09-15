@@ -110,7 +110,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -122,6 +122,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -255,35 +262,47 @@ class Type type-node
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests/PrcaDiscussionThread/8388A39E">Affected<wbr>File<wbr>Relative<wbr>Path</a></td>
 								<td>FilePath</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets the path to the file where the message should be posted.
+            The path needs to be relative to the repository root.
+            Can be <code class="cs">null</code> if discussion is not related to a change in a file.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests/PrcaDiscussionThread/32FEC601">Comments</a></td>
-								<td>IList<wbr>&lt;<wbr>I<wbr>Prca<wbr>Discussion<wbr>Comment&gt;<wbr></td>
+								<td>IList<wbr>&lt;T&gt;<wbr></td>
 								<td>
-									<div></div>
+									<div>
+            Gets all the comments of this thread.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests/PrcaDiscussionThread/55021193">CommentSource</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets a value used to decorate comments created by this addin.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests/PrcaDiscussionThread/7D55160D">Id</a></td>
 								<td>int</td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets the ID of the discussion thread.
+            </div>
 								</td>
 							</tr>
 							<tr>
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests/PrcaDiscussionThread/CCC9C439">Status</a></td>
 								<td><a href="/Cake.Prca.Website/api/Cake.Prca.PullRequests/PrcaDiscussionStatus">PrcaDiscussionStatus</a></td>
 								<td>
-									<div></div>
+									<div>
+            Gets or sets if the thread is active or already fixed.
+            </div>
 								</td>
 							</tr>
 					</tbody></table>
