@@ -34,32 +34,32 @@ var searchModule = function() {
 
     a({
         id:0,
-        title:"ICodeAnalysisProvider",
-        content:"ICodeAnalysisProvider",
+        title:"EsLintIssuesAliases",
+        content:"EsLintIssuesAliases",
         description:'',
         tags:''
     });
 
     a({
         id:1,
-        title:"DocFxIssuesProviderAliases",
-        content:"DocFxIssuesProviderAliases",
+        title:"PrcaCommentFormat",
+        content:"PrcaCommentFormat",
         description:'',
         tags:''
     });
 
     a({
         id:2,
-        title:"IPrcaDiscussionThread",
-        content:"IPrcaDiscussionThread",
+        title:"PrcaDiscussionThread",
+        content:"PrcaDiscussionThread",
         description:'',
         tags:''
     });
 
     a({
         id:3,
-        title:"CodeAnalysisIssue",
-        content:"CodeAnalysisIssue",
+        title:"ILogFileFormat",
+        content:"ILogFileFormat",
         description:'',
         tags:''
     });
@@ -74,78 +74,22 @@ var searchModule = function() {
 
     a({
         id:5,
-        title:"ILogFileFormat",
-        content:"ILogFileFormat",
+        title:"MarkdownlintIssuesSettings",
+        content:"MarkdownlintIssuesSettings",
         description:'',
         tags:''
     });
 
     a({
         id:6,
-        title:"CodeAnalysisProvider",
-        content:"CodeAnalysisProvider",
+        title:"PrcaDiscussionStatus",
+        content:"PrcaDiscussionStatus",
         description:'',
         tags:''
     });
 
     a({
         id:7,
-        title:"ReportIssuesToPullRequestSettings",
-        content:"ReportIssuesToPullRequestSettings",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:8,
-        title:"PullRequestSystem",
-        content:"PullRequestSystem",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:9,
-        title:"PrcaDiscussionComment",
-        content:"PrcaDiscussionComment",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:10,
-        title:"EsLintIssuesAliases",
-        content:"EsLintIssuesAliases",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:11,
-        title:"PrcaSettings",
-        content:"PrcaSettings",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:12,
-        title:"MsBuildRuleDescription",
-        content:"MsBuildRuleDescription",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:13,
-        title:"LogFileFormat",
-        content:"LogFileFormat",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:14,
         title:"EsLintIssuesSettings",
         content:"EsLintIssuesSettings",
         description:'',
@@ -153,39 +97,7 @@ var searchModule = function() {
     });
 
     a({
-        id:15,
-        title:"IPrcaDiscussionComment",
-        content:"IPrcaDiscussionComment",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:16,
-        title:"TfsPullRequestSettings",
-        content:"TfsPullRequestSettings",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:17,
-        title:"ILogFileFormat",
-        content:"ILogFileFormat",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:18,
-        title:"CakeAliasConstants",
-        content:"CakeAliasConstants",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:19,
+        id:8,
         title:"TfsPullRequestSystemAliases",
         content:"TfsPullRequestSystemAliases",
         description:'',
@@ -193,63 +105,7 @@ var searchModule = function() {
     });
 
     a({
-        id:20,
-        title:"IPrcaCredentials",
-        content:"IPrcaCredentials",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:21,
-        title:"MsBuildIssuesSettings",
-        content:"MsBuildIssuesSettings",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:22,
-        title:"PrcaDiscussionThread",
-        content:"PrcaDiscussionThread",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:23,
-        title:"PrcaAliases",
-        content:"PrcaAliases",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:24,
-        title:"ICodeAnalysisIssue",
-        content:"ICodeAnalysisIssue",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:25,
-        title:"MsBuildIssuesAliases",
-        content:"MsBuildIssuesAliases",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:26,
-        title:"PrcaCommentFormat",
-        content:"PrcaCommentFormat",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:27,
+        id:9,
         title:"LogFileFormat",
         content:"LogFileFormat",
         description:'',
@@ -257,7 +113,39 @@ var searchModule = function() {
     });
 
     a({
-        id:28,
+        id:10,
+        title:"IPrcaDiscussionThread",
+        content:"IPrcaDiscussionThread",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:11,
+        title:"ReportIssuesToPullRequestSettings",
+        content:"ReportIssuesToPullRequestSettings",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:12,
+        title:"PullRequestSystem",
+        content:"PullRequestSystem",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:13,
+        title:"TfsPullRequestSettings",
+        content:"TfsPullRequestSettings",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:14,
         title:"PrcaException",
         content:"PrcaException",
         description:'',
@@ -265,9 +153,121 @@ var searchModule = function() {
     });
 
     a({
-        id:29,
+        id:15,
+        title:"ReadIssuesSettings",
+        content:"ReadIssuesSettings",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:16,
+        title:"ICodeAnalysisProvider",
+        content:"ICodeAnalysisProvider",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:17,
+        title:"CodeAnalysisIssue",
+        content:"CodeAnalysisIssue",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:18,
+        title:"PrcaAliases",
+        content:"PrcaAliases",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:19,
+        title:"DocFxIssuesProviderAliases",
+        content:"DocFxIssuesProviderAliases",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:20,
+        title:"MsBuildRuleDescription",
+        content:"MsBuildRuleDescription",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:21,
+        title:"InspectCodeIssuesAliases",
+        content:"InspectCodeIssuesAliases",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:22,
+        title:"PrcaDiscussionComment",
+        content:"PrcaDiscussionComment",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:23,
+        title:"IPrcaCredentials",
+        content:"IPrcaCredentials",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:24,
         title:"PrcaResult",
         content:"PrcaResult",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:25,
+        title:"ICodeAnalysisIssue",
+        content:"ICodeAnalysisIssue",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:26,
+        title:"IPullRequestSystem",
+        content:"IPullRequestSystem",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:27,
+        title:"MsBuildIssuesSettings",
+        content:"MsBuildIssuesSettings",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:28,
+        title:"ILogFileFormat",
+        content:"ILogFileFormat",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:29,
+        title:"InspectCodeIssuesSettings",
+        content:"InspectCodeIssuesSettings",
         description:'',
         tags:''
     });
@@ -282,22 +282,6 @@ var searchModule = function() {
 
     a({
         id:31,
-        title:"DocFxIssuesSettings",
-        content:"DocFxIssuesSettings",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:32,
-        title:"StringPathExtensions",
-        content:"StringPathExtensions",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:33,
         title:"BaseRuleDescription",
         content:"BaseRuleDescription",
         description:'',
@@ -305,63 +289,15 @@ var searchModule = function() {
     });
 
     a({
-        id:34,
-        title:"InspectCodeIssuesAliases",
-        content:"InspectCodeIssuesAliases",
+        id:32,
+        title:"PrcaSettings",
+        content:"PrcaSettings",
         description:'',
         tags:''
     });
 
     a({
-        id:35,
-        title:"IPullRequestSystem",
-        content:"IPullRequestSystem",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:36,
-        title:"ReadIssuesSettings",
-        content:"ReadIssuesSettings",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:37,
-        title:"PrcaDiscussionStatus",
-        content:"PrcaDiscussionStatus",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:38,
-        title:"MarkdownlintIssuesSettings",
-        content:"MarkdownlintIssuesSettings",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:39,
-        title:"InspectCodeIssuesSettings",
-        content:"InspectCodeIssuesSettings",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:40,
-        title:"BaseRuleUrlResolver",
-        content:"BaseRuleUrlResolver",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:41,
+        id:33,
         title:"PrcaArgumentChecks",
         content:"PrcaArgumentChecks",
         description:'',
@@ -369,34 +305,98 @@ var searchModule = function() {
     });
 
     a({
-        id:42,
+        id:34,
+        title:"DocFxIssuesSettings",
+        content:"DocFxIssuesSettings",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:35,
+        title:"BaseRuleUrlResolver",
+        content:"BaseRuleUrlResolver",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:36,
+        title:"CakeAliasConstants",
+        content:"CakeAliasConstants",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:37,
+        title:"LogFileFormat",
+        content:"LogFileFormat",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:38,
+        title:"StringPathExtensions",
+        content:"StringPathExtensions",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:39,
+        title:"IPrcaDiscussionComment",
+        content:"IPrcaDiscussionComment",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:40,
         title:"CodeAnalysisIssue",
         content:"CodeAnalysisIssue",
         description:'',
         tags:''
     });
 
+    a({
+        id:41,
+        title:"MsBuildIssuesAliases",
+        content:"MsBuildIssuesAliases",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:42,
+        title:"CodeAnalysisProvider",
+        content:"CodeAnalysisProvider",
+        description:'',
+        tags:''
+    });
+
     y({
-        url:'/Cake.Prca.Website/api/Cake.Prca.Issues/ICodeAnalysisProvider',
-        title:"ICodeAnalysisProvider",
+        url:'/Cake.Prca.Website/api/Cake.Prca.Issues.EsLint/EsLintIssuesAliases',
+        title:"EsLintIssuesAliases",
         description:""
     });
 
     y({
-        url:'/Cake.Prca.Website/api/Cake.Prca.Issues.DocFx/DocFxIssuesProviderAliases',
-        title:"DocFxIssuesProviderAliases",
+        url:'/Cake.Prca.Website/api/Cake.Prca/PrcaCommentFormat',
+        title:"PrcaCommentFormat",
         description:""
     });
 
     y({
-        url:'/Cake.Prca.Website/api/Cake.Prca.PullRequests/IPrcaDiscussionThread',
-        title:"IPrcaDiscussionThread",
+        url:'/Cake.Prca.Website/api/Cake.Prca.PullRequests/PrcaDiscussionThread',
+        title:"PrcaDiscussionThread",
         description:""
     });
 
     y({
-        url:'/Cake.Prca.Website/api/Cake.Prca.Issues/CodeAnalysisIssue_1',
-        title:"CodeAnalysisIssue<T>",
+        url:'/Cake.Prca.Website/api/Cake.Prca.Issues.MsBuild/ILogFileFormat',
+        title:"ILogFileFormat",
         description:""
     });
 
@@ -407,14 +407,38 @@ var searchModule = function() {
     });
 
     y({
-        url:'/Cake.Prca.Website/api/Cake.Prca.Issues.EsLint/ILogFileFormat',
-        title:"ILogFileFormat",
+        url:'/Cake.Prca.Website/api/Cake.Prca.Issues.Markdownlint/MarkdownlintIssuesSettings',
+        title:"MarkdownlintIssuesSettings",
         description:""
     });
 
     y({
-        url:'/Cake.Prca.Website/api/Cake.Prca.Issues/CodeAnalysisProvider',
-        title:"CodeAnalysisProvider",
+        url:'/Cake.Prca.Website/api/Cake.Prca.PullRequests/PrcaDiscussionStatus',
+        title:"PrcaDiscussionStatus",
+        description:""
+    });
+
+    y({
+        url:'/Cake.Prca.Website/api/Cake.Prca.Issues.EsLint/EsLintIssuesSettings',
+        title:"EsLintIssuesSettings",
+        description:""
+    });
+
+    y({
+        url:'/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystemAliases',
+        title:"TfsPullRequestSystemAliases",
+        description:""
+    });
+
+    y({
+        url:'/Cake.Prca.Website/api/Cake.Prca.Issues.MsBuild/LogFileFormat',
+        title:"LogFileFormat",
+        description:""
+    });
+
+    y({
+        url:'/Cake.Prca.Website/api/Cake.Prca.PullRequests/IPrcaDiscussionThread',
+        title:"IPrcaDiscussionThread",
         description:""
     });
 
@@ -431,116 +455,8 @@ var searchModule = function() {
     });
 
     y({
-        url:'/Cake.Prca.Website/api/Cake.Prca.PullRequests/PrcaDiscussionComment',
-        title:"PrcaDiscussionComment",
-        description:""
-    });
-
-    y({
-        url:'/Cake.Prca.Website/api/Cake.Prca.Issues.EsLint/EsLintIssuesAliases',
-        title:"EsLintIssuesAliases",
-        description:""
-    });
-
-    y({
-        url:'/Cake.Prca.Website/api/Cake.Prca/PrcaSettings',
-        title:"PrcaSettings",
-        description:""
-    });
-
-    y({
-        url:'/Cake.Prca.Website/api/Cake.Prca.Issues.MsBuild/MsBuildRuleDescription',
-        title:"MsBuildRuleDescription",
-        description:""
-    });
-
-    y({
-        url:'/Cake.Prca.Website/api/Cake.Prca.Issues.MsBuild/LogFileFormat',
-        title:"LogFileFormat",
-        description:""
-    });
-
-    y({
-        url:'/Cake.Prca.Website/api/Cake.Prca.Issues.EsLint/EsLintIssuesSettings',
-        title:"EsLintIssuesSettings",
-        description:""
-    });
-
-    y({
-        url:'/Cake.Prca.Website/api/Cake.Prca.PullRequests/IPrcaDiscussionComment',
-        title:"IPrcaDiscussionComment",
-        description:""
-    });
-
-    y({
         url:'/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSettings',
         title:"TfsPullRequestSettings",
-        description:""
-    });
-
-    y({
-        url:'/Cake.Prca.Website/api/Cake.Prca.Issues.MsBuild/ILogFileFormat',
-        title:"ILogFileFormat",
-        description:""
-    });
-
-    y({
-        url:'/Cake.Prca.Website/api/Cake.Prca/CakeAliasConstants',
-        title:"CakeAliasConstants",
-        description:""
-    });
-
-    y({
-        url:'/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestSystemAliases',
-        title:"TfsPullRequestSystemAliases",
-        description:""
-    });
-
-    y({
-        url:'/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs/IPrcaCredentials',
-        title:"IPrcaCredentials",
-        description:""
-    });
-
-    y({
-        url:'/Cake.Prca.Website/api/Cake.Prca.Issues.MsBuild/MsBuildIssuesSettings',
-        title:"MsBuildIssuesSettings",
-        description:""
-    });
-
-    y({
-        url:'/Cake.Prca.Website/api/Cake.Prca.PullRequests/PrcaDiscussionThread',
-        title:"PrcaDiscussionThread",
-        description:""
-    });
-
-    y({
-        url:'/Cake.Prca.Website/api/Cake.Prca/PrcaAliases',
-        title:"PrcaAliases",
-        description:""
-    });
-
-    y({
-        url:'/Cake.Prca.Website/api/Cake.Prca.Issues/ICodeAnalysisIssue',
-        title:"ICodeAnalysisIssue",
-        description:""
-    });
-
-    y({
-        url:'/Cake.Prca.Website/api/Cake.Prca.Issues.MsBuild/MsBuildIssuesAliases',
-        title:"MsBuildIssuesAliases",
-        description:""
-    });
-
-    y({
-        url:'/Cake.Prca.Website/api/Cake.Prca/PrcaCommentFormat',
-        title:"PrcaCommentFormat",
-        description:""
-    });
-
-    y({
-        url:'/Cake.Prca.Website/api/Cake.Prca.Issues.EsLint/LogFileFormat',
-        title:"LogFileFormat",
         description:""
     });
 
@@ -551,32 +467,38 @@ var searchModule = function() {
     });
 
     y({
-        url:'/Cake.Prca.Website/api/Cake.Prca/PrcaResult',
-        title:"PrcaResult",
+        url:'/Cake.Prca.Website/api/Cake.Prca/ReadIssuesSettings',
+        title:"ReadIssuesSettings",
         description:""
     });
 
     y({
-        url:'/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestVote',
-        title:"TfsPullRequestVote",
+        url:'/Cake.Prca.Website/api/Cake.Prca.Issues/ICodeAnalysisProvider',
+        title:"ICodeAnalysisProvider",
         description:""
     });
 
     y({
-        url:'/Cake.Prca.Website/api/Cake.Prca.Issues.DocFx/DocFxIssuesSettings',
-        title:"DocFxIssuesSettings",
+        url:'/Cake.Prca.Website/api/Cake.Prca.Issues/CodeAnalysisIssue',
+        title:"CodeAnalysisIssue",
         description:""
     });
 
     y({
-        url:'/Cake.Prca.Website/api/Cake.Prca.Issues/StringPathExtensions',
-        title:"StringPathExtensions",
+        url:'/Cake.Prca.Website/api/Cake.Prca/PrcaAliases',
+        title:"PrcaAliases",
         description:""
     });
 
     y({
-        url:'/Cake.Prca.Website/api/Cake.Prca.Issues/BaseRuleDescription',
-        title:"BaseRuleDescription",
+        url:'/Cake.Prca.Website/api/Cake.Prca.Issues.DocFx/DocFxIssuesProviderAliases',
+        title:"DocFxIssuesProviderAliases",
+        description:""
+    });
+
+    y({
+        url:'/Cake.Prca.Website/api/Cake.Prca.Issues.MsBuild/MsBuildRuleDescription',
+        title:"MsBuildRuleDescription",
         description:""
     });
 
@@ -587,26 +509,44 @@ var searchModule = function() {
     });
 
     y({
+        url:'/Cake.Prca.Website/api/Cake.Prca.PullRequests/PrcaDiscussionComment',
+        title:"PrcaDiscussionComment",
+        description:""
+    });
+
+    y({
+        url:'/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs/IPrcaCredentials',
+        title:"IPrcaCredentials",
+        description:""
+    });
+
+    y({
+        url:'/Cake.Prca.Website/api/Cake.Prca/PrcaResult',
+        title:"PrcaResult",
+        description:""
+    });
+
+    y({
+        url:'/Cake.Prca.Website/api/Cake.Prca.Issues/ICodeAnalysisIssue',
+        title:"ICodeAnalysisIssue",
+        description:""
+    });
+
+    y({
         url:'/Cake.Prca.Website/api/Cake.Prca.PullRequests/IPullRequestSystem',
         title:"IPullRequestSystem",
         description:""
     });
 
     y({
-        url:'/Cake.Prca.Website/api/Cake.Prca/ReadIssuesSettings',
-        title:"ReadIssuesSettings",
+        url:'/Cake.Prca.Website/api/Cake.Prca.Issues.MsBuild/MsBuildIssuesSettings',
+        title:"MsBuildIssuesSettings",
         description:""
     });
 
     y({
-        url:'/Cake.Prca.Website/api/Cake.Prca.PullRequests/PrcaDiscussionStatus',
-        title:"PrcaDiscussionStatus",
-        description:""
-    });
-
-    y({
-        url:'/Cake.Prca.Website/api/Cake.Prca.Issues.Markdownlint/MarkdownlintIssuesSettings',
-        title:"MarkdownlintIssuesSettings",
+        url:'/Cake.Prca.Website/api/Cake.Prca.Issues.EsLint/ILogFileFormat',
+        title:"ILogFileFormat",
         description:""
     });
 
@@ -617,8 +557,20 @@ var searchModule = function() {
     });
 
     y({
-        url:'/Cake.Prca.Website/api/Cake.Prca.Issues/BaseRuleUrlResolver_1',
-        title:"BaseRuleUrlResolver<T>",
+        url:'/Cake.Prca.Website/api/Cake.Prca.PullRequests.Tfs/TfsPullRequestVote',
+        title:"TfsPullRequestVote",
+        description:""
+    });
+
+    y({
+        url:'/Cake.Prca.Website/api/Cake.Prca.Issues/BaseRuleDescription',
+        title:"BaseRuleDescription",
+        description:""
+    });
+
+    y({
+        url:'/Cake.Prca.Website/api/Cake.Prca/PrcaSettings',
+        title:"PrcaSettings",
         description:""
     });
 
@@ -629,8 +581,56 @@ var searchModule = function() {
     });
 
     y({
-        url:'/Cake.Prca.Website/api/Cake.Prca.Issues/CodeAnalysisIssue',
-        title:"CodeAnalysisIssue",
+        url:'/Cake.Prca.Website/api/Cake.Prca.Issues.DocFx/DocFxIssuesSettings',
+        title:"DocFxIssuesSettings",
+        description:""
+    });
+
+    y({
+        url:'/Cake.Prca.Website/api/Cake.Prca.Issues/BaseRuleUrlResolver_1',
+        title:"BaseRuleUrlResolver<T>",
+        description:""
+    });
+
+    y({
+        url:'/Cake.Prca.Website/api/Cake.Prca/CakeAliasConstants',
+        title:"CakeAliasConstants",
+        description:""
+    });
+
+    y({
+        url:'/Cake.Prca.Website/api/Cake.Prca.Issues.EsLint/LogFileFormat',
+        title:"LogFileFormat",
+        description:""
+    });
+
+    y({
+        url:'/Cake.Prca.Website/api/Cake.Prca.Issues/StringPathExtensions',
+        title:"StringPathExtensions",
+        description:""
+    });
+
+    y({
+        url:'/Cake.Prca.Website/api/Cake.Prca.PullRequests/IPrcaDiscussionComment',
+        title:"IPrcaDiscussionComment",
+        description:""
+    });
+
+    y({
+        url:'/Cake.Prca.Website/api/Cake.Prca.Issues/CodeAnalysisIssue_1',
+        title:"CodeAnalysisIssue<T>",
+        description:""
+    });
+
+    y({
+        url:'/Cake.Prca.Website/api/Cake.Prca.Issues.MsBuild/MsBuildIssuesAliases',
+        title:"MsBuildIssuesAliases",
+        description:""
+    });
+
+    y({
+        url:'/Cake.Prca.Website/api/Cake.Prca.Issues/CodeAnalysisProvider',
+        title:"CodeAnalysisProvider",
         description:""
     });
 
