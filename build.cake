@@ -1,5 +1,5 @@
 #load nuget:https://www.myget.org/F/cake-contrib/api/v2?package=Cake.Wyam.Recipe&prerelease
-#addin "nuget:https://api.nuget.org/v3/index.json?package=Cake.Yaml"
+#addin "nuget:https://api.nuget.org/v3/index.json?package=Cake.Yaml&version=1.0.3.7"
 
 //////////////////////////////////////////////////////////////////////
 // PARAMETERS
